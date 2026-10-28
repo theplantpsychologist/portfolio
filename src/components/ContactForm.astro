@@ -1,19 +1,23 @@
 ---
 // Posts to functions/api/contact.ts. Works without JavaScript too
 // (the function redirects back here with ?sent=1 or ?sent=0).
+import { TOPICS } from "../lib/contact";
+
 const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
-const topics = ["Commission", "Lessons", "Collaboration / sponsorship", "Academic", "Other"];
 ---
 <form class="contact" method="post" action="/api/contact">
   <div class="row">
     <label>Name <input name="name" required maxlength="100" autocomplete="name" /></label>
     <label>Email <input name="email" type="email" required maxlength="200" autocomplete="email" /></label>
   </div>
-  <label>Topic
-    <select name="topic">{topics.map((t) => <option>{t}</option>)}</select>
-  </label>
+  <div class="row">
+    <label>Topic
+      <select name="topic">{TOPICS.map((t) => <option>{t}</option>)}</select>
+    </label>
+    <label><span>Subject <span class="optional">(optional)</span></span> <input name="subject" maxlength="150" /></label>
+  </div>
   <label>Message
-    <textarea name="message" required minlength="10" maxlength="5000" rows="6" placeholder="What would you like made? Size, colors, deadline, budget…"></textarea>
+    <textarea name="message" required minlength="10" maxlength="5000" rows="6" placeholder="Please include as much detail as possible"></textarea>
   </label>
   <label class="hp" aria-hidden="true">Website <input name="website" tabindex="-1" autocomplete="off" /></label>
   {siteKey ? (
@@ -39,6 +43,7 @@ const topics = ["Commission", "Lessons", "Collaboration / sponsorship", "Academi
   input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
   textarea { resize: vertical; }
   .hp { position: absolute; left: -9999px; }
+  .optional { color: var(--muted); font-weight: 400; }
   .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
   .status { margin: 0; }
   .status.ok { color: #2f8a4d; }

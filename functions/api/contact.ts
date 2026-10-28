@@ -5,6 +5,8 @@
 // Secrets/vars (Pages → Settings → Variables and Secrets):
 //   TURNSTILE_SECRET_KEY, RESEND_API_KEY, CONTACT_TO, CONTACT_FROM
 
+import { TOPICS } from "../../src/lib/contact";
+
 interface Env {
   TURNSTILE_SECRET_KEY: string;
   RESEND_API_KEY: string;
@@ -12,7 +14,6 @@ interface Env {
   CONTACT_FROM: string; // e.g. "Portfolio <contact@yourdomain.com>", on a domain verified in Resend
 }
 
-const TOPICS = ["Commission", "Lessons", "Collaboration / sponsorship", "Academic", "Other"];
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
@@ -32,6 +33,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   const name = field("name", 100);
   const email = field("email", 200);
   const topic = TOPICS.includes(field("topic", 50)) ? field("topic", 50) : "Other";
+  const subject = field("subject", 150).replace(/\s+/g, " ");
   const message = field("message", 5000);
 
   // Bots fill every field; people never see this one.
@@ -60,8 +62,8 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
       from: env.CONTACT_FROM,
       to: [env.CONTACT_TO],
       reply_to: `${name.replace(/[<>"]/g, "")} <${email}>`,
-      subject: `[${topic}] Message from ${name}`,
-      text: `${message}\n\n— ${name} <${email}>\nTopic: ${topic}`,
+      subject: `[${topic}] ${subject || `Message from ${name}`}`,
+      text: `${message}\n\n— ${name} <${email}>\nTopic: ${topic}${subject ? `\nSubject: ${subject}` : ""}`,
     }),
   });
   if (!sent.ok) {

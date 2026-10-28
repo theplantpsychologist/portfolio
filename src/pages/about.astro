@@ -1,79 +1,305 @@
 ---
 import Base from "../layouts/Base.astro";
+import Img from "../components/Img.astro";
 import ContactForm from "../components/ContactForm.astro";
 import { socials } from "../lib/site";
+import { getWorks, coverOf } from "../lib/content";
 
-const services = [
-  { name: "Original design", price: "$100–300", note: "Creating a new design. Not included if you want one of my existing designs." },
-  { name: "Physical model", price: "$100–300", note: "Varies with shipping." },
-  { name: "Video tutorial", price: "$100–300", note: "A step-by-step folding video.", link: "https://youtu.be/rJEaC-PzEPo" },
-  { name: "Diagrams", price: "$400–600", note: "Step-by-step diagrams that make the model easy to recreate." },
-  { name: "Sponsored post", price: "$50–100", note: "Instagram reels, YouTube shorts, and TikTok; past videos regularly reach 100k+ views." },
-  { name: "Lessons", price: "$50–100 / hr", note: "Individuals or groups, from beginner workshops to advanced design techniques." },
+// Social stats, shown as tiles and bars. Update these when the numbers change.
+const headline = [
+  { value: "230k", label: "Instagram followers" },
+  { value: "30k", label: "YouTube subscribers" },
+  { value: "1.1M", label: "Average views per reel" },
+  { value: "460k", label: "Median views per reel" },
+  { value: "66%", label: "Average watch rate" },
+  { value: "12%", label: "Interaction rate" },
 ];
+const gender = [
+  { label: "Men", pct: 64 },
+  { label: "Women", pct: 36 },
+];
+const countries = [
+  { label: "United States", pct: 27.6 },
+  { label: "India", pct: 12.4 },
+  { label: "United Kingdom", pct: 5.5 },
+  { label: "Canada", pct: 4.3 },
+  { label: "Australia", pct: 3.3 },
+];
+const ages = [
+  { label: "18–24", pct: 34 },
+  { label: "25–34", pct: 39 },
+  { label: "Other", pct: 27 },
+];
+
+// Paste a reel link (https://www.instagram.com/reel/…) into url to play it in place.
+const reels = [
+  { title: "Animated math", views: "4.2M", image: "/img/reels/math.png", url: "https://www.instagram.com/reel/Da2uuLlo2OO/" },
+  { title: "Origami engineering", views: "1.9M", image: "/img/reels/chair.JPG", url: "https://www.instagram.com/reel/C-imP1gNKRO/" },
+  { title: "Cute origami", views: "4.3M", image: "/img/reels/otters.png", url: "https://www.instagram.com/reel/C95E6OKRHJT/" },
+];
+const instagram = socials.find((s) => s.label === "Instagram")!.url;
+
+const rates = [
+  { name: "Static carousel post", price: "$500", note: "Includes the option to pin your product's information to my profile." },
+  { name: "Long-form integrated sponsorship", price: "$1,000", note: "A segment about your product inside one of my YouTube videos." },
+  { name: "Sponsored reel", price: "$1,500", note: "A 30 s – 1 min video on Instagram and YouTube, priced on a conservative $12 CPM.", featured: true },
+  { name: "3× reel campaign", price: "$4,000", note: "Three reels at a multi-video discount, compounding reach across posts." },
+];
+const formats = [
+  { name: "Folding tutorial", note: "I design a simple model of your logo or mascot, and viewers fold one too." },
+  { name: "Deep-dive math", note: "A math concept related to your product. Viewers feel like they're learning, not watching an ad." },
+  { name: "Complex origami", note: "A cinematic timelapse folding an original piece." },
+];
+
+// Gallery pieces shown with commissions; any work slug from content/works.
+const showcase = ["male-torso", "viper", "dreaming-girl", "agony-in-the-garden"];
+const works = await getWorks();
+const pieces = showcase.map((s) => works.find((w) => w.id === s)).filter((w) => w !== undefined);
 ---
-<Base title="About" description="About Brandon Wong, origami designer and engineer. Commissions, lessons, and contact information.">
-  <section class="bio">
+<Base title="About" description="Brandon Wong: origami artist, MIT engineer, and creator with 230k followers. Sponsorships, commissions, lessons, and contact.">
+  <section class="hero">
     <img src="/img/portrait1.jpg" alt="Brandon Wong" width="640" height="427" />
-    <div class="prose">
-      <h1>About</h1>
-      <p>
-        Brandon Wong is an origami designer and artist with over 100 original designs. His work features intricate, novel structural techniques
-        while balancing art and engineering. His online content as <a href="https://www.instagram.com/theplantpsychologist/">@ThePlantPsychologist</a>
-        has reached millions of viewers.
+    <div>
+      <p class="eyebrow">Origami · Engineering · Storytelling</p>
+      <h1>Hi, I'm Brandon.</h1>
+      <p class="lede">
+        I create world class origami, study the math and engineering that make it work, and share with millions of viewers online as <a href={instagram}>@ThePlantPsychologist</a>. I graduated from MIT in mechanical engineering, and am now pursuing a PhD at Stanford studying origami-inspired mechanics.
       </p>
-      <p>
-        Originally from the San Francisco Bay Area, Brandon studied mechanical engineering at MIT. His research includes computational origami
-        under the mentorship of <a href="https://erikdemaine.org/">Prof. Erik Demaine</a>, as well as independent research in origami design, with two
-        first-authored publications in the field.
-      </p>
-      <p>
-        He served as president of MIT's <a href="http://origamit.mit.edu/">OrigaMIT</a> club from 2021, leading its conventions, and is involved with
-        Origami USA, teaching at in-person and online events.
-      </p>
+      <div class="actions">
+        <a class="btn" href="#contact" data-topic="Sponsorship / Collaboration">Contact</a>
+        <a class="btn ghost" href="/gallery/">See my art</a>
+        <a class="btn ghost" href="/academics/">See my research</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="social" class="band">
+    <h2>Social media</h2>
+    <blockquote>
+      I translate advanced technical concepts into mesmerizing, highly viral short-form videos. As a native Gen Z creator, I know how to
+      engage a generation of tech-curious young adults who value authenticity, intellect, and creativity.
+    </blockquote>
+
+    <ul class="stats">
+      {headline.map((s) => (
+        <li><strong>{s.value}</strong><span>{s.label}</span></li>
+      ))}
+    </ul>
+
+    <h3>Audience</h3>
+    <div class="audience">
+      <figure>
+        <figcaption>Gender</figcaption>
+        <div class="split" role="img" aria-label={gender.map((g) => `${g.label} ${g.pct}%`).join(", ")}>
+          {gender.map((g, i) => <span class:list={["seg", i ? "alt" : "main"]} style={`flex-basis:${g.pct}%`} />)}
+        </div>
+        <div class="split-labels">
+          {gender.map((g) => <span><b>{g.pct}%</b> {g.label}</span>)}
+        </div>
+      </figure>
+      <figure>
+        <figcaption>Ages</figcaption>
+        <ul class="bars">
+          {ages.map((a) => (
+            <li>
+              <span class="name">{a.label}</span>
+              <span class="track"><span class:list={["fill", { quiet: a.label === "Other" }]} style={`width:${(a.pct / 40) * 100}%`} /></span>
+              <b>{a.pct}%</b>
+            </li>
+          ))}
+        </ul>
+      </figure>
+      <figure>
+        <figcaption>Top countries</figcaption>
+        <ul class="bars">
+          {countries.map((c) => (
+            <li>
+              <span class="name">{c.label}</span>
+              <span class="track"><span class="fill" style={`width:${(c.pct / 30) * 100}%`} /></span>
+              <b>{c.pct}%</b>
+            </li>
+          ))}
+        </ul>
+      </figure>
+    </div>
+
+    <h3>Popular reels</h3>
+    <ul class="reels">
+      {reels.map((r) => (
+        <li>
+          <a href={r.url || instagram} data-reel={r.url || undefined} aria-label={`${r.title}, ${r.views} views`}>
+            <img src={r.image} alt="" width="480" height="541" loading="lazy" />
+            <span class="views">▶ {r.views} views</span>
+          </a>
+          <p>{r.title}</p>
+        </li>
+      ))}
+    </ul>
+
+    <h3>Sponsorship rates</h3>
+    <ul class="rates">
+      {rates.map((r) => (
+        <li class:list={{ featured: r.featured }}>
+          {r.featured && <span class="badge">Most popular</span>}
+          <strong>{r.name}</strong>
+          <span class="price">{r.price}</span>
+          <p>{r.note}</p>
+        </li>
+      ))}
+    </ul>
+    <p class="muted fine">
+      Rates are baseline and cover standard usage rights (30 days organic). Custom packages, long-term whitelisting, and cross-posting to
+      other platforms are available on request.
+    </p>
+    <ul class="formats">
+      {formats.map((f) => <li><strong>{f.name}</strong> <span class="muted">{f.note}</span></li>)}
+    </ul>
+    <div class="actions">
+      <a class="btn" href="#contact" data-topic="Sponsorship / Collaboration">Plan a sponsorship</a>
     </div>
   </section>
 
   <section id="commissions">
-    <h2>Commissions & services</h2>
-    <p class="muted">
-      Whether it's to promote your business or a gift for a friend, I can make something for you. Estimates below are for a model of
-      <a href="/gallery/cowboy-cat/">typical complexity</a>; prices vary with the project.
-    </p>
-    <ul class="services">
-      {services.map((s) => (
-        <li>
-          <div><strong>{s.name}</strong><span>{s.price}</span></div>
-          <p class="muted">{s.note} {s.link && <a href={s.link}>Example</a>}</p>
-        </li>
+    <h2>Art collection & commissions</h2>
+    <ul class="pieces">
+      {pieces.map((w) => (
+        <li><a href={`/gallery/${w.id}/`}><Img pic={coverOf(w, 800)} alt={w.data.name} sizes="(max-width: 760px) 50vw, 300px" /><span>{w.data.name}</span></a></li>
       ))}
     </ul>
+    <div class="commission-text">
+      <div>
+        <p>
+          Some pieces in the <a href="/gallery/">gallery</a> are available to buy. Others are no longer available, but can be recreated upon request. I can also design, fold, and ship a new piece from scratch, just for you.
+        </p>
+        <!-- <p class="muted"></p> -->
+      </div>
+      <div class="range">
+        <span class="muted">Typical range:</span>
+        <strong>$300 – $3,000</strong>
+        <span class="muted">Contact for exact quote</span>
+      </div>
+    </div>
+    <div class="actions">
+      <a class="btn" href="#contact" data-topic="Commission">Request a quote</a>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p class="muted">For a quote, describe your request in as much detail as you can. I'll reply by email.</p>
+  <section id="contact" class="contact-card">
+    <h2>Let's work together!</h2>
+    <!-- <p>
+      Sponsorships, commissions, private lessons, speaking engagements, or something else entirely. Lessons and talks are arranged case by case.
+      Tell me what you have in mind and I will reply by email.
+    </p> -->
     <ContactForm />
-    <ul class="chips socials">
+    <!-- <ul class="chips socials">
       {socials.map((s) => <li><a class="chip" href={s.url} rel="me noopener">{s.label}</a></li>)}
-    </ul>
+    </ul> -->
   </section>
 </Base>
 
 <style>
-  section { margin-bottom: 48px; }
-  section > h2 { margin-bottom: 8px; }
-  .bio { display: grid; grid-template-columns: minmax(0, 360px) 1fr; gap: 36px; align-items: start; }
-  .bio img { width: 100%; height: auto; border-radius: var(--radius); }
-  .bio h1 { margin-bottom: 12px; }
-  .services { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-top: 18px; }
-  .services li { padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); display: grid; gap: 6px; }
-  .services div { display: flex; justify-content: space-between; gap: 12px; }
-  .services span { color: var(--accent); font-weight: 700; white-space: nowrap; }
-  .services p { font-size: 0.92rem; }
-  .socials { list-style: none; padding: 0; margin-top: 28px; }
+  section { margin-bottom: 64px; }
+  h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 12px; }
+  h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 36px 0 14px; }
   a:not(.btn):not(.chip) { color: var(--accent); }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+
+  .hero { display: grid; grid-template-columns: minmax(0, 380px) minmax(0, 1fr); gap: 40px; align-items: center; }
+  .hero img { width: 100%; border-radius: var(--radius); }
+  .eyebrow { color: var(--accent); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+  .lede { font-size: 1.12rem; max-width: 60ch; margin-top: 14px; }
+
+  .band { background: var(--surface); border: 1px solid var(--line); border-radius: calc(var(--radius) * 2); padding: clamp(20px, 4vw, 40px); }
+  blockquote { font-size: 1.1rem; max-width: 65ch; padding-left: 16px; border-left: 3px solid var(--accent); }
+
+  .stats { list-style: none; padding: 0; margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+  .stats li { padding: 16px; border-radius: var(--radius); background: var(--bg); display: grid; gap: 2px; }
+  .stats strong { font-size: clamp(2rem, 4vw, 2.6rem); line-height: 1.05; letter-spacing: -0.02em; }
+  .stats span { color: var(--muted); font-size: 0.9rem; }
+
+  .audience { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; }
+  figure { margin: 0; display: grid; gap: 10px; align-content: start; }
+  figcaption { font-weight: 700; }
+  .split { display: flex; gap: 2px; height: 14px; }
+  .seg { border-radius: 4px; }
+  .seg.main { background: var(--accent); }
+  .seg.alt { background: var(--muted); opacity: 0.55; }
+  .split-labels { display: flex; justify-content: space-between; font-size: 0.92rem; color: var(--muted); }
+  .split-labels b { color: var(--ink); font-size: 1.1rem; }
+  .bars { list-style: none; padding: 0; display: grid; gap: 8px; }
+  .bars li { display: grid; grid-template-columns: 8.6em minmax(0, 1fr) 3.2em; align-items: center; gap: 10px; font-size: 0.92rem; }
+  .bars .name { color: var(--muted); }
+  .bars b { text-align: right; }
+  .track { height: 10px; }
+  .fill { display: block; height: 100%; background: var(--accent); border-radius: 0 4px 4px 0; }
+  .fill.quiet { background: var(--muted); opacity: 0.55; }
+
+  .reels { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; max-width: 780px; }
+  .reels a { position: relative; display: block; border-radius: var(--radius); overflow: hidden; aspect-ratio: 9 / 13; background: #000; }
+  .reels img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.2s; }
+  .reels a:hover img { transform: scale(1.03); }
+  .reels :global(iframe) { display: block; width: 100%; aspect-ratio: 9 / 16; border: 0; border-radius: var(--radius); background: #fff; }
+  .views { position: absolute; left: 10px; bottom: 10px; padding: 4px 10px; border-radius: 999px; background: rgb(0 0 0 / 0.65); color: #fff; font-weight: 700; font-size: 0.9rem; }
+  .reels p { margin-top: 8px; font-weight: 600; }
+
+  .rates { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+  .rates li { position: relative; padding: 18px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--bg); display: grid; gap: 6px; align-content: start; }
+  .rates li.featured { border: 2px solid var(--accent); }
+  .badge { position: absolute; top: -11px; left: 16px; padding: 2px 10px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-size: 0.75rem; font-weight: 700; }
+  .price { font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; }
+  .rates p { font-size: 0.9rem; color: var(--muted); }
+  .fine { font-size: 0.85rem; margin-top: 12px; }
+  .formats { list-style: none; padding: 0; margin-top: 20px; display: grid; gap: 8px; max-width: 75ch; }
+
+  .pieces { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 8px 0 24px; }
+  .pieces a { display: block; text-decoration: none; color: inherit; font-weight: 600; font-size: 0.92rem; }
+  .pieces :global(img), .pieces :global(.missing) { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); margin-bottom: 6px; }
+  .commission-text { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 32px; align-items: center; max-width: 900px; }
+  .commission-text p { font-size: 1.05rem; }
+  .range { display: grid; gap: 2px; padding: 18px 22px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); text-align: center; }
+  .range strong { font-size: 1.8rem; letter-spacing: -0.02em; white-space: nowrap; }
+  .range span { font-size: 0.85rem; }
+
+  .contact-card { padding: clamp(22px, 5vw, 48px); border-radius: calc(var(--radius) * 2); background: var(--surface); border: 2px solid var(--accent); box-shadow: 0 10px 40px rgb(0 0 0 / 0.08); }
+  .contact-card > p { font-size: 1.08rem; max-width: 65ch; }
+  .contact-card :global(form.contact) { max-width: none; margin-top: 24px; }
+  .contact-card :global(textarea) { min-height: 180px; }
+  .socials { list-style: none; padding: 0; margin-top: 28px; }
+
   @media (max-width: 760px) {
-    .bio { grid-template-columns: 1fr; }
+    .hero { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+    .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    .stats li { padding: 12px; }
+    .stats strong { font-size: 1.8rem; }
+    .stats span { font-size: 0.82rem; }
+    .reels { gap: 8px; }
+    .views { left: 6px; bottom: 6px; font-size: 0.75rem; padding: 3px 7px; }
+    .reels p { font-size: 0.85rem; }
+    .pieces { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .commission-text { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   }
 </style>
+
+<script>
+  // Buttons that jump to the contact form also pick the matching topic.
+  const topic = document.querySelector<HTMLSelectElement>("form.contact select[name=topic]");
+  for (const a of document.querySelectorAll<HTMLAnchorElement>("a[data-topic]")) {
+    a.addEventListener("click", () => {
+      if (topic) topic.value = a.dataset.topic!;
+    });
+  }
+
+  // Reels with a link play in place via Instagram's embed; the rest open the profile.
+  for (const a of document.querySelectorAll<HTMLAnchorElement>("a[data-reel]")) {
+    const id = a.dataset.reel!.match(/instagram\.com\/(?:reel|p)\/([\w-]+)/)?.[1];
+    if (!id) continue;
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      const frame = document.createElement("iframe");
+      frame.src = `https://www.instagram.com/reel/${id}/embed`;
+      frame.title = a.getAttribute("aria-label")!;
+      frame.allow = "autoplay; encrypted-media";
+      a.replaceWith(frame);
+    });
+  }
+</script>
