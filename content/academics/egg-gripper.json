@@ -1,0 +1,22 @@
+{
+  "title": "Compliant egg gripper",
+  "date": "2024-11-01",
+  "summary": "For 2.145 (Design of compliant mechanisms)",
+  "body": "For 2.145 (Design of compliant mechanisms), made from a waterjet sheet of acrylic. The gripper is designed as one solid piece, acheiving the motion through flexures. It also features flexures to pad the egg.",
+  "collaborators": [
+    "Andy Dequin",
+    "Alexandra Valdepeñas",
+    "Brooke Rethman",
+    "Jose Betances"
+  ],
+  "images": [
+    "egg gripper photo.JPG"
+  ],
+  "video": "egg gripper video.MOV",
+  "files": [],
+  "links": [],
+  "tags": [
+    "design",
+    "mechanics"
+  ]
+}

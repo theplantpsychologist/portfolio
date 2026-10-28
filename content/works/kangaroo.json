@@ -1,0 +1,22 @@
+{
+  "name": "Kangaroo",
+  "date": "2021-04-01",
+  "description": "",
+  "photos": [
+    "kangaroo.jpg"
+  ],
+  "cps": [
+    "kangaroo cp.png"
+  ],
+  "cpDescription": "A very straightforward example of tilted grid.",
+  "video": "https://youtu.be/rnsL1Vz7y20",
+  "diagrams": null,
+  "tags": [
+    "animal",
+    "mammal",
+    "tilted_grid",
+    "bp",
+    "nonuniaxial"
+  ],
+  "related": []
+}

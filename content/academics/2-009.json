@@ -1,0 +1,46 @@
+{
+  "title": "Band-it",
+  "date": "2024-12-01",
+  "summary": "A lobster bander that reduces repetitive strain injuries for lobstermen. Senior capstone product for 2.009 (the Product Engineering Process)",
+  "body": "A lobster bander that reduces repetitive strain injuries for lobstermen. Senior capstone product for 2.009 (the Product Engineering Process). This class essentially simulates a startup--our team of 15 students is given a budget and about 3 months, and are set off to go design a product that would be ready to go to market.<br><br>Our team decided to tackle the problem of repetitive strain injuries experienced by lobstermen caused by the twisting squeezing motion required to apply rubber bands to lobster claws. We designed an improved banding tool that locks in place after the initial squeeze, then releases the band onto the claw with the click of a trigger--reducing both the time spent under load, and the need to twist the wrist. Our presentation can be viewed <a href='https://www.009balance.com/webcast'>on the course website</a>, starting at around 1:14:30. The video embedded below is a fun vlog of our team's journey through the project.",
+  "collaborators": [
+    "Dana Barker",
+    "Jose Betances",
+    "Johnny Chen",
+    "Jade Durham",
+    "Tyler Ea",
+    "Mercedes Escandon",
+    "Stephanie Hulme",
+    "Andrew LeBlanc",
+    "Sophia Pineda",
+    "Brooke Rethman",
+    "Ian Rosado",
+    "Tilly Swanson",
+    "Rohan Wagh",
+    "Johnny Zhang"
+  ],
+  "images": [
+    "2.009 1.jpg",
+    "2.009 2.jpg",
+    "2.009 3.jpg",
+    "2.009 4.jpg",
+    "2.009 animation.gif"
+  ],
+  "video": "https://youtu.be/Odk07QharRw",
+  "files": [
+    {
+      "label": "2.009 product sheet",
+      "file": "2.009 product sheet.pdf"
+    }
+  ],
+  "links": [
+    {
+      "label": "Project link",
+      "url": "https://www.009balance.com/webcast"
+    }
+  ],
+  "tags": [
+    "class-project",
+    "design"
+  ]
+}

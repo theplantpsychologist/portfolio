@@ -1,0 +1,21 @@
+{
+  "name": "Bonsai Tree",
+  "date": "2020-03-01",
+  "description": "",
+  "photos": [
+    "bonsai tree.jpg"
+  ],
+  "cps": [
+    "bonsai cp.png"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "bp",
+    "color_change",
+    "plant",
+    "uniaxial"
+  ],
+  "related": []
+}

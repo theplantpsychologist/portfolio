@@ -1,0 +1,26 @@
+{
+  "name": "Penguin (chick)",
+  "date": "2020-10-01",
+  "description": "A cute, simple, model that can be folded from a normal 15cm sheet of kami, and possibly my design that I've taught the most workshops of. I've taught this model at Origami Bolivia 2021 (online, in Spanish), Origami USA 2022, OrigaMIT 2022, and at a private gathering in Tokyo (in Japanese), and many other occasions.",
+  "photos": [
+    "penguin.jpg",
+    "penguin snow.png"
+  ],
+  "cps": [
+    "penguin cp.png"
+  ],
+  "cpDescription": "",
+  "video": "https://youtu.be/uxq-8PMj3u4",
+  "diagrams": null,
+  "tags": [
+    "animal",
+    "bird",
+    "bp",
+    "simple",
+    "cute",
+    "nonuniaxial",
+    "color_change",
+    "portfolio"
+  ],
+  "related": []
+}

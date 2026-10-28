@@ -1,0 +1,44 @@
+---
+// Shows YouTube's thumbnail and only loads the player after a click,
+// which keeps ~1 MB of YouTube scripts off pages until someone wants them.
+import { youtubeId } from "../lib/media";
+
+interface Props {
+  url: string;
+  title: string;
+}
+const { url, title } = Astro.props;
+const id = youtubeId(url);
+const vertical = /\/shorts\//.test(url);
+---
+{id ? (
+  <div class:list={["yt", { vertical }]} data-id={id}>
+    <button type="button" aria-label={`Play video: ${title}`}>
+      <img src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`} alt="" loading="lazy" />
+      <span aria-hidden="true">▶</span>
+    </button>
+  </div>
+) : (
+  <a href={url}>Watch video</a>
+)}
+
+<style>
+  .yt { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden; background: #000; }
+  .yt.vertical { aspect-ratio: 9 / 16; max-width: 340px; }
+  .yt button { all: unset; cursor: pointer; position: absolute; inset: 0; display: grid; place-items: center; }
+  .yt img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .yt span { position: relative; width: 68px; height: 48px; display: grid; place-items: center; background: #e00; color: #fff; border-radius: 12px; font-size: 1.4rem; }
+  .yt :global(iframe) { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+</style>
+
+<script>
+  for (const el of document.querySelectorAll<HTMLElement>(".yt")) {
+    el.querySelector("button")?.addEventListener("click", () => {
+      const f = document.createElement("iframe");
+      f.src = `https://www.youtube-nocookie.com/embed/${el.dataset.id}?autoplay=1`;
+      f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+      f.allowFullscreen = true;
+      el.replaceChildren(f);
+    });
+  }
+</script>

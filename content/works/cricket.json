@@ -1,0 +1,22 @@
+{
+  "name": "Cricket",
+  "date": "2021-02-01",
+  "description": "A rare 15 degree design.",
+  "photos": [
+    "cricket white-2.jpg",
+    "cricket green-4.jpg"
+  ],
+  "cps": [
+    "cricket cp.png"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "15",
+    "uniaxial",
+    "animal",
+    "insect"
+  ],
+  "related": []
+}

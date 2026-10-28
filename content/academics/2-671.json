@@ -1,0 +1,29 @@
+{
+  "title": "Compressive strength of Miura-Ori patterns",
+  "date": "2024-05-01",
+  "summary": "Final project for 2.671 (measurement and instrumentation)",
+  "body": "Final project for 2.671 (measurement and instrumentation). In this project, I measured how different mechanical properties of the Miura-ori pattern change with different fold angles. I folded 12 copies of the same crease pattern, and then squished them under the texture analyzer at 4 different fold angles. The stress-strain curves were then analyzed to see how the compressive strength and initial stiffness were affected.",
+  "collaborators": [],
+  "images": [
+    "2.671 photo.png"
+  ],
+  "video": null,
+  "files": [
+    {
+      "label": "2.671 final paper",
+      "file": "2.671 final paper.pdf"
+    },
+    {
+      "label": "2.671 poster",
+      "file": "2.671 poster.pdf"
+    }
+  ],
+  "links": [],
+  "tags": [
+    "class-project",
+    "metamaterials",
+    "origami",
+    "mechanics",
+    "measurement"
+  ]
+}

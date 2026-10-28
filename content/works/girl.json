@@ -1,0 +1,20 @@
+{
+  "name": "Girl",
+  "date": "2021-07-01",
+  "description": "Designed as an entry level human figure, using level shifters for clothes",
+  "photos": [
+    "girl-2.jpg"
+  ],
+  "cps": [
+    "bp girl cp.png"
+  ],
+  "cpDescription": "",
+  "video": "https://youtu.be/0uPTFBkuJ4E",
+  "diagrams": null,
+  "tags": [
+    "human",
+    "bp",
+    "uniaxial"
+  ],
+  "related": []
+}

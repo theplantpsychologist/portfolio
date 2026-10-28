@@ -1,0 +1,29 @@
+{
+  "title": "Orikanji (折漢字)",
+  "date": "2023-05-01",
+  "summary": "Foldable 3d prints for Japanese learning that pair character stroke order with crease pattern fold order. Final project for 21G.510 (Project based Japanese)",
+  "body": "Foldable 3d prints for Japanese learning that pair character stroke order with crease pattern fold order. Final project for 21G.510 (Project based Japanese). This product is designed to simultaneously teach Japanese learners kanji stroke order crease pattern reading. Each crease pattern is designed with a specific fold order that corresponds to the character's stroke order, and when folded correctly, the character is revealed.<br><br>These prototypes were made by FDM 3d printing. First a few base layers are printed, then a thin net-like fabric is inserted, and then the print is continued for a few more layers. The result is a flexible print with rigid faces joined by flexible gaps of fabric.",
+  "collaborators": [],
+  "images": [
+    "orikanji photo.png",
+    "orikanji stroke order.png"
+  ],
+  "video": null,
+  "files": [
+    {
+      "label": "orikanji slides",
+      "file": "orikanji slides.pdf"
+    },
+    {
+      "label": "orikanji instructions",
+      "file": "orikanji instructions.pdf"
+    }
+  ],
+  "links": [],
+  "tags": [
+    "origami",
+    "japanese",
+    "design",
+    "3d-printing"
+  ]
+}

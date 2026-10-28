@@ -1,0 +1,24 @@
+{
+  "name": "Knight BP",
+  "date": "2020-10-01",
+  "description": "",
+  "photos": [
+    "knight final-5.jpg",
+    "knight final-4.jpg",
+    "knight final-6.png"
+  ],
+  "cps": [
+    "knight cp.png"
+  ],
+  "cpDescription": "Photodiagrams for the helmet are available <a href='https://drive.google.com/file/d/15KmlFGRwykBLCD_wlhgzg0s7UwgjXsvB/view'>here</a>.",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "human",
+    "portfolio",
+    "color_change",
+    "bp",
+    "uniaxial"
+  ],
+  "related": []
+}

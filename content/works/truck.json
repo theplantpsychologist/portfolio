@@ -1,0 +1,19 @@
+{
+  "name": "Truck",
+  "date": "2021-10-10",
+  "description": "An Inktober prompt",
+  "photos": [
+    "truck.jpg"
+  ],
+  "cps": [
+    "truck cp.png"
+  ],
+  "cpDescription": "Grid: 17x17",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "3d",
+    "inktober"
+  ],
+  "related": []
+}

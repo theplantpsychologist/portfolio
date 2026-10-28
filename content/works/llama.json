@@ -1,0 +1,20 @@
+{
+  "name": "Llama",
+  "date": "2021-04-23",
+  "description": "",
+  "photos": [
+    "llama.png"
+  ],
+  "cps": [
+    "llama cp.png"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "animal",
+    "bp",
+    "mammal"
+  ],
+  "related": []
+}

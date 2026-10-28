@@ -1,0 +1,26 @@
+{
+  "name": "Mermaid",
+  "date": "2021-08-01",
+  "description": "",
+  "photos": [
+    "mermaid.jpg"
+  ],
+  "cps": [
+    "mermaid cp.svg"
+  ],
+  "cpDescription": "Uses the same hexagonal scales as <a href'./rattlesnake.html'>Rattlesnake</a>, and similarly is a mix of box pleating and hex pleating.",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "hp",
+    "bp",
+    "uniaxial",
+    "nonuniaxial",
+    "mythical",
+    "human",
+    "color_change",
+    "sea_life",
+    "scales"
+  ],
+  "related": []
+}

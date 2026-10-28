@@ -1,0 +1,22 @@
+{
+  "name": "Boba",
+  "date": "2021-12-01",
+  "description": "Designed as a gift",
+  "photos": [
+    "boba.jpg"
+  ],
+  "cps": [
+    "boba cp.jpg"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "color_change",
+    "food",
+    "bp",
+    "nonuniaxial",
+    "object"
+  ],
+  "related": []
+}

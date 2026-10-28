@@ -1,0 +1,104 @@
+---
+const links = [
+  { href: "/gallery/", label: "Gallery" },
+  { href: "/academics/", label: "Academics" },
+  { href: "/about/", label: "About" },
+];
+const path = Astro.url.pathname;
+---
+<header class="nav">
+  <div class="inner">
+    <a class="logo" href="/" aria-label="Home"><img src="/img/logo.svg" alt="" width="36" height="36" /></a>
+    <nav aria-label="Main">
+      {links.map((l) => <a href={l.href} aria-current={path.startsWith(l.href) ? "page" : undefined}>{l.label}</a>)}
+    </nav>
+    <form class="search" action="/gallery/" role="search">
+      <label class="visually-hidden" for="site-search">Search works</label>
+      <input id="site-search" name="q" type="search" placeholder="Search…" autocomplete="off" />
+      <ul class="results" hidden></ul>
+    </form>
+  </div>
+</header>
+
+<style>
+  .nav { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .inner { max-width: var(--max); margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; gap: 20px; }
+  .logo img { width: 36px; height: 36px; }
+  nav { display: flex; gap: 18px; }
+  nav a { text-decoration: none; font-weight: 600; color: var(--muted); }
+  nav a[aria-current="page"], nav a:hover { color: var(--ink); }
+  .search { margin-left: auto; position: relative; }
+  input { width: 200px; font: inherit; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+  input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .results { position: absolute; right: 0; top: calc(100% + 6px); width: min(340px, calc(100vw - 32px)); list-style: none; padding: 6px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 10px 30px rgb(0 0 0 / 0.15); }
+  .results :global(a) { display: flex; gap: 10px; align-items: center; padding: 6px; border-radius: 6px; text-decoration: none; }
+  .results :global(a:hover), .results :global(a[aria-selected="true"]) { background: var(--chip); color: var(--ink); }
+  .results :global(img) { width: 40px; height: 40px; object-fit: cover; border-radius: 4px; flex: none; }
+  .results :global(small) { display: block; color: var(--muted); }
+  @media (max-width: 640px) {
+    .inner { flex-wrap: wrap; gap: 10px 16px; }
+    .search { order: 3; flex-basis: 100%; }
+    input { width: 100%; }
+  }
+</style>
+
+<script>
+  // Quick-jump search over works and academic projects. The index is
+  // fetched once, on first focus, so pages that never search don't pay for it.
+  type Item = { t: string; u: string; s: string; k: string; i?: string };
+  const form = document.querySelector<HTMLFormElement>(".nav .search")!;
+  const input = form.querySelector("input")!;
+  const list = form.querySelector<HTMLUListElement>(".results")!;
+  let index: Item[] | null = null;
+  let active = -1;
+
+  async function load() {
+    index ??= await fetch("/search.json").then((r) => r.json());
+  }
+  function render() {
+    const q = input.value.trim().toLowerCase();
+    if (!q || !index) return (list.hidden = true);
+    const hits = index.filter((it) => it.s.includes(q)).slice(0, 8);
+    active = -1;
+    list.innerHTML = "";
+    for (const h of hits) {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = h.u;
+      if (h.i) a.innerHTML = `<img src="${h.i}" alt="" loading="lazy">`;
+      const span = document.createElement("span");
+      span.textContent = h.t;
+      const small = document.createElement("small");
+      small.textContent = h.k;
+      span.append(small);
+      a.append(span);
+      li.append(a);
+      list.append(li);
+    }
+    if (hits.length) {
+      const li = document.createElement("li");
+      li.innerHTML = `<a href="/gallery/?q=${encodeURIComponent(q)}"><span>See all results in the gallery</span></a>`;
+      list.append(li);
+    }
+    list.hidden = !hits.length;
+  }
+  input.addEventListener("focus", load, { once: true });
+  input.addEventListener("input", async () => {
+    await load();
+    render();
+  });
+  input.addEventListener("keydown", (e) => {
+    const links = [...list.querySelectorAll("a")];
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      e.preventDefault();
+      active = (active + (e.key === "ArrowDown" ? 1 : -1) + links.length) % links.length;
+      links.forEach((a, i) => a.setAttribute("aria-selected", String(i === active)));
+    } else if (e.key === "Enter" && active >= 0) {
+      e.preventDefault();
+      location.href = links[active].href;
+    } else if (e.key === "Escape") list.hidden = true;
+  });
+  document.addEventListener("click", (e) => {
+    if (!form.contains(e.target as Node)) list.hidden = true;
+  });
+</script>

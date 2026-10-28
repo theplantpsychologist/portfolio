@@ -1,0 +1,29 @@
+{
+  "title": "Desk pet",
+  "date": "2023-03-01",
+  "summary": "A personal robot for Japanese learning. Designed for 21G.510 (Project based Japanese)",
+  "body": "A personal robot for Japanese learning. Designed for 21G.510 (Project based Japanese). The idea was to be a desk pet that would help students learn Japanese by responding to spoken Japanese with appropriate facial expressions and movements.  My task on the team was to design a robot with a speaker, facial display, and a small motor to nod and bow, while my teammate would do the programming for the face and AI API. The robot was designed to be cute and engaging, with a small form factor that would fit on a desk.<br><br>The bowing and nodding was coupled with a mechanism such that once the head went below a certain point, a \"foot\" would press on the ground from the bottom, causing the robot to lean forward slightly. We didn't have enough time to fully integrate the software and hardware, but the bowing and nodding worked (mostly).",
+  "collaborators": [
+    "Jenny Zhao"
+  ],
+  "images": [
+    "desk pet photo.jpg",
+    "desk pet cad.png",
+    "desk pet face.gif"
+  ],
+  "video": "desk pet bowing.MOV",
+  "files": [
+    {
+      "label": "desk pet slides",
+      "file": "desk pet slides.pdf"
+    }
+  ],
+  "links": [],
+  "tags": [
+    "class-project",
+    "japanese",
+    "design",
+    "robotics",
+    "3d-printing"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Bruh",
+  "date": "2020-07-01",
+  "description": "Bruh.",
+  "photos": [
+    "bruh.JPG"
+  ],
+  "cps": [
+    "bruh cp.png"
+  ],
+  "cpDescription": "",
+  "video": "https://youtu.be/rJEaC-PzEPo",
+  "diagrams": null,
+  "tags": [
+    "bp",
+    "color_change",
+    "nonuniaxial",
+    "uniaxial",
+    "2d"
+  ],
+  "related": []
+}

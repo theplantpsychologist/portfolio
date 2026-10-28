@@ -1,0 +1,19 @@
+{
+  "title": "Folding reconfigurable circuits",
+  "date": "2022-07-01",
+  "summary": "A printed circuit that reroutes when the substrate is folded.",
+  "body": "A prototype of a printed circuit that reroutes when the substrate is folded. In this example, the circuit that wires two LEDs has 5 possible configurations: 1) both LEDs in series, 2) both LEDs in parallel, 3) one LED on, 4) the other LED on, and 5) both LEDs off (unfolded state). The circuit is made of copper tape on paper with an insulating tape covering the traces between the contact pads. <br><br>The first image shows a photo of the circuit. The second shows the crease patterns and resulting circuit schematics of the first 4 configurations. Yellow lines represent the copper tape traces, yellow circles represent the contact pads, and purple lines represent connections created by folding. The video below shows a rough demo of the circuit being folded between the different configurations. <br><br>This project was created on a whim and was not for any particular class or research project.  ",
+  "collaborators": [],
+  "images": [
+    "circuit photo.png",
+    "circuit details.png"
+  ],
+  "video": "https://youtu.be/lpm9d1AlXk8",
+  "files": [],
+  "links": [],
+  "tags": [
+    "research",
+    "electronics",
+    "origami"
+  ]
+}

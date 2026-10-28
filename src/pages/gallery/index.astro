@@ -1,0 +1,229 @@
+---
+import Base from "../../layouts/Base.astro";
+import Img from "../../components/Img.astro";
+import { getWorks, derivedTags, coverOf, cpCoverOf, tagGroups, tagLabel } from "../../lib/content";
+
+const works = await getWorks();
+const extras = { has_cp: "Has crease pattern", has_video: "Has video", has_diagrams: "Has diagrams" };
+const years = [...new Set(works.map((w) => String(w.data.date.getUTCFullYear())))].sort().reverse();
+
+// Facet groups, in sidebar order. Only tags actually in use are shown.
+const used = new Set(works.flatMap((w) => [...w.data.tags, ...derivedTags(w)]));
+const facets = [
+  ...Object.entries(tagGroups).map(([id, g]) => ({
+    id,
+    label: g.label,
+    tags: Object.entries(g.tags).filter(([t]) => used.has(t)),
+  })),
+  { id: "has", label: "Includes", tags: Object.entries(extras).filter(([t]) => used.has(t)) },
+  { id: "year", label: "Year", tags: years.map((y) => [y, y]) },
+].filter((f) => f.tags.length);
+
+const cards = works.map((w) => {
+  const tags = [...w.data.tags, ...derivedTags(w)];
+  return {
+    w,
+    cover: coverOf(w, 400),
+    cp: cpCoverOf(w, 400),
+    year: String(w.data.date.getUTCFullYear()),
+    tags,
+    search: [w.data.name, w.id, ...tags.map(tagLabel)].join(" ").toLowerCase(),
+  };
+});
+---
+<Base title="Gallery" description={`Browse ${works.length} original origami designs by Brandon Wong, with crease patterns and design notes.`}>
+  <div class="head">
+    <div>
+      <h1>Gallery</h1>
+      <p class="muted"><span id="count">{works.length}</span> of {works.length} works</p>
+    </div>
+    <div class="controls">
+      <label class="visually-hidden" for="q">Filter by name</label>
+      <input id="q" type="search" placeholder="Filter by name or tag" autocomplete="off" />
+      <label class="visually-hidden" for="sort">Sort</label>
+      <select id="sort">
+        <option value="new">Newest first</option>
+        <option value="old">Oldest first</option>
+        <option value="az">A–Z</option>
+      </select>
+      <div class="seg" role="group" aria-label="Show">
+        <button type="button" data-view="photo" aria-pressed="true">Photos</button>
+        <button type="button" data-view="cp" aria-pressed="false">Crease patterns</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="layout">
+    <aside>
+      <details id="filters" open>
+        <summary>Filters <span id="active-count"></span></summary>
+        {facets.map((f) => (
+          <fieldset data-group={f.id}>
+            <legend>{f.label}</legend>
+            <div class="chips">
+              {f.tags.map(([t, label]) => (
+                <label class="facet">
+                  <input type="checkbox" value={t} />
+                  <span>{label}</span>
+                  <small data-count />
+                </label>
+              ))}
+            </div>
+          </fieldset>
+        ))}
+        <button type="button" class="btn ghost" id="clear">Clear filters</button>
+      </details>
+    </aside>
+
+    <section>
+      <ul id="grid" class="grid">
+        {cards.map(({ w, cover, cp, year, tags, search }) => (
+          <li data-tags={tags.join(" ")} data-year={year} data-date={w.data.date.getTime()} data-name={w.data.name} data-search={search}>
+            <a href={`/gallery/${w.id}/`}>
+              <Img pic={cover} alt={w.data.name} sizes="(max-width: 640px) 50vw, 240px" class="photo" />
+              {cp && <Img pic={cp} alt={`${w.data.name} crease pattern`} sizes="(max-width: 640px) 50vw, 240px" class="cp" />}
+              <span class="caption">{w.data.name} <small>{year}</small></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p id="empty" class="muted" hidden>No works match these filters.</p>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; }
+  .controls input, .controls select { font: inherit; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+  .seg button { font: inherit; border: 0; padding: 7px 14px; background: var(--surface); color: var(--muted); cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+
+  .layout { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 28px; align-items: start; }
+  aside { position: sticky; top: 76px; max-height: calc(100vh - 92px); overflow: auto; padding-right: 4px; }
+  summary { font-weight: 700; cursor: pointer; margin-bottom: 8px; }
+  fieldset { border: 0; padding: 0; margin: 0 0 16px; }
+  legend { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 6px; }
+  .facet { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 999px; background: var(--chip); font-size: 0.85rem; cursor: pointer; border: 1px solid transparent; user-select: none; }
+  .facet input { position: absolute; opacity: 0; pointer-events: none; }
+  .facet small { color: var(--muted); }
+  .facet:has(input:checked) { background: var(--ink); color: var(--bg); }
+  .facet:has(input:checked) small { color: inherit; opacity: 0.7; }
+  .facet:has(input:focus-visible) { outline: 2px solid var(--accent); }
+  .facet.zero { opacity: 0.4; }
+
+  .grid { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 14px; }
+  .grid li { content-visibility: auto; contain-intrinsic-size: auto 240px; }
+  .grid li[hidden] { display: none; }
+  .grid a { display: block; text-decoration: none; }
+  .grid :global(img), .grid :global(.missing) { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); transition: transform 0.2s; }
+  .grid a:hover :global(img) { transform: scale(1.02); }
+  .grid :global(.cp) { display: none; object-fit: contain; background: #fff !important; }
+  .grid.show-cp :global(.photo) { display: none; }
+  .grid.show-cp :global(.cp) { display: block; }
+  .caption { display: block; padding: 6px 2px 0; font-weight: 600; font-size: 0.95rem; }
+  .caption small { color: var(--muted); font-weight: 400; }
+
+  @media (max-width: 800px) {
+    .layout { grid-template-columns: minmax(0, 1fr); }
+    aside { position: static; max-height: none; }
+    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  }
+</style>
+
+<script>
+  const grid = document.getElementById("grid")!;
+  const cards = [...grid.children] as HTMLLIElement[];
+  const groups = [...document.querySelectorAll<HTMLFieldSetElement>("fieldset[data-group]")];
+  const q = document.getElementById("q") as HTMLInputElement;
+  const sort = document.getElementById("sort") as HTMLSelectElement;
+  const viewButtons = [...document.querySelectorAll<HTMLButtonElement>("[data-view]")];
+  let view = "photo";
+
+  const tagsOf = new Map(cards.map((c) => [c, new Set([...c.dataset.tags!.split(" "), c.dataset.year!])]));
+  const checked = (g: HTMLFieldSetElement) =>
+    [...g.querySelectorAll<HTMLInputElement>("input:checked")].map((i) => i.value);
+
+  // Within a group, any selected tag matches; across groups, all must match.
+  function matches(card: HTMLLIElement, selection: Map<string, string[]>, words: string[], skip?: string) {
+    const tags = tagsOf.get(card)!;
+    if (view === "cp" && !tags.has("has_cp")) return false;
+    for (const [g, sel] of selection) if (g !== skip && sel.length && !sel.some((t) => tags.has(t))) return false;
+    return words.every((w) => card.dataset.search!.includes(w));
+  }
+
+  function update(pushUrl = true) {
+    const selection = new Map(groups.map((g) => [g.dataset.group!, checked(g)]));
+    const words = q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    let shown = 0;
+    for (const c of cards) {
+      const ok = matches(c, selection, words);
+      c.hidden = !ok;
+      if (ok) shown++;
+    }
+    // Facet counts: how many results each tag would give, given the other groups' filters.
+    for (const g of groups) {
+      const pool = cards.filter((c) => matches(c, selection, words, g.dataset.group));
+      for (const label of g.querySelectorAll<HTMLLabelElement>(".facet")) {
+        const input = label.querySelector("input")!;
+        const n = pool.filter((c) => tagsOf.get(c)!.has(input.value)).length;
+        label.querySelector("small")!.textContent = String(n);
+        label.classList.toggle("zero", n === 0 && !input.checked);
+      }
+    }
+    document.getElementById("count")!.textContent = String(shown);
+    document.getElementById("empty")!.hidden = shown > 0;
+    const active = [...selection.values()].flat().length;
+    document.getElementById("active-count")!.textContent = active ? `(${active})` : "";
+    grid.classList.toggle("show-cp", view === "cp");
+    viewButtons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.view === view)));
+    if (pushUrl) writeUrl(selection);
+  }
+
+  function applySort() {
+    const by = sort.value;
+    const sorted = [...cards].sort((a, b) =>
+      by === "az" ? a.dataset.name!.localeCompare(b.dataset.name!) : (by === "old" ? 1 : -1) * (Number(a.dataset.date) - Number(b.dataset.date)),
+    );
+    grid.append(...sorted);
+  }
+
+  // Filters live in the URL, e.g. /gallery/?subject=bird&method=hp&view=cp
+  function writeUrl(selection: Map<string, string[]>) {
+    const p = new URLSearchParams();
+    for (const [g, sel] of selection) if (sel.length) p.set(g, sel.join(","));
+    if (q.value.trim()) p.set("q", q.value.trim());
+    if (sort.value !== "new") p.set("sort", sort.value);
+    if (view !== "photo") p.set("view", view);
+    const s = p.toString().replace(/%2C/g, ",");
+    history.replaceState(null, "", s ? `?${s}` : location.pathname);
+  }
+
+  function readUrl() {
+    const p = new URLSearchParams(location.search);
+    const want = new Set(p.getAll("tag").flatMap((t) => t.split(",")));
+    for (const g of groups) {
+      const sel = new Set([...(p.get(g.dataset.group!)?.split(",") ?? []), ...want]);
+      for (const i of g.querySelectorAll<HTMLInputElement>("input")) i.checked = sel.has(i.value);
+    }
+    q.value = p.get("q") ?? "";
+    sort.value = p.get("sort") ?? "new";
+    view = p.get("view") === "cp" ? "cp" : "photo";
+  }
+
+  readUrl();
+  applySort();
+  update(false);
+  if (matchMedia("(max-width: 800px)").matches) document.getElementById("filters")!.removeAttribute("open");
+
+  for (const g of groups) g.addEventListener("change", () => update());
+  q.addEventListener("input", () => update());
+  sort.addEventListener("change", () => (applySort(), update()));
+  viewButtons.forEach((b) => b.addEventListener("click", () => ((view = b.dataset.view!), update())));
+  document.getElementById("clear")!.addEventListener("click", () => {
+    groups.forEach((g) => g.querySelectorAll("input").forEach((i) => (i.checked = false)));
+    q.value = "";
+    update();
+  });
+</script>

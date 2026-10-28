@@ -1,0 +1,21 @@
+{
+  "name": "Bison",
+  "date": "2021-01-01",
+  "description": "This was a proof of concept about tilted grid and unaxial box pleating, as a \"translation\" of <a href=\"https://www.flickr.com/photos/origami-artist-galen/28456060595\">Shuki Kato's bison</a> from a tilted grid into a normal grid.",
+  "photos": [
+    "bison.jpg"
+  ],
+  "cps": [
+    "bison cp.png"
+  ],
+  "cpDescription": "",
+  "video": "https://youtu.be/rnsL1Vz7y20",
+  "diagrams": null,
+  "tags": [
+    "bp",
+    "nonuniaxial",
+    "animal",
+    "mammal"
+  ],
+  "related": []
+}

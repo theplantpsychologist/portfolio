@@ -1,0 +1,24 @@
+{
+  "name": "Round Bunny",
+  "date": "2023-01-01",
+  "description": "This was a solution for an animal structure that 1) looks good from both the side and front, 2) looks soft and round like a stuffed animal, and 3) can be easily adapted to make other animals.",
+  "photos": [
+    "bunnyhp front.jpg",
+    "bunnyhp side.jpg"
+  ],
+  "cps": [
+    "bunnyhp cp.jpg"
+  ],
+  "cpDescription": "The cp is a bit tricky and very 3d. The head and body are inside out relative to one another (which is the key to looking good from both the front and side as mentioned before), so having the mv reversed version of the cp on hand becomes helpful while folding. Also watch out that the head and body will be different colors on duo paper. Thick paper is recommended.",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "hp",
+    "animal",
+    "nonuniaxial",
+    "cute",
+    "mammal",
+    "3d"
+  ],
+  "related": []
+}

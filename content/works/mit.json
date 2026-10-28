@@ -1,0 +1,21 @@
+{
+  "name": "MIT logo",
+  "date": "2021-08-01",
+  "description": "The last thing I folded before leaving home for college.",
+  "photos": [
+    "mit logo.jpg"
+  ],
+  "cps": [
+    "mit cp.svg"
+  ],
+  "cpDescription": "Grid: 45x25",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "2d",
+    "color_change",
+    "bp",
+    "nonuniaxial"
+  ],
+  "related": []
+}

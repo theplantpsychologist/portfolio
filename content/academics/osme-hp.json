@@ -1,0 +1,27 @@
+{
+  "title": "New techniques in hex pleating for representational origami design",
+  "date": "2024-07-01",
+  "summary": "A summary of my findings with representational hex pleating. Submitted and presented at 8OSME",
+  "body": "A summary of my findings with representational hex pleating. Submitted and presented at 8OSME. Essentially, I show how uniaxial hex pleating can be used for greater flexibility, layer distribution, and embedded textures compared to uniaxial box pleating, and then introduce non-uniaxial hex pleating for creating 3d \"representational polyhedra\".",
+  "collaborators": [],
+  "images": [
+    "hp image.svg"
+  ],
+  "video": "https://youtu.be/an-mfNn9Idw",
+  "files": [
+    {
+      "label": "hp paper",
+      "file": "hp paper.pdf"
+    },
+    {
+      "label": "hp slides",
+      "file": "hp slides.pdf"
+    }
+  ],
+  "links": [],
+  "tags": [
+    "origami",
+    "theoretical",
+    "research"
+  ]
+}

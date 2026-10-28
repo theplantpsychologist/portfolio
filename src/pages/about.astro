@@ -1,0 +1,79 @@
+---
+import Base from "../layouts/Base.astro";
+import { email, socials } from "../lib/site";
+
+const services = [
+  { name: "Original design", price: "$100–300", note: "Creating a new design. Not included if you want one of my existing designs." },
+  { name: "Physical model", price: "$100–300", note: "Varies with shipping." },
+  { name: "Video tutorial", price: "$100–300", note: "A step-by-step folding video.", link: "https://youtu.be/rJEaC-PzEPo" },
+  { name: "Diagrams", price: "$400–600", note: "Step-by-step diagrams that make the model easy to recreate." },
+  { name: "Sponsored post", price: "$50–100", note: "Instagram reels, YouTube shorts, and TikTok; past videos regularly reach 100k+ views." },
+  { name: "Lessons", price: "$50–100 / hr", note: "Individuals or groups, from beginner workshops to advanced design techniques." },
+];
+---
+<Base title="About" description="About Brandon Wong, origami designer and engineer. Commissions, lessons, and contact information.">
+  <section class="bio">
+    <img src="/img/portrait.webp" alt="Brandon Wong" width="640" height="427" />
+    <div class="prose">
+      <h1>About</h1>
+      <p>
+        Brandon Wong is an origami designer and artist with over 100 original designs. His work features intricate, novel structural techniques
+        while balancing art and engineering. His online content as <a href="https://www.instagram.com/theplantpsychologist/">@ThePlantPsychologist</a>
+        has reached millions of viewers.
+      </p>
+      <p>
+        Originally from the San Francisco Bay Area, Brandon studied mechanical engineering at MIT. His research includes computational origami
+        under the mentorship of <a href="https://erikdemaine.org/">Prof. Erik Demaine</a>, as well as independent research in origami design, with two
+        first-authored publications in the field.
+      </p>
+      <p>
+        He served as president of MIT's <a href="http://origamit.mit.edu/">OrigaMIT</a> club from 2021, leading its conventions, and is involved with
+        Origami USA, teaching at in-person and online events.
+      </p>
+    </div>
+  </section>
+
+  <section id="commissions">
+    <h2>Commissions & services</h2>
+    <p class="muted">
+      Whether it's to promote your business or a gift for a friend, I can make something for you. Estimates below are for a model of
+      <a href="/gallery/cowboy-cat/">typical complexity</a>; prices vary with the project.
+    </p>
+    <ul class="services">
+      {services.map((s) => (
+        <li>
+          <div><strong>{s.name}</strong><span>{s.price}</span></div>
+          <p class="muted">{s.note} {s.link && <a href={s.link}>Example</a>}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="muted">For a quote, describe your request in as much detail as you can.</p>
+    <p><a class="btn" href={`mailto:${email}`}>{email}</a></p>
+    <ul class="chips socials">
+      {socials.filter((s) => s.label !== "Email").map((s) => <li><a class="chip" href={s.url} rel="me noopener">{s.label}</a></li>)}
+    </ul>
+  </section>
+</Base>
+
+<style>
+  section { margin-bottom: 48px; }
+  section > h2 { margin-bottom: 8px; }
+  .bio { display: grid; grid-template-columns: minmax(0, 360px) 1fr; gap: 36px; align-items: start; }
+  .bio img { width: 100%; height: auto; border-radius: var(--radius); }
+  .bio h1 { margin-bottom: 12px; }
+  .services { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-top: 18px; }
+  .services li { padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); display: grid; gap: 6px; }
+  .services div { display: flex; justify-content: space-between; gap: 12px; }
+  .services span { color: var(--accent); font-weight: 700; white-space: nowrap; }
+  .services p { font-size: 0.92rem; }
+  #contact p { margin-top: 8px; }
+  .socials { list-style: none; padding: 0; margin-top: 16px; }
+  a:not(.btn):not(.chip) { color: var(--accent); }
+  @media (max-width: 760px) {
+    .bio { grid-template-columns: 1fr; }
+  }
+</style>

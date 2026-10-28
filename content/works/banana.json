@@ -1,0 +1,22 @@
+{
+  "name": "Banana",
+  "date": "2024-06-01",
+  "description": "A peelable banana. Day 4 of the top comment series.",
+  "photos": [
+    "banana.JPG"
+  ],
+  "cps": [
+    "banana cp.png"
+  ],
+  "cpDescription": "",
+  "video": "https://youtube.com/shorts/I9QnXZAgiXw?si=eX75unJBvCEyA1G0",
+  "diagrams": null,
+  "tags": [
+    "action",
+    "food",
+    "color_change",
+    "15",
+    "top_comment"
+  ],
+  "related": []
+}

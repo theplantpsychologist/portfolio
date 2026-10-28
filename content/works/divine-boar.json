@@ -1,0 +1,22 @@
+{
+  "name": "Divine Boar",
+  "date": "2021-02-01",
+  "description": "Designed as part of an online competition. Inspired by <a href=\"https://www.folders.jp/g/1999/9914.html\">Satoshi Kamiya's divine boar</a>.",
+  "photos": [
+    "divine boar-2.jpg"
+  ],
+  "cps": [
+    "divine boar cp.png"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "animal",
+    "mythical",
+    "mammal",
+    "tilted_grid",
+    "nonuniaxial"
+  ],
+  "related": []
+}

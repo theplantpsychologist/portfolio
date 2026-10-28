@@ -1,0 +1,19 @@
+{
+  "name": "Cat",
+  "date": "2021-11-01",
+  "description": "",
+  "photos": [
+    "cat.jpg"
+  ],
+  "cps": [],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "22.5",
+    "animal",
+    "mammal",
+    "cute"
+  ],
+  "related": []
+}

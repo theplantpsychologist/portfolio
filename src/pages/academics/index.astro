@@ -1,0 +1,64 @@
+---
+import Base from "../../layouts/Base.astro";
+import Img from "../../components/Img.astro";
+import { getProjects } from "../../lib/content";
+import { picture } from "../../lib/media";
+
+const projects = await getProjects();
+const label = (t: string) => t.replace(/-/g, " ").replace(/^./, (c) => c.toUpperCase());
+const counts = new Map<string, number>();
+for (const p of projects) for (const t of p.data.tags) counts.set(t, (counts.get(t) ?? 0) + 1);
+const tags = [...counts].sort((a, b) => b[1] - a[1]).map(([t]) => t);
+---
+<Base title="Academics" description="Research, class projects, and engineering work by Brandon Wong: computational origami, metamaterials, robotics, and more.">
+  <h1>Academics</h1>
+  <p class="muted intro">Research papers, class projects, and engineering work beyond paper folding.</p>
+
+  <div class="chips filters" role="group" aria-label="Filter by topic">
+    <button type="button" class="chip" aria-pressed="true" data-tag="">All</button>
+    {tags.map((t) => <button type="button" class="chip" aria-pressed="false" data-tag={t}>{label(t)}</button>)}
+  </div>
+
+  <ul class="cards">
+    {projects.map((p) => (
+      <li data-tags={p.data.tags.join(" ")}>
+        <a href={`/academics/${p.id}/`}>
+          <Img pic={p.data.images[0] ? picture(`academics/${p.id}/${p.data.images[0]}`, 800) : null} alt="" sizes="(max-width: 640px) 100vw, 380px" />
+          <div>
+            <h2>{p.data.title}</h2>
+            <p class="muted">{p.data.date.getUTCFullYear()}</p>
+            <p>{p.data.summary}</p>
+          </div>
+        </a>
+      </li>
+    ))}
+  </ul>
+</Base>
+
+<style>
+  .intro { margin: 6px 0 20px; }
+  .filters { margin-bottom: 24px; }
+  .filters button { font: inherit; font-size: 0.85rem; cursor: pointer; }
+  .filters button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+  .cards { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+  .cards li[hidden] { display: none; }
+  .cards a { display: flex; flex-direction: column; height: 100%; text-decoration: none; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .cards a:hover { border-color: var(--accent); color: inherit; }
+  .cards :global(img), .cards :global(.missing) { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+  .cards div { padding: 14px 16px 18px; display: grid; gap: 4px; }
+  .cards h2 { font-size: 1.1rem; }
+  .cards p:last-child { font-size: 0.92rem; }
+</style>
+
+<script>
+  const buttons = [...document.querySelectorAll<HTMLButtonElement>(".filters button")];
+  const cards = [...document.querySelectorAll<HTMLLIElement>(".cards li")];
+  function select(tag: string) {
+    buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.tag === tag)));
+    cards.forEach((c) => (c.hidden = !!tag && !c.dataset.tags!.split(" ").includes(tag)));
+    history.replaceState(null, "", tag ? `?tag=${tag}` : location.pathname);
+  }
+  buttons.forEach((b) => b.addEventListener("click", () => select(b.dataset.tag!)));
+  const initial = new URLSearchParams(location.search).get("tag");
+  if (initial && buttons.some((b) => b.dataset.tag === initial)) select(initial);
+</script>

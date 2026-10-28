@@ -1,0 +1,19 @@
+{
+  "name": "Growing Sprout",
+  "date": "2020-06-01",
+  "description": "An action model that \"grows\" when you pull on it.",
+  "photos": [
+    "sprout.jpg"
+  ],
+  "cps": [],
+  "cpDescription": "",
+  "video": "https://youtu.be/sAlkHi7Tm2c",
+  "diagrams": null,
+  "tags": [
+    "plant",
+    "action",
+    "bp",
+    "color_change"
+  ],
+  "related": []
+}

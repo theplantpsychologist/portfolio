@@ -1,0 +1,21 @@
+{
+  "name": "Student",
+  "date": "2021-12-01",
+  "description": "Part of a series of designing ordinary 21st century people (in contrast to the many knights and wizards and fantasy characters common in origami). Not a self portrait.",
+  "photos": [
+    "student watermark.jpg",
+    "student watermark-2.jpg"
+  ],
+  "cps": [
+    "student cp.svg"
+  ],
+  "cpDescription": "This model is closed back instead of closed belly, which allows the unique backpack structure. This also means the model looks complete from all viewing angles.",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "human",
+    "bp",
+    "uniaxial"
+  ],
+  "related": []
+}

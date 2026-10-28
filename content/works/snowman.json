@@ -1,0 +1,19 @@
+{
+  "name": "Snowman",
+  "date": "2023-09-02",
+  "description": "A modification of <a href='penguin chick.html'>Penguin Chick</a> but with a graft for extra features.",
+  "photos": [
+    "snowman.JPG"
+  ],
+  "cps": [],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "color_change",
+    "bp",
+    "cute",
+    "object"
+  ],
+  "related": []
+}

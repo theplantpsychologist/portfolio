@@ -1,0 +1,21 @@
+{
+  "name": "Mushroom people",
+  "date": "2024-01-01",
+  "description": "Fictional mushroom people of the woods. Designed as a gift for a friend.",
+  "photos": [
+    "mushrooms.jpg"
+  ],
+  "cps": [
+    "mushrooms cp.png"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "fantasy",
+    "character",
+    "color_change",
+    "22.5"
+  ],
+  "related": []
+}

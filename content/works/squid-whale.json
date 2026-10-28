@@ -1,0 +1,25 @@
+{
+  "name": "Squid vs Whale",
+  "date": "2016-05-01",
+  "description": "One of my first major complex designs, inspired after doing a squid disection in 7th grade science class.",
+  "photos": [
+    "squid whale.JPG",
+    "squid whale original.png"
+  ],
+  "cps": [
+    "oripa squid whale.png"
+  ],
+  "cpDescription": "(Apologies for the low quality cp, it was drawn before I knew what I was doing, and haven't had a chance to fix it since)",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "color_change",
+    "bp",
+    "uniaxial",
+    "multi_subject",
+    "animal",
+    "sea_life",
+    "portfolio"
+  ],
+  "related": []
+}

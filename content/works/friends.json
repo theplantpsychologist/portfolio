@@ -1,0 +1,24 @@
+{
+  "name": "Friends",
+  "date": "2022-01-01",
+  "description": "One main challenge with human figure design is creating emotional expressions. Here, the main feature that makes the figures \"smile\" are the raised cheeks under their eyes.",
+  "photos": [
+    "friends.png",
+    "friends-4.png"
+  ],
+  "cps": [
+    "friends cp.svg"
+  ],
+  "cpDescription": "This multi-figure structure uses the same technique as used in <a href=\"./family.html\">Family</a>. Technically, this would be called multiaxial box pleating, with one axis for each figure. The friends are literally inseparable (joined from shoulder to heel), and that greatly improves the model's efficiency. <br><br>Grid: 40x40 ",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "human",
+    "multi_subject",
+    "multiaxial",
+    "uniaxial",
+    "nonuniaxial",
+    "bp"
+  ],
+  "related": []
+}

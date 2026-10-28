@@ -1,0 +1,70 @@
+{
+  "subject": {
+    "label": "Subject",
+    "tags": {
+      "animal": "Animal",
+      "mammal": "Mammal",
+      "bird": "Bird",
+      "sea_life": "Sea life",
+      "fish": "Fish",
+      "reptile": "Reptile",
+      "insect": "Insect",
+      "dinosaur": "Dinosaur",
+      "skeleton": "Skeleton",
+      "human": "Human",
+      "character": "Character",
+      "fantasy": "Fantasy",
+      "mythical": "Mythical",
+      "biblical": "Biblical",
+      "plant": "Plant",
+      "flower": "Flower",
+      "food": "Food",
+      "object": "Object"
+    }
+  },
+  "method": {
+    "label": "Design method",
+    "tags": {
+      "bp": "Box pleating",
+      "hp": "Hex pleating",
+      "22.5": "22.5°",
+      "15": "15°",
+      "tilted_grid": "Tilted grid",
+      "tessellation": "Tessellation"
+    }
+  },
+  "structure": {
+    "label": "Structure",
+    "tags": {
+      "uniaxial": "Uniaxial",
+      "nonuniaxial": "Non-uniaxial",
+      "multiaxial": "Multiaxial",
+      "2d": "2D",
+      "3d": "3D"
+    }
+  },
+  "features": {
+    "label": "Features",
+    "tags": {
+      "color_change": "Color change",
+      "scales": "Scales",
+      "metallic": "Metallic",
+      "x_ray": "X-ray",
+      "functional": "Functional",
+      "action": "Action",
+      "multi_subject": "Multiple subjects",
+      "cute": "Cute",
+      "simple": "Simple"
+    }
+  },
+  "collection": {
+    "label": "Collection",
+    "tags": {
+      "portfolio": "Portfolio highlights",
+      "commission": "Commission",
+      "collaboration": "Collaboration",
+      "inktober": "Inktober",
+      "top_comment": "Top comment"
+    }
+  }
+}

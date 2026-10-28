@@ -1,0 +1,23 @@
+{
+  "name": "Stanford Bunny",
+  "date": "2023-11-01",
+  "description": "The \"Stanford bunny\" is a 3d shape often used as a test object for rendering softwares or other things that are supposed to be able to operate on arbitrarily complex 3d geometries. I wanted to demonstrate hex pleating's capabilities for 3d objects by creating a model of the Stanford bunny.",
+  "photos": [
+    "stanford bunny.jpg"
+  ],
+  "cps": [
+    "stanford bunny hp cp.svg"
+  ],
+  "cpDescription": "",
+  "video": "https://youtube.com/shorts/N3G89dVCFuw",
+  "diagrams": null,
+  "tags": [
+    "hp",
+    "3d",
+    "nonuniaxial",
+    "animal",
+    "cute",
+    "mammal"
+  ],
+  "related": []
+}

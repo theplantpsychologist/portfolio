@@ -1,0 +1,21 @@
+{
+  "name": "Bird",
+  "date": "2020-06-01",
+  "description": "This model, my first 22.5 design, was designed for a Bob Ross parody video.",
+  "photos": [
+    "bird.png"
+  ],
+  "cps": [
+    "bird cp.png"
+  ],
+  "cpDescription": "The crease pattern is a bird base with a smaller bird base grafted in the corner.",
+  "video": "https://youtu.be/NWlvNuXQufo",
+  "diagrams": null,
+  "tags": [
+    "22.5",
+    "bird",
+    "animal",
+    "simple"
+  ],
+  "related": []
+}

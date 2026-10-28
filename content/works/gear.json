@@ -1,0 +1,20 @@
+{
+  "name": "Gear",
+  "date": "2020-12-01",
+  "description": "An asymmetrical crease pattern for a symmetrical object.",
+  "photos": [
+    "gear.jpg"
+  ],
+  "cps": [
+    "gear cp.png"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "object",
+    "bp",
+    "uniaxial"
+  ],
+  "related": []
+}

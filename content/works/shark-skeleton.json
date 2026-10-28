@@ -1,0 +1,23 @@
+{
+  "name": "Shark skeleton",
+  "date": "2020-11-01",
+  "description": "My first design using pythagorean stretches.",
+  "photos": [
+    "shark skele-6.jpg"
+  ],
+  "cps": [
+    "shark skeleton cp.png"
+  ],
+  "cpDescription": "The top half is the packing, the bottom half is the crease pattern.",
+  "video": "https://youtu.be/BDiDOsAM44c",
+  "diagrams": null,
+  "tags": [
+    "animal",
+    "sea_life",
+    "skeleton",
+    "bp",
+    "uniaxial",
+    "portfolio"
+  ],
+  "related": []
+}

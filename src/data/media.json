@@ -1,0 +1,4603 @@
+{
+  "academics/1-583/1.583 fig.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "256779748ed3d5a0",
+    "width": 950,
+    "height": 848,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      950
+    ]
+  },
+  "academics/1-583/1.583 poster.pdf": {
+    "kind": "file",
+    "v": 2,
+    "hash": "5d8589e97a28cc80",
+    "src": "5d8589e97a28cc80/1.583 poster.pdf",
+    "bytes": 1441228
+  },
+  "academics/1-583/1.583 video.MOV": {
+    "kind": "video",
+    "v": 2,
+    "hash": "45e17a2b0ac3a5d0",
+    "src": "45e17a2b0ac3a5d0.mp4",
+    "width": 1080,
+    "height": 1920,
+    "color": "#c88848",
+    "poster": {
+      "kind": "image",
+      "v": 2,
+      "hash": "45e17a2b0ac3a5d0-poster",
+      "width": 1080,
+      "height": 1920,
+      "color": "#c88848",
+      "widths": [
+        400,
+        800,
+        1080
+      ]
+    }
+  },
+  "academics/2-007/2.007 1.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "f6f893e2490ad21a",
+    "width": 1067,
+    "height": 1422,
+    "color": "#c8c8b8",
+    "widths": [
+      400,
+      800,
+      1067
+    ]
+  },
+  "academics/2-007/2.007 2.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "8309ca4867cd8f3c",
+    "width": 1067,
+    "height": 1422,
+    "color": "#b8a888",
+    "widths": [
+      400,
+      800,
+      1067
+    ]
+  },
+  "academics/2-007/2.007 3.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "03da0ccfc96eebdd",
+    "width": 1067,
+    "height": 1422,
+    "color": "#c8a878",
+    "widths": [
+      400,
+      800,
+      1067
+    ]
+  },
+  "academics/2-007/2.007 4.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9fd1db49f365e993",
+    "width": 1067,
+    "height": 1422,
+    "color": "#d8d8c8",
+    "widths": [
+      400,
+      800,
+      1067
+    ]
+  },
+  "academics/2-007/2.007 video.MOV": {
+    "kind": "video",
+    "v": 2,
+    "hash": "69f67068aff9f582",
+    "src": "69f67068aff9f582.mp4",
+    "width": 1080,
+    "height": 1920,
+    "color": "#c8c8a8",
+    "poster": {
+      "kind": "image",
+      "v": 2,
+      "hash": "69f67068aff9f582-poster",
+      "width": 1080,
+      "height": 1920,
+      "color": "#c8c8a8",
+      "widths": [
+        400,
+        800,
+        1080
+      ]
+    }
+  },
+  "academics/2-008/2.008 1.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "10f756b664e4fb5c",
+    "width": 1896,
+    "height": 1422,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/2-008/2.008 2.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "97b42bd6cfdd07be",
+    "width": 1749,
+    "height": 1422,
+    "color": "#e8e8e8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/2-008/2.008 3.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0c1246fe19c64adc",
+    "width": 2134,
+    "height": 1422,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/2-008/2.008 poster.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "2fe3c1a82014ab58",
+    "width": 2500,
+    "height": 1687,
+    "color": "#c8d8e8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/2-009/2.009 1.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "e1e3e70fe93982a7",
+    "width": 4141,
+    "height": 2761,
+    "color": "#e8e8e8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/2-009/2.009 2.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "e9755d5ca45fd294",
+    "width": 4142,
+    "height": 2761,
+    "color": "#d8d8d8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/2-009/2.009 3.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "3725779dd7c8a94b",
+    "width": 4899,
+    "height": 3266,
+    "color": "#d8d8d8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/2-009/2.009 4.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "09fa6760172940d6",
+    "width": 4898,
+    "height": 3266,
+    "color": "#d8d8d8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/2-009/2.009 animation.gif": {
+    "kind": "video",
+    "v": 2,
+    "hash": "8b1c1958c237aa12",
+    "src": "8b1c1958c237aa12.mp4",
+    "width": 1280,
+    "height": 720,
+    "color": "#f8f8f8",
+    "poster": {
+      "kind": "image",
+      "v": 2,
+      "hash": "8b1c1958c237aa12-poster",
+      "width": 1280,
+      "height": 720,
+      "color": "#f8f8f8",
+      "widths": [
+        400,
+        800,
+        1280
+      ]
+    }
+  },
+  "academics/2-009/2.009 product sheet.pdf": {
+    "kind": "file",
+    "v": 2,
+    "hash": "2fa223530e3dd29c",
+    "src": "2fa223530e3dd29c/2.009 product sheet.pdf",
+    "bytes": 271329
+  },
+  "academics/2-671/2.671 final paper.pdf": {
+    "kind": "file",
+    "v": 2,
+    "hash": "5ed63cae036d938c",
+    "src": "5ed63cae036d938c/2.671 final paper.pdf",
+    "bytes": 2432448
+  },
+  "academics/2-671/2.671 photo.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "4e71406624f24af6",
+    "width": 1896,
+    "height": 1422,
+    "color": "#887858",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/2-671/2.671 poster.pdf": {
+    "kind": "file",
+    "v": 2,
+    "hash": "e6e94709e0a3dfbf",
+    "src": "e6e94709e0a3dfbf/2.671 poster.pdf",
+    "bytes": 799151
+  },
+  "academics/2-74/2.74 CAD.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "232d2d1d08ba6891",
+    "width": 1334,
+    "height": 850,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1334
+    ]
+  },
+  "academics/2-74/2.74 photo.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "a574e98739617337",
+    "width": 1896,
+    "height": 1422,
+    "color": "#88a8d8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/2-74/2.74 poster.pdf": {
+    "kind": "file",
+    "v": 2,
+    "hash": "b1ff4a380acb9fe3",
+    "src": "b1ff4a380acb9fe3/2.74 poster.pdf",
+    "bytes": 3305682
+  },
+  "academics/2-74/2.74 video.MOV": {
+    "kind": "video",
+    "v": 2,
+    "hash": "46ebf1c028c70b92",
+    "src": "46ebf1c028c70b92.mp4",
+    "width": 1280,
+    "height": 720,
+    "color": "#c8b8a8",
+    "poster": {
+      "kind": "image",
+      "v": 2,
+      "hash": "46ebf1c028c70b92-poster",
+      "width": 1280,
+      "height": 720,
+      "color": "#c8b8a8",
+      "widths": [
+        400,
+        800,
+        1280
+      ]
+    }
+  },
+  "academics/circle-jig/circle jig.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0f389f0f23e783a6",
+    "width": 1000,
+    "height": 1000,
+    "color": "#78d8e8",
+    "widths": [
+      400,
+      800,
+      1000
+    ]
+  },
+  "academics/circuit/circuit details.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "bc23d11fae06aa9d",
+    "width": 1067,
+    "height": 1422,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1067
+    ]
+  },
+  "academics/circuit/circuit photo.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "75c3bece0a88c89e",
+    "width": 1589,
+    "height": 1422,
+    "color": "#d8d8d8",
+    "widths": [
+      400,
+      800,
+      1589
+    ]
+  },
+  "academics/desk-pet/desk pet bowing.MOV": {
+    "kind": "video",
+    "v": 2,
+    "hash": "c8f14f335320e1d0",
+    "src": "c8f14f335320e1d0.mp4",
+    "width": 1280,
+    "height": 720,
+    "color": "#c8c8c8",
+    "poster": {
+      "kind": "image",
+      "v": 2,
+      "hash": "c8f14f335320e1d0-poster",
+      "width": 1280,
+      "height": 720,
+      "color": "#c8c8c8",
+      "widths": [
+        400,
+        800,
+        1280
+      ]
+    }
+  },
+  "academics/desk-pet/desk pet cad.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "192df265e0e3488b",
+    "width": 1024,
+    "height": 1020,
+    "color": "#485868",
+    "widths": [
+      400,
+      800,
+      1024
+    ]
+  },
+  "academics/desk-pet/desk pet face.gif": {
+    "kind": "video",
+    "v": 2,
+    "hash": "647d04dce857d2e2",
+    "src": "647d04dce857d2e2.mp4",
+    "width": 800,
+    "height": 450,
+    "color": "#282828",
+    "poster": {
+      "kind": "image",
+      "v": 2,
+      "hash": "647d04dce857d2e2-poster",
+      "width": 800,
+      "height": 450,
+      "color": "#282828",
+      "widths": [
+        400,
+        800
+      ]
+    }
+  },
+  "academics/desk-pet/desk pet photo.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "95a17da5a639ee93",
+    "width": 2886,
+    "height": 2888,
+    "color": "#383838",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/desk-pet/desk pet slides.pdf": {
+    "kind": "file",
+    "v": 2,
+    "hash": "bc1f89ba45db05b9",
+    "src": "bc1f89ba45db05b9/desk pet slides.pdf",
+    "bytes": 1183586
+  },
+  "academics/egg-gripper/egg gripper photo.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "45ff4d725a2fe374",
+    "width": 3024,
+    "height": 2269,
+    "color": "#988878",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/egg-gripper/egg gripper video.MOV": {
+    "kind": "video",
+    "v": 2,
+    "hash": "bfe4e22df21b52e9",
+    "src": "bfe4e22df21b52e9.mp4",
+    "width": 1080,
+    "height": 1920,
+    "color": "#180808",
+    "poster": {
+      "kind": "image",
+      "v": 2,
+      "hash": "bfe4e22df21b52e9-poster",
+      "width": 1080,
+      "height": 1920,
+      "color": "#180808",
+      "widths": [
+        400,
+        800,
+        1080
+      ]
+    }
+  },
+  "academics/foldable-3d-prints/foldable 3d print video.mp4": {
+    "kind": "video",
+    "v": 2,
+    "hash": "73d32e48c5ea9982",
+    "src": "73d32e48c5ea9982.mp4",
+    "width": 1280,
+    "height": 720,
+    "color": "#080808",
+    "poster": {
+      "kind": "image",
+      "v": 2,
+      "hash": "73d32e48c5ea9982-poster",
+      "width": 1280,
+      "height": 720,
+      "color": "#080808",
+      "widths": [
+        400,
+        800,
+        1280
+      ]
+    }
+  },
+  "academics/foldable-3d-prints/foldable print 1.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "7b0f099819f45895",
+    "width": 4032,
+    "height": 3024,
+    "color": "#c8c8c8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/foldable-3d-prints/foldable print 2.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "66fe682ccabdb692",
+    "width": 4032,
+    "height": 3024,
+    "color": "#988878",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/foldable-3d-prints/foldable print 3.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "14e62010a591b21f",
+    "width": 3024,
+    "height": 4032,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/foldable-3d-prints/foldable print 4.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "7846d71762956d18",
+    "width": 4032,
+    "height": 3024,
+    "color": "#181818",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/foldable-3d-prints/foldable print.gif": {
+    "kind": "video",
+    "v": 2,
+    "hash": "8366bef385fe3ece",
+    "src": "8366bef385fe3ece.mp4",
+    "width": 1280,
+    "height": 720,
+    "color": "#080808",
+    "poster": {
+      "kind": "image",
+      "v": 2,
+      "hash": "8366bef385fe3ece-poster",
+      "width": 1280,
+      "height": 720,
+      "color": "#080808",
+      "widths": [
+        400,
+        800,
+        1280
+      ]
+    }
+  },
+  "academics/levicircuits/levicircuits.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "6d3eb892b51d0274",
+    "width": 1896,
+    "height": 1422,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/orikanji/orikanji instructions.pdf": {
+    "kind": "file",
+    "v": 2,
+    "hash": "f4a2ce2fe3ce6bb9",
+    "src": "f4a2ce2fe3ce6bb9/orikanji instructions.pdf",
+    "bytes": 5562353
+  },
+  "academics/orikanji/orikanji photo.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "577626b0bb4a1af2",
+    "width": 1114,
+    "height": 586,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1114
+    ]
+  },
+  "academics/orikanji/orikanji slides.pdf": {
+    "kind": "file",
+    "v": 2,
+    "hash": "b1e9a0a1d56beac7",
+    "src": "b1e9a0a1d56beac7/orikanji slides.pdf",
+    "bytes": 10082451
+  },
+  "academics/orikanji/orikanji stroke order.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "fd4169e80491138a",
+    "width": 1030,
+    "height": 548,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1030
+    ]
+  },
+  "academics/osme-hp/hp image.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "ad229062975c60ed",
+    "width": 2004,
+    "height": 2004,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "ad229062975c60ed/hp image.svg"
+  },
+  "academics/osme-hp/hp paper.pdf": {
+    "kind": "file",
+    "v": 2,
+    "hash": "d7f8f4cbaa22e59e",
+    "src": "d7f8f4cbaa22e59e/hp paper.pdf",
+    "bytes": 1383190
+  },
+  "academics/osme-hp/hp slides.pdf": {
+    "kind": "file",
+    "v": 2,
+    "hash": "5d99b5ae026a6af3",
+    "src": "5d99b5ae026a6af3/hp slides.pdf",
+    "bytes": 4786422
+  },
+  "academics/osme-transitions/transitions image.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "ce9f79d6b826a33c",
+    "width": 12641,
+    "height": 7093,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "ce9f79d6b826a33c/transitions image.svg"
+  },
+  "academics/osme-transitions/transitions paper.pdf": {
+    "kind": "file",
+    "v": 2,
+    "hash": "2601fbb44012d175",
+    "src": "2601fbb44012d175/transitions paper.pdf",
+    "bytes": 525809
+  },
+  "academics/osme-transitions/transitions slides.pdf": {
+    "kind": "file",
+    "v": 2,
+    "hash": "dafcb3c5f6c72df1",
+    "src": "dafcb3c5f6c72df1/transitions slides.pdf",
+    "bytes": 2231252
+  },
+  "academics/piano/piano internals.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "8248e9c5be80f34f",
+    "width": 1896,
+    "height": 1422,
+    "color": "#482818",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/piano/piano photo.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "01b9efab045cef7d",
+    "width": 4032,
+    "height": 2267,
+    "color": "#e8e8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/precreasing-device/precreasing device.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "c4e4f8c9097c0faa",
+    "width": 4032,
+    "height": 3024,
+    "color": "#f87888",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/10-grid-lady/10 grid lady cp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "3cb83bff8678a3fa",
+    "width": 1319,
+    "height": 785,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1319
+    ]
+  },
+  "works/10-grid-lady/10 grid lady.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "aeb4363c4c409014",
+    "width": 3024,
+    "height": 4032,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/agony-in-the-garden/agony in the garden cp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "b525f8ed67934506",
+    "width": 2524,
+    "height": 1390,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/agony-in-the-garden/agony in the garden-6.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "87cfa9feb1ecbfc7",
+    "width": 4898,
+    "height": 3266,
+    "color": "#181818",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/agony-in-the-garden/agony in the garden-9.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "2df7c650863e9249",
+    "width": 4899,
+    "height": 3266,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/agony-in-the-garden/agony in the garden-side by side (1).jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "60852e7f578c26f4",
+    "width": 5332,
+    "height": 3000,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/anatomical-heart/anatomical heart cp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "eab5a5c9327532ed",
+    "width": 1300,
+    "height": 1296,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1300
+    ]
+  },
+  "works/anatomical-heart/anatomical heart.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "bb1ecf2eb419e6f7",
+    "width": 2551,
+    "height": 2470,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/baby-groot/baby_groot .JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "12f002b474771320",
+    "width": 3072,
+    "height": 2304,
+    "color": "#d8d8d8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/banana/banana cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "aaddaa261c15cc4e",
+    "width": 1158,
+    "height": 1154,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1158
+    ]
+  },
+  "works/banana/banana.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "ee931566db985752",
+    "width": 3024,
+    "height": 4032,
+    "color": "#083838",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/bat/bat.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "19892121785dd8bd",
+    "width": 4032,
+    "height": 3024,
+    "color": "#280808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/bear-cub/bear cub back.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "1d46ae9ea26a881b",
+    "width": 3024,
+    "height": 4032,
+    "color": "#885848",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/bear-cub/bear cub cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "1e6b99e08ede2164",
+    "width": 1332,
+    "height": 1334,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1332
+    ]
+  },
+  "works/bear-cub/bear cub front.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "03da0b71148217f9",
+    "width": 1987,
+    "height": 2649,
+    "color": "#584848",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/bear-cub/bear cub side.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "c7804e2af2ff140d",
+    "width": 3024,
+    "height": 4032,
+    "color": "#685848",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/bison/bison cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0f98e9413b3f2d90",
+    "width": 2290,
+    "height": 1394,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/bison/bison.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "5adc50ab65b41d73",
+    "width": 3648,
+    "height": 2736,
+    "color": "#c8c8d8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/blue-devil/blue devil-2.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "907094efb51a1325",
+    "width": 3518,
+    "height": 2639,
+    "color": "#482828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/bob-ross-bird/bird cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "70d36e934ad84aed",
+    "width": 1674,
+    "height": 1320,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/bob-ross-bird/bird.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "ba2360ed285d18be",
+    "width": 2000,
+    "height": 1102,
+    "color": "#383828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/boba/boba cp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "3374746e56490d73",
+    "width": 1208,
+    "height": 840,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1208
+    ]
+  },
+  "works/boba/boba.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "dde7cf6b1e75f49a",
+    "width": 3024,
+    "height": 3024,
+    "color": "#887858",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/body-builder/body builder.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "f5fdfaf561bcecc5",
+    "width": 2862,
+    "height": 2862,
+    "color": "#786858",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/body-builder/bodybuilder cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "a107c9ce19807b42",
+    "width": 2390,
+    "height": 1278,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/bonsai-tree/bonsai cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "8c759aa86f8d755e",
+    "width": 1564,
+    "height": 1238,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1564
+    ]
+  },
+  "works/bonsai-tree/bonsai tree.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "fcf4ac8260e64706",
+    "width": 3648,
+    "height": 2736,
+    "color": "#786828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/brachiosaurus/brachiosaurus cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "77c1246b6e55d5c3",
+    "width": 2368,
+    "height": 1414,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/brachiosaurus/dinos.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0e8c29afb9167903",
+    "width": 3284,
+    "height": 2463,
+    "color": "#c8c8c8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/bruh/bruh cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "ecb14f58c3d003b2",
+    "width": 1226,
+    "height": 1406,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1226
+    ]
+  },
+  "works/bruh/bruh.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "69613cf3832982a7",
+    "width": 2564,
+    "height": 1442,
+    "color": "#d8e8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/bunny-round/bunnyhp cp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "24e0a50d74039d7b",
+    "width": 2802,
+    "height": 1312,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/bunny-round/bunnyhp front.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "f759cfd6b9ef9efa",
+    "width": 4616,
+    "height": 3465,
+    "color": "#585858",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/bunny-round/bunnyhp side.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "26a35a59f044fa99",
+    "width": 4616,
+    "height": 3465,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/bunny-stanford/stanford bunny hp cp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "ad229062975c60ed",
+    "width": 2004,
+    "height": 2004,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "ad229062975c60ed/stanford bunny hp cp.svg"
+  },
+  "works/bunny-stanford/stanford bunny.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "56e7e4af338485c7",
+    "width": 4619,
+    "height": 3464,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/camel/camel cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "7c9aece9452208cf",
+    "width": 2376,
+    "height": 1410,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/camel/camel.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "1a3d50726431d7ad",
+    "width": 1406,
+    "height": 1055,
+    "color": "#e8c8a8",
+    "widths": [
+      400,
+      800,
+      1406
+    ]
+  },
+  "works/camel/camels.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "5dd7fb5bd6022702",
+    "width": 1867,
+    "height": 1400,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/capybara/capybara cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9b5d67823958ea73",
+    "width": 1170,
+    "height": 1170,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1170
+    ]
+  },
+  "works/capybara/capybara.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "8ffc65d9f30e7c16",
+    "width": 4032,
+    "height": 3024,
+    "color": "#c8c8c8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/cardinal/cardinal hp cp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "bf8de19cd8ab3327",
+    "width": 2000,
+    "height": 935,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "bf8de19cd8ab3327/cardinal hp cp.svg"
+  },
+  "works/cardinal/cardinal other.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "fe2e967e4d7b1772",
+    "width": 1894,
+    "height": 1421,
+    "color": "#383828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/cardinal/cardinal.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "5eafb3ccc88d4355",
+    "width": 4619,
+    "height": 3464,
+    "color": "#384808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/cat-with-fish/cat with fish cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "bca51bbc77cb35ac",
+    "width": 1374,
+    "height": 1372,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1374
+    ]
+  },
+  "works/cat-with-fish/cat with fish.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "d01800e59e6d13df",
+    "width": 1067,
+    "height": 1422,
+    "color": "#888878",
+    "widths": [
+      400,
+      800,
+      1067
+    ]
+  },
+  "works/cat/cat.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "7d6bfbd47edd7b99",
+    "width": 3462,
+    "height": 2597,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/chair/chair cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "4ba78063a483654a",
+    "width": 1106,
+    "height": 1086,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1106
+    ]
+  },
+  "works/chair/chair template.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "7d96929cf6fcfab2",
+    "width": 966,
+    "height": 998,
+    "color": "#f8e8d8",
+    "widths": [
+      400,
+      800,
+      966
+    ]
+  },
+  "works/chair/chair thinker.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "4cf2b06f1a92af28",
+    "width": 2929,
+    "height": 2204,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/chair/chair.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "8ee0073a0169be21",
+    "width": 4032,
+    "height": 3024,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/cheese/cheese cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "fd828b7c4f45f6af",
+    "width": 1268,
+    "height": 1270,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1268
+    ]
+  },
+  "works/cheese/cheese.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "df79e9e79babd1b4",
+    "width": 3024,
+    "height": 2268,
+    "color": "#381808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/cherubim/angel and ezekiel-3.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "698cbec6e8cb9708",
+    "width": 5071,
+    "height": 3803,
+    "color": "#182828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/cherubim/angel-4.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "f4b329394564ee28",
+    "width": 5286,
+    "height": 3524,
+    "color": "#182828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/cherubim/angel-7.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "d7457a7b19b4b61b",
+    "width": 6000,
+    "height": 4000,
+    "color": "#181818",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/cherubim/cherubim.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "a4825484cd6fc426",
+    "width": 1997,
+    "height": 1997,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "a4825484cd6fc426/cherubim.svg"
+  },
+  "works/cockatiel/cockatiel cp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "c821b759f44f51c2",
+    "width": 1999,
+    "height": 928,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "c821b759f44f51c2/cockatiel cp.svg"
+  },
+  "works/cockatiel/cockatiel.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "816ed25121d5f399",
+    "width": 1754,
+    "height": 1002,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/cowboy-cat/cowboy cat 2.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "bce881d58b970af2",
+    "width": 3024,
+    "height": 4032,
+    "color": "#382808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/cowboy-cat/cowboy cat cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "dffc8f4fd8c04266",
+    "width": 1504,
+    "height": 1244,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1504
+    ]
+  },
+  "works/cowboy-cat/cowboy cat.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "d05fbe3bedb73988",
+    "width": 3024,
+    "height": 4032,
+    "color": "#b8b8b8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/cowboy/cowboy cp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "197b8593b76bdf5d",
+    "width": 2000,
+    "height": 2000,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "197b8593b76bdf5d/cowboy cp.svg"
+  },
+  "works/cowboy/cowboy-9781.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9f6ca18dc9ecc641",
+    "width": 4142,
+    "height": 3106,
+    "color": "#483838",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/crab/crab.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "820ca5ae7157efb7",
+    "width": 2899,
+    "height": 2174,
+    "color": "#d8b8b8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/crab15/crab 15 cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "e6ebd3773b4f98de",
+    "width": 2304,
+    "height": 1363,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/crab15/crab15.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "f52919d319b7e39c",
+    "width": 2645,
+    "height": 1984,
+    "color": "#988858",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/cricket/cricket cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "ecb94413f25f32a3",
+    "width": 2388,
+    "height": 1414,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/cricket/cricket green-4.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "f4bfe201cf95b882",
+    "width": 3009,
+    "height": 2257,
+    "color": "#484828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/cricket/cricket white-2.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "50f94b61dbb53955",
+    "width": 1896,
+    "height": 1422,
+    "color": "#c8a8a8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/david/david close up.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "70dec82c360fb482",
+    "width": 4654,
+    "height": 3490,
+    "color": "#383838",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/david/david closeup2.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9966da6afe116305",
+    "width": 1894,
+    "height": 1421,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/david/david.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "5779751c13acc750",
+    "width": 2755,
+    "height": 3674,
+    "color": "#585858",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/deer/deer cp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0785a11750295325",
+    "width": 2001,
+    "height": 1032,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "0785a11750295325/deer cp.svg"
+  },
+  "works/deer/deer-2.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "089eb4ce50f3aee6",
+    "width": 4432,
+    "height": 3324,
+    "color": "#384818",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/deer/deer-6.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "137f3328fc81e514",
+    "width": 4875,
+    "height": 3656,
+    "color": "#384818",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/deer/deer.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0b3ee563d105d07c",
+    "width": 4488,
+    "height": 3366,
+    "color": "#384818",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/dinosaur/dinosaur.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "165649467e806cd1",
+    "width": 3264,
+    "height": 2448,
+    "color": "#482828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/divine-boar/divine boar cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "2a920b03c4c80104",
+    "width": 2098,
+    "height": 1416,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/divine-boar/divine boar-2.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "8a875e7b661cc01f",
+    "width": 2795,
+    "height": 2096,
+    "color": "#081818",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/dodo-skeleton/dodo skeleton.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "ba166a3e20d83c55",
+    "width": 2981,
+    "height": 2236,
+    "color": "#f8f8e8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/dodo-skeleton/dodoskeletoncp.PNG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "23ae700203d55dd7",
+    "width": 1537,
+    "height": 862,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1537
+    ]
+  },
+  "works/dodo/dodo cp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "dab7da6305a8310d",
+    "width": 2000,
+    "height": 2000,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "dab7da6305a8310d/dodo cp.svg"
+  },
+  "works/dodo/dodo other.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "759dae4b40766a9d",
+    "width": 1894,
+    "height": 1421,
+    "color": "#686868",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/dodo/dodo-3.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "be80e3e948c7d7dc",
+    "width": 4223,
+    "height": 3167,
+    "color": "#483838",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/dove/dove-2.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "c3eeac26d7b89e62",
+    "width": 3026,
+    "height": 2270,
+    "color": "#484828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/dragon-keeper/adventurer dragon.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0594a2208f91edfd",
+    "width": 1635,
+    "height": 1226,
+    "color": "#181818",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/dragon-keeper/adventurer knife.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "471460b669915577",
+    "width": 1684,
+    "height": 1263,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/dragon-keeper/adventurer-10.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "c9d92b29252435aa",
+    "width": 3240,
+    "height": 2430,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/dragon-keeper/adventurer-7.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "dbfa542410dba182",
+    "width": 2930,
+    "height": 2198,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/dragon-keeper/dragon keeper cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "3daf2ac5c3fa591a",
+    "width": 2030,
+    "height": 1344,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/dragon/dragon cp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "b9e00b5e8132b4d8",
+    "width": 2000,
+    "height": 2000,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "b9e00b5e8132b4d8/dragon cp.svg"
+  },
+  "works/dragon/dragon glowing.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "6056b6f3f5ab3fed",
+    "width": 1894,
+    "height": 1421,
+    "color": "#685858",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/dragon/dragon-9838.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "b1b0c9d02769aa67",
+    "width": 4418,
+    "height": 3313,
+    "color": "#d8d8d8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/edamame/edamame comparison.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "a822dc16db1da18e",
+    "width": 2000,
+    "height": 1125,
+    "color": "#381808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/edamame/edamame.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "8c71023874f8424c",
+    "width": 3300,
+    "height": 2475,
+    "color": "#d8d8c8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/elephant-baby/elephant cp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "342afbea7d821e8c",
+    "width": 2002,
+    "height": 1981,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "342afbea7d821e8c/elephant cp.svg"
+  },
+  "works/elephant-baby/elephant-3.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "00bc96bfb2df392a",
+    "width": 2569,
+    "height": 1927,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/evolution/evolution cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "5a62c1602f7c2020",
+    "width": 1674,
+    "height": 1250,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/evolution/evolution short.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "84bf1d317f5f74df",
+    "width": 1894,
+    "height": 1421,
+    "color": "#383838",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/evolution/evolution tall.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "7a3045c260189bf7",
+    "width": 1894,
+    "height": 1421,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/ezekiel/ezekiel-4.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "f974b0df0f1ad592",
+    "width": 3640,
+    "height": 4854,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/ezekiel/ezekiel-5.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "8e6decd692e41720",
+    "width": 949,
+    "height": 1422,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      949
+    ]
+  },
+  "works/ezekiel/windy.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "3152bb20f8db3b15",
+    "width": 2001,
+    "height": 2001,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "3152bb20f8db3b15/windy.svg"
+  },
+  "works/faces/faces.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "057d5cd47fd4eaa0",
+    "width": 3661,
+    "height": 2756,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/faces/karen cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "a50b8329ee25d3b2",
+    "width": 1356,
+    "height": 1322,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1356
+    ]
+  },
+  "works/faces/karen.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "4bfec12314c65646",
+    "width": 3024,
+    "height": 3024,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/fallen-angel/fallen angel comparison.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9aae00cdfc7c2585",
+    "width": 1837,
+    "height": 1377,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/fallen-angel/fallen angel skull.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "dff114890b3da46f",
+    "width": 4618,
+    "height": 3464,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/fallen-angel/fallen angel.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "c0e9d8922a0ceb87",
+    "width": 4616,
+    "height": 3466,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/family/family-5.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "fa909d5f7a74bb31",
+    "width": 2301,
+    "height": 2301,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/family/family-6.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "66ee5bc7dd126130",
+    "width": 2736,
+    "height": 2736,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/fight-or-flight/fight or flight.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "6c1d55902cbf396e",
+    "width": 1900,
+    "height": 3017,
+    "color": "#181818",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/fish-with-leg/fish with legs cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "930025c99582b980",
+    "width": 1148,
+    "height": 1144,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1148
+    ]
+  },
+  "works/fish-with-leg/fish with legs.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9e4a1efda96335b5",
+    "width": 3024,
+    "height": 2269,
+    "color": "#888878",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/fish/fish cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "f42e21415c61add7",
+    "width": 2330,
+    "height": 1416,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/fish/fish tg.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "68c746b7232eed6e",
+    "width": 2926,
+    "height": 2195,
+    "color": "#084868",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/flutist/flutist cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0e0ca69f867d0382",
+    "width": 2234,
+    "height": 1402,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/flutist/flutist-8.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "388f977d8857ec63",
+    "width": 2704,
+    "height": 2028,
+    "color": "#583838",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/flutist/flutist-9.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "cabd7bd37f700d1e",
+    "width": 1894,
+    "height": 1421,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/forest/forest above.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "83e203b0dd6a7bb0",
+    "width": 1894,
+    "height": 1421,
+    "color": "#f8e8d8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/forest/forest closeup.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "faab5c946b92d216",
+    "width": 1894,
+    "height": 1421,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/forest/forest cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "f8dc84b682315259",
+    "width": 1654,
+    "height": 1410,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/forest/forest path-4.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "39bf3868bc1e9fcb",
+    "width": 3496,
+    "height": 2622,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/friends/friends cp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "7d0b1c64c6942801",
+    "width": 2002,
+    "height": 2002,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "7d0b1c64c6942801/friends cp.svg"
+  },
+  "works/friends/friends-4.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "273c35342d64ec02",
+    "width": 3967,
+    "height": 2975,
+    "color": "#484808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/friends/friends.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "840d98b5c8c52dec",
+    "width": 3828,
+    "height": 2871,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/frog-hat/frog with hat cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "1ca8c5c5fffa82b8",
+    "width": 1166,
+    "height": 1158,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1166
+    ]
+  },
+  "works/frog-hat/frog with hat.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0b665779ed487070",
+    "width": 3024,
+    "height": 4032,
+    "color": "#e8c8d8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/gear/gear cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "dc25dccd132a0cb1",
+    "width": 2300,
+    "height": 1410,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/gear/gear.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "98df4e3bf20d7d68",
+    "width": 3024,
+    "height": 3024,
+    "color": "#f8e8d8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/ghost/ghost.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "226f7599a6432b2f",
+    "width": 3024,
+    "height": 4032,
+    "color": "#c8b8a8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/girl/bp girl cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "8edb4cfd0108758a",
+    "width": 1869,
+    "height": 1402,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/girl/girl-2.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "44288a05ac044f4a",
+    "width": 3429,
+    "height": 2572,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/globe/globe.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "3753c2a0f2f25241",
+    "width": 2448,
+    "height": 3264,
+    "color": "#d8b898",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/goblet/goblet.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "2bc45bce0e30aa24",
+    "width": 480,
+    "height": 360,
+    "color": "#787878",
+    "widths": [
+      400,
+      480
+    ]
+  },
+  "works/goose/goose cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "74af56468608ae82",
+    "width": 986,
+    "height": 974,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      986
+    ]
+  },
+  "works/goose/goose with knife.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "79cc0995dd68042f",
+    "width": 3024,
+    "height": 4032,
+    "color": "#a8a8a8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/graduation/graduation cap cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "f7ba8db587f62cae",
+    "width": 1576,
+    "height": 1310,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1576
+    ]
+  },
+  "works/graduation/graduation cap.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "369a7040e1e23293",
+    "width": 3024,
+    "height": 2268,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/grim-reaper/grim reaper cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "d3ede80447f0b7b4",
+    "width": 1765,
+    "height": 1380,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/grim-reaper/grim reaper details.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "f9c4dbf9bef9eb3c",
+    "width": 960,
+    "height": 720,
+    "color": "#080818",
+    "widths": [
+      400,
+      800,
+      960
+    ]
+  },
+  "works/grim-reaper/grim reaper final.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "1bba44004f06eab0",
+    "width": 4616,
+    "height": 3465,
+    "color": "#181828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/head-empty/head empty cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "05cd250f597cc872",
+    "width": 1382,
+    "height": 1376,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1382
+    ]
+  },
+  "works/head-empty/head empty-6.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9af0b3127be67040",
+    "width": 4898,
+    "height": 3266,
+    "color": "#486848",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/head-empty/head empty-7.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "4a845eb8328ee130",
+    "width": 949,
+    "height": 1422,
+    "color": "#383828",
+    "widths": [
+      400,
+      800,
+      949
+    ]
+  },
+  "works/head-empty/head empty-8.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9daa3e4aaae172a7",
+    "width": 2131,
+    "height": 1421,
+    "color": "#283828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/hidden-hearts/hidden hearts cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "abe2868576818978",
+    "width": 1298,
+    "height": 1290,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1298
+    ]
+  },
+  "works/hidden-hearts/hidden hearts.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "445a2de9a70a079e",
+    "width": 3024,
+    "height": 4032,
+    "color": "#483838",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/jellyfish/jellyfish cp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "7436b0d8678352de",
+    "width": 1262,
+    "height": 1280,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      1262
+    ]
+  },
+  "works/jellyfish/jellyfish desk.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "6a8a2a70a0acaa45",
+    "width": 4011,
+    "height": 5348,
+    "color": "#484838",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/jellyfish/jellyfish.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "1fbcc4be29823552",
+    "width": 2730,
+    "height": 3640,
+    "color": "#181808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/journey/journey cp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0a8f3396884c045c",
+    "width": 2000,
+    "height": 2000,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "0a8f3396884c045c/journey cp.svg"
+  },
+  "works/journey/journey1.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "f6052f49b41b70b5",
+    "width": 1614,
+    "height": 1211,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/journey/journey2.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "ee6c7a6a60e914f2",
+    "width": 3260,
+    "height": 2445,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/kangaroo/kangaroo cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "d47849ec1fafbc74",
+    "width": 1882,
+    "height": 1402,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/kangaroo/kangaroo.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "e85b88c20563c3e4",
+    "width": 3537,
+    "height": 2653,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/knight-hp1/knight hp old down.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0edb1e3c4c26c9e9",
+    "width": 1894,
+    "height": 1421,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/knight-hp1/knighthp old.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "8a9f51601fa6648b",
+    "width": 4618,
+    "height": 3464,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/knight-hp2/knight hp back.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "34e09819ba8ecf8a",
+    "width": 2131,
+    "height": 1421,
+    "color": "#181818",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/knight-hp2/knight hp cp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "7f5b13daae5ae14c",
+    "width": 1980,
+    "height": 2000,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "7f5b13daae5ae14c/knight hp cp.svg"
+  },
+  "works/knight-hp2/knighthp1.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "f81c5d4d0437ca89",
+    "width": 4898,
+    "height": 3266,
+    "color": "#a8a8a8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/knight-hp2/knighthp2.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "1e31369e8cd3b42d",
+    "width": 4898,
+    "height": 3266,
+    "color": "#181818",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/knight/knight cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "f92d55fb19e648ba",
+    "width": 1674,
+    "height": 1382,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/knight/knight final-4.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "aa5714e9f940e0a2",
+    "width": 3366,
+    "height": 2525,
+    "color": "#c8c8c8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/knight/knight final-5.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "836fbfea1abcafe1",
+    "width": 3267,
+    "height": 2450,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/knight/knight final-6.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9bf2ed0dc324a1d6",
+    "width": 1894,
+    "height": 1421,
+    "color": "#e8e8e8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/lemonade/lemoade.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "d22c00c4aa60ccab",
+    "width": 2744,
+    "height": 2744,
+    "color": "#181818",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/lemonade/lemonade cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "56efc21773cbcf7f",
+    "width": 1382,
+    "height": 856,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1382
+    ]
+  },
+  "works/llama/llama cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "61f38449904b4ae3",
+    "width": 2160,
+    "height": 1277,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/llama/llama.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9b6359e056b1c0ca",
+    "width": 1714,
+    "height": 1285,
+    "color": "#887868",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/lobster/jsl hp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "7166746d4a1235ed",
+    "width": 4619,
+    "height": 3464,
+    "color": "#084858",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/lobster/jslcp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "6b65cc9c1231a525",
+    "width": 1999,
+    "height": 1999,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "6b65cc9c1231a525/jslcp.svg"
+  },
+  "works/lobster/lobster 2.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "58cce1375a04eb2b",
+    "width": 1894,
+    "height": 1421,
+    "color": "#084848",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/long-shen/longshen.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "b2962a28a17341de",
+    "width": 3253,
+    "height": 2440,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/mermaid/mermaid cp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "57fda94bedefc1a7",
+    "width": 2001,
+    "height": 2001,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "57fda94bedefc1a7/mermaid cp.svg"
+  },
+  "works/mermaid/mermaid.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9001654ed8d26373",
+    "width": 3145,
+    "height": 2359,
+    "color": "#087878",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/mit/mit cp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "1fb584684d8b15c2",
+    "width": 2003,
+    "height": 1115,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "1fb584684d8b15c2/mit cp.svg"
+  },
+  "works/mit/mit logo.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0957c93037e012e4",
+    "width": 3480,
+    "height": 2610,
+    "color": "#888888",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/mushrooms/mushrooms cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "845685a52443f5cc",
+    "width": 2304,
+    "height": 1246,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/mushrooms/mushrooms.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "3a1f2d0ea440b0a1",
+    "width": 4555,
+    "height": 3416,
+    "color": "#282818",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/music/music.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "62ce4eacf3fdb8af",
+    "width": 3024,
+    "height": 3024,
+    "color": "#d8d8d8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/neko/neko.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "c737bf2ec0c1e1ba",
+    "width": 2448,
+    "height": 1836,
+    "color": "#885828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/otters/otters cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9a73f4b986eaedc7",
+    "width": 1324,
+    "height": 1324,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1324
+    ]
+  },
+  "works/otters/otters.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "af9188d424acd772",
+    "width": 1067,
+    "height": 1422,
+    "color": "#987888",
+    "widths": [
+      400,
+      800,
+      1067
+    ]
+  },
+  "works/owl/owl cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "cd3b7da0b70f60d6",
+    "width": 1222,
+    "height": 1232,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1222
+    ]
+  },
+  "works/owl/owl.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "61f813717deab500",
+    "width": 800,
+    "height": 1422,
+    "color": "#989898",
+    "widths": [
+      400,
+      800
+    ]
+  },
+  "works/panda/panda cub cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "d1fdc018566bc9c3",
+    "width": 2054,
+    "height": 1220,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/panda/panda.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "8916c77c2ed32fa1",
+    "width": 4618,
+    "height": 3464,
+    "color": "#384848",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/panda/panda2.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0f4ecb411e1d2192",
+    "width": 3024,
+    "height": 2269,
+    "color": "#b8b8b8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/penguin-chick/penguin cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0c2452727084ae90",
+    "width": 1682,
+    "height": 1092,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/penguin-chick/penguin snow.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "3c416c7d278132b5",
+    "width": 1894,
+    "height": 1421,
+    "color": "#c8c8d8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/penguin-chick/penguin.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "61c5dc6d9ed7b956",
+    "width": 3235,
+    "height": 2426,
+    "color": "#b8c8c8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/penguin-old/penguin old 3.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0b0b59dd94ba5f89",
+    "width": 1066,
+    "height": 1421,
+    "color": "#a8a8a8",
+    "widths": [
+      400,
+      800,
+      1066
+    ]
+  },
+  "works/penguin-old/penguin old.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "5c7c6bdf860e2226",
+    "width": 3364,
+    "height": 2418,
+    "color": "#b8c8d8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/penguin-old/penguin old2.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "a0be94719321e0b4",
+    "width": 3129,
+    "height": 2346,
+    "color": "#383838",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/penguin-tall/tall penguin.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "319e57f4a01046bb",
+    "width": 1780,
+    "height": 1202,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/pikmin/pikmin scenic.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "ba0459aaf1d0b9f7",
+    "width": 1894,
+    "height": 1421,
+    "color": "#98b808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/pikmin/pikmin.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "281e485d39f992be",
+    "width": 3152,
+    "height": 2364,
+    "color": "#385808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/pikmin/pikmin2.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "b295a9b370ce8d35",
+    "width": 1453,
+    "height": 817,
+    "color": "#686828",
+    "widths": [
+      400,
+      800,
+      1453
+    ]
+  },
+  "works/pikmin/red pikmin.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "b7f3e8961102eaff",
+    "width": 1066,
+    "height": 1421,
+    "color": "#787848",
+    "widths": [
+      400,
+      800,
+      1066
+    ]
+  },
+  "works/plants-turtle/plants turtle cp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "1b9d952c3260ef96",
+    "width": 2001,
+    "height": 2001,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "1b9d952c3260ef96/plants turtle cp.svg"
+  },
+  "works/plants-turtle/plants turtle oversize.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "1a7fecb4c2c55b1b",
+    "width": 2048,
+    "height": 1671,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/plants-turtle/planturtle2.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "bedeba6946a59545",
+    "width": 1402,
+    "height": 1052,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1402
+    ]
+  },
+  "works/poop/poop.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "62a4c500a7e250b6",
+    "width": 2448,
+    "height": 1836,
+    "color": "#a85828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/power-of-friendship/3 in 1 legit.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "5e338870e016ed20",
+    "width": 2002,
+    "height": 2002,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "5e338870e016ed20/3 in 1 legit.svg"
+  },
+  "works/power-of-friendship/joisel.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9a167e1083c57269",
+    "width": 2194,
+    "height": 1042,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/power-of-friendship/the power of friendship closeup.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "03f2a912cf3b8e07",
+    "width": 1894,
+    "height": 1421,
+    "color": "#585848",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/power-of-friendship/the power of friendship-9579.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "de46d4032f8317b0",
+    "width": 4682,
+    "height": 3511,
+    "color": "#686868",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/power-of-friendship/the power of friendship-9592.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "7b7508004772a3e2",
+    "width": 4520,
+    "height": 3390,
+    "color": "#585848",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/princess/princess cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "fe921501ddcb3f4e",
+    "width": 712,
+    "height": 662,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      712
+    ]
+  },
+  "works/princess/princess.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9e1e7448819de900",
+    "width": 3024,
+    "height": 4032,
+    "color": "#686868",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/puppy/puppy cp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "2cc3522b497ae790",
+    "width": 31667,
+    "height": 31667,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "2cc3522b497ae790/puppy cp.svg"
+  },
+  "works/puppy/tgdogs.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "8b8650c096abbd93",
+    "width": 3648,
+    "height": 2736,
+    "color": "#584838",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/rabbit/rabbit cp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "e4b74497d2bd6f7f",
+    "width": 1224,
+    "height": 827,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1224
+    ]
+  },
+  "works/rabbit/rabbit.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "faad648d67d67fc0",
+    "width": 4032,
+    "height": 3024,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/rat-new/rat back.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "98c2d97ebeaa6634",
+    "width": 1894,
+    "height": 1421,
+    "color": "#787878",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/rat-new/rat cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9f567dbea06af251",
+    "width": 1187,
+    "height": 682,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1187
+    ]
+  },
+  "works/rat-new/rat new.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "22b0f0d840a86bbb",
+    "width": 2448,
+    "height": 1835,
+    "color": "#786848",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/rat-old/rat old.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "78339c18f9121443",
+    "width": 3264,
+    "height": 2448,
+    "color": "#b8b8b8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/rattlesnake/rattlesnake cp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "5539f95f47574e91",
+    "width": 1999,
+    "height": 1999,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "5539f95f47574e91/rattlesnake cp.svg"
+  },
+  "works/rattlesnake/rattlesnake-3.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "fc246e7847ae09ab",
+    "width": 3648,
+    "height": 2736,
+    "color": "#585818",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/reindeer/reindeer cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "1feec9973d924762",
+    "width": 1674,
+    "height": 1418,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/reindeer/reindeer.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "22b2aa104999c1e2",
+    "width": 1440,
+    "height": 1080,
+    "color": "#383828",
+    "widths": [
+      400,
+      800,
+      1440
+    ]
+  },
+  "works/risk/risk cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "ad72345ef01596a1",
+    "width": 1553,
+    "height": 821,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1553
+    ]
+  },
+  "works/risk/risk.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "cd51eb51866aefbf",
+    "width": 2713,
+    "height": 3617,
+    "color": "#d8c8b8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/robo-ky/robo ky cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9d6a26ee7ba7c56c",
+    "width": 2304,
+    "height": 1362,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/robo-ky/robo ky-10.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "665338d11e845530",
+    "width": 3311,
+    "height": 2483,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/rose/rose cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "3ebe15445f8e4f98",
+    "width": 1046,
+    "height": 1240,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      1046
+    ]
+  },
+  "works/rose/rose side.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "26da12caefb72f81",
+    "width": 2809,
+    "height": 2107,
+    "color": "#b8b8b8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/rose/rose top.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "df79c3f6bc848986",
+    "width": 3024,
+    "height": 2269,
+    "color": "#b8b8b8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/sakura/sakura.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "b4d3a4cfb78807a8",
+    "width": 3024,
+    "height": 4032,
+    "color": "#583838",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/self-portrait/self portrait cp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "f4ec5c5604428954",
+    "width": 1332,
+    "height": 1334,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1332
+    ]
+  },
+  "works/self-portrait/self portrait.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "125e0e2b5a6789fc",
+    "width": 3024,
+    "height": 4032,
+    "color": "#b8b8a8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/shark-skeleton/shark skele-6.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9fbe4ebb9668cb97",
+    "width": 3137,
+    "height": 2353,
+    "color": "#384858",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/shark-skeleton/shark skeleton cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "19c3656c355bd03b",
+    "width": 1678,
+    "height": 1144,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/shepherd/shepherd-0126.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "aabb027849c760d7",
+    "width": 4180,
+    "height": 3135,
+    "color": "#585818",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/shepherd/shepherd.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "97251c653496b24f",
+    "width": 2006,
+    "height": 1505,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/ship-dragon/ship cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "fe98a69f32f7a16b",
+    "width": 1654,
+    "height": 1178,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/ship-dragon/ship.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "e402f8f75daf097d",
+    "width": 3301,
+    "height": 2476,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/ship/ship old.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "17b8c5eeea2e8e29",
+    "width": 480,
+    "height": 360,
+    "color": "#787878",
+    "widths": [
+      400,
+      480
+    ]
+  },
+  "works/snoopy/snoopy.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "a0ddd70c6b7fb70e",
+    "width": 3024,
+    "height": 4032,
+    "color": "#483838",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/snowman/snowman.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "1fd6242669089868",
+    "width": 4032,
+    "height": 3024,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/sprout/sprout.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "6cbbe299f39239bf",
+    "width": 954,
+    "height": 536,
+    "color": "#181808",
+    "widths": [
+      400,
+      800,
+      954
+    ]
+  },
+  "works/squid-whale/oripa squid whale.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "38a065de8fa82b12",
+    "width": 632,
+    "height": 628,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      632
+    ]
+  },
+  "works/squid-whale/squid whale original.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "30007cfceda6b8ee",
+    "width": 1066,
+    "height": 1421,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1066
+    ]
+  },
+  "works/squid-whale/squid whale.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "38f6b3c9c551233f",
+    "width": 2480,
+    "height": 1860,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/stone-golem/stone golem cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "109b6a5cb29b9fa3",
+    "width": 1678,
+    "height": 1188,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/stone-golem/stone golem old.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "200f75cae49f7284",
+    "width": 3072,
+    "height": 2304,
+    "color": "#a8a8a8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/stone-golem/stone golems-5.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "68ff4ff92b0825de",
+    "width": 3371,
+    "height": 2528,
+    "color": "#c8b8b8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/stop-and-smell/stop and smell.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "2a796d8ec7d203a7",
+    "width": 3266,
+    "height": 2576,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/street-fighter/fighter cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "d0132787ef235c01",
+    "width": 875,
+    "height": 523,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      875
+    ]
+  },
+  "works/street-fighter/final martial artist outsid.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "e994684336828602",
+    "width": 1894,
+    "height": 1421,
+    "color": "#182808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/street-fighter/final martial artist.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "7293f2fa515e1d91",
+    "width": 3255,
+    "height": 2441,
+    "color": "#d8c8c8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/student/student cp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "23fb31852d9ee079",
+    "width": 1998,
+    "height": 1998,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "23fb31852d9ee079/student cp.svg"
+  },
+  "works/student/student watermark-2.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0bfeb30dd9e39934",
+    "width": 2857,
+    "height": 2143,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/student/student watermark.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "ef49f99ae52b62b3",
+    "width": 3041,
+    "height": 2281,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/swan/swan-2.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "80e3fa11e10e39bc",
+    "width": 2737,
+    "height": 2053,
+    "color": "#886858",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/t-rex-wizard/t rex wizard.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "e67cd79cc1fc47a6",
+    "width": 3024,
+    "height": 4032,
+    "color": "#b8a8a8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/t-shirt/shirt cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "62c91f3b12607ed9",
+    "width": 1658,
+    "height": 1182,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/t-shirt/tshirt.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "3a6a03a326e82eba",
+    "width": 711,
+    "height": 711,
+    "color": "#686868",
+    "widths": [
+      400,
+      711
+    ]
+  },
+  "works/tree-man/tree man cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "82963a35608a4e7a",
+    "width": 682,
+    "height": 664,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      682
+    ]
+  },
+  "works/tree-man/tree man.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "a824d1ac722f2f3c",
+    "width": 2162,
+    "height": 2965,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/truck/truck cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "33418a0168f06f11",
+    "width": 1040,
+    "height": 780,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1040
+    ]
+  },
+  "works/truck/truck.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "291cecd8411ac542",
+    "width": 4032,
+    "height": 3024,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/tugboat/tuboat.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "e155eba311bddd33",
+    "width": 3648,
+    "height": 2736,
+    "color": "#785828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/tugboat/tugboat cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "fb3722af5a730677",
+    "width": 1534,
+    "height": 847,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1534
+    ]
+  },
+  "works/turkey/turkey cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "6ac32ffd5afdef78",
+    "width": 2196,
+    "height": 1390,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/turkey/turkey-4.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "34381b4f6b6f8852",
+    "width": 4619,
+    "height": 3464,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/turtle-hp-1/plants turtle hp.PNG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "105f2cf8f32f82d5",
+    "width": 1173,
+    "height": 832,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1173
+    ]
+  },
+  "works/turtle-hp-1/turtle hp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "7c44dd853f743172",
+    "width": 3369,
+    "height": 2527,
+    "color": "#082828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/turtle-hp-2/turtle hp cp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "feec20c578ea4815",
+    "width": 2003,
+    "height": 2003,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "feec20c578ea4815/turtle hp cp.svg"
+  },
+  "works/turtle-hp-2/turtle hp-0103.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "b0d2106e984d3abd",
+    "width": 3991,
+    "height": 2993,
+    "color": "#183838",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/vegetables/eggplant.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "481909f36d7cc324",
+    "width": 2304,
+    "height": 1296,
+    "color": "#e8d8c8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/vegetables/green onion.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "12fd96bbb2412178",
+    "width": 2273,
+    "height": 2273,
+    "color": "#a87848",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/vegetables/plant's plantation.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "c0fae4fe2db71ef1",
+    "width": 3035,
+    "height": 2276,
+    "color": "#181818",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/vegetables/raspberry.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0e9a3cb9e65487e3",
+    "width": 1066,
+    "height": 1421,
+    "color": "#c8d8e8",
+    "widths": [
+      400,
+      800,
+      1066
+    ]
+  },
+  "works/viper/viper 0.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "a77ff3a46e547b37",
+    "width": 949,
+    "height": 1422,
+    "color": "#e8e8e8",
+    "widths": [
+      400,
+      800,
+      949
+    ]
+  },
+  "works/viper/viper 1.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "aa095f35419bcd30",
+    "width": 2134,
+    "height": 1422,
+    "color": "#181808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/viper/viper back.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "ab398959eefd4623",
+    "width": 2134,
+    "height": 1422,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/viper/viper black.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "e30be5b4dc0d3d52",
+    "width": 1067,
+    "height": 1422,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1067
+    ]
+  },
+  "works/viper/viper efficiency cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "95ad610c73673a44",
+    "width": 2304,
+    "height": 1315,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/viper/viper golden.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "b09d23866b5de884",
+    "width": 2133,
+    "height": 1422,
+    "color": "#483828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/viper/viper head closeup.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "e3a8fb6130bb27e2",
+    "width": 2134,
+    "height": 1422,
+    "color": "#d8d8d8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/viper/viper left.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "c22ce2b2b35967f6",
+    "width": 1896,
+    "height": 1422,
+    "color": "#d8d8d8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/viperfish/viperfish closeup.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "b1fda3f7ab445e1f",
+    "width": 1894,
+    "height": 1421,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/viperfish/viperfish cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "7be91d214c2be096",
+    "width": 1638,
+    "height": 1316,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/viperfish/viperfish.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "ef0654057cc9a8b7",
+    "width": 1322,
+    "height": 991,
+    "color": "#285878",
+    "widths": [
+      400,
+      800,
+      1322
+    ]
+  },
+  "works/walking-in-the-wind/windy.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "6507aac4e7b372a2",
+    "width": 4947,
+    "height": 3710,
+    "color": "#585858",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/walking-in-the-wind/windy.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "3152bb20f8db3b15",
+    "width": 2001,
+    "height": 2001,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "3152bb20f8db3b15/windy.svg"
+  },
+  "works/warrior-monk/fighter-6.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "c13fcb881405c16e",
+    "width": 3109,
+    "height": 2332,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/warrior-monk/warrior monk cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "06d52af008ac5254",
+    "width": 2382,
+    "height": 1412,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/whale-shark/whale shark cp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "37e1451b0262f37d",
+    "width": 924,
+    "height": 823,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      924
+    ]
+  },
+  "works/whale-shark/whale shark.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "2365f2aeb5a08594",
+    "width": 2807,
+    "height": 2106,
+    "color": "#e8a888",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/yin-yang-cats/yin yang cats cp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "5142b46093e52fd1",
+    "width": 1270,
+    "height": 1270,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1270
+    ]
+  },
+  "works/yin-yang-cats/yin yang cats hand.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "8142ee81b501444b",
+    "width": 2864,
+    "height": 2481,
+    "color": "#d8d8c8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/yin-yang-cats/yin yang cats.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "dfcbe18cebab985a",
+    "width": 776,
+    "height": 778,
+    "color": "#384828",
+    "widths": [
+      400,
+      776
+    ]
+  }
+}

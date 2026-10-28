@@ -1,0 +1,27 @@
+{
+  "name": "Dragon Keeper",
+  "date": "2021-02-01",
+  "description": "",
+  "photos": [
+    "adventurer-7.jpg",
+    "adventurer-10.jpg",
+    "adventurer dragon.png",
+    "adventurer knife.png"
+  ],
+  "cps": [
+    "dragon keeper cp.png"
+  ],
+  "cpDescription": "Each part of the model (the dragon, torch, hood, tunic, etc) was carefully test folded on its own and then packed into the square for the final fold.",
+  "video": "https://youtu.be/crBTc4_ZCNk",
+  "diagrams": null,
+  "tags": [
+    "bp",
+    "uniaxial",
+    "portfolio",
+    "animal",
+    "human",
+    "mythical",
+    "multi_subject"
+  ],
+  "related": []
+}

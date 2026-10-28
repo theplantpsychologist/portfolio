@@ -1,0 +1,21 @@
+{
+  "name": "Hidden hearts",
+  "date": "2024-06-08",
+  "description": "Day 10 of the top comment series. The thickness of the model is used to create dark regions that outline glowing hearts when held up to a light.",
+  "photos": [
+    "hidden hearts.JPG"
+  ],
+  "cps": [
+    "hidden hearts cp.png"
+  ],
+  "cpDescription": "",
+  "video": "https://youtube.com/shorts/XTQuKw57JlU?si=Yx05li3VlNUrO2ZO",
+  "diagrams": null,
+  "tags": [
+    "2d",
+    "x_ray",
+    "tessellation",
+    "top_comment"
+  ],
+  "related": []
+}

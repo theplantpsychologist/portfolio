@@ -1,0 +1,21 @@
+{
+  "name": "Turkey",
+  "date": "2023-11-23",
+  "description": "Designed for thanksgiving 2023",
+  "photos": [
+    "turkey-4.jpg"
+  ],
+  "cps": [
+    "turkey cp.png"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "hp",
+    "animal",
+    "bird",
+    "3d"
+  ],
+  "related": []
+}

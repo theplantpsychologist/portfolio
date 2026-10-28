@@ -1,0 +1,21 @@
+{
+  "name": "Princess",
+  "date": "2019-07-01",
+  "description": "One of my first human figure designs. Inspired by Zelda",
+  "photos": [
+    "princess.jpg"
+  ],
+  "cps": [
+    "princess cp.png"
+  ],
+  "cpDescription": "Not completely correct, but what I drew at the time.",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "human",
+    "fantasy",
+    "bp",
+    "uniaxial"
+  ],
+  "related": []
+}

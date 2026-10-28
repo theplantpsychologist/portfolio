@@ -1,0 +1,24 @@
+{
+  "name": "Grim Reaper",
+  "date": "2021-03-01",
+  "description": "Folded from blank single tissue, painted with white acrylic on one side.",
+  "photos": [
+    "grim reaper final.jpg",
+    "grim reaper details.png"
+  ],
+  "cps": [
+    "grim reaper cp.png"
+  ],
+  "cpDescription": "The body is a big center flap, and all the features are placed around the edge for easy color change.",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "mythical",
+    "human",
+    "portfolio",
+    "bp",
+    "uniaxial",
+    "color_change"
+  ],
+  "related": []
+}

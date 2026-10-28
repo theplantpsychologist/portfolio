@@ -1,0 +1,24 @@
+{
+  "title": "Circle jig",
+  "date": "2021-11-01",
+  "summary": "Interactive physics-based circle packing visualization tool",
+  "body": "Interactive physics-based circle packing visualization tool. Circles that are too close together will \"repel\" each other until they reach a stable equilibrium. It's like treemaker but displays the rivers, and also allows the user to guide the optimizer by dragging circles around to their general locations. This tool can be accessed <a href='https://web.mit.edu/wongb/www/circle-jig/'>here</a>.",
+  "collaborators": [],
+  "images": [
+    "circle jig.png"
+  ],
+  "video": null,
+  "files": [],
+  "links": [
+    {
+      "label": "Project link",
+      "url": "https://web.mit.edu/wongb/www/circle-jig/"
+    }
+  ],
+  "tags": [
+    "origami",
+    "origami-design",
+    "computer-science",
+    "theoretical"
+  ]
+}

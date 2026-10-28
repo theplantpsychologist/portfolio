@@ -1,0 +1,23 @@
+{
+  "name": "An Origami Journey",
+  "date": "2021-03-01",
+  "description": "A depiction of a folder's journey as we push ourselves to improve: from a traditional crane in one hand, to a ryujin in the other hand. It also is an illustration of how far origami as a technical art form has advanced, from cranes to ryujins, and it is itself a very technical piece.",
+  "photos": [
+    "journey1.jpg",
+    "journey2.jpg"
+  ],
+  "cps": [
+    "journey cp.svg"
+  ],
+  "cpDescription": "The most remarkable aspect of this crease pattern is how an entire section (the ryujin area on the right) is on partials, and along the boundary between the normal 40ths and the partial 80ths is a nice wall of level shifters (including one on the ridge of the pytha). This enables the model to have quite extreme variation in crease density; ie, the ryujin can be much more detailed and smaller than the rest of the model.",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "bp",
+    "multi_subject",
+    "portfolio",
+    "uniaxial",
+    "human"
+  ],
+  "related": []
+}

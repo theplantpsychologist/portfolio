@@ -1,0 +1,24 @@
+{
+  "name": "Cardinal",
+  "date": "2024-01-01",
+  "description": "",
+  "photos": [
+    "cardinal.jpg",
+    "cardinal other.png"
+  ],
+  "cps": [
+    "cardinal hp cp.svg"
+  ],
+  "cpDescription": "The base is completely flat, and then the pleats in the belly are swung open.",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "hp",
+    "3d",
+    "nonuniaxial",
+    "animal",
+    "bird",
+    "color_change"
+  ],
+  "related": []
+}

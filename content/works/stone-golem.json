@@ -1,0 +1,23 @@
+{
+  "name": "Stone Golem",
+  "date": "2018-01-01",
+  "description": "Refolded July 2020. The charm of this model comes from the illusion that the rocks are simply stacked on each other, when in fact it's all one continuous sheet.",
+  "photos": [
+    "stone golems-5.jpg",
+    "stone golem old.JPG"
+  ],
+  "cps": [
+    "stone golem cp.png"
+  ],
+  "cpDescription": "This is a good example of level shifters. I would like to revisit this model soon.",
+  "video": "https://youtu.be/v4ZJzLWAK10",
+  "diagrams": null,
+  "tags": [
+    "portfolio",
+    "fantasy",
+    "mythical",
+    "uniaxial",
+    "bp"
+  ],
+  "related": []
+}

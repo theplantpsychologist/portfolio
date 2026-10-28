@@ -1,0 +1,124 @@
+---
+import Base from "../../layouts/Base.astro";
+import Viewer, { type Slide } from "../../components/Viewer.astro";
+import YouTube from "../../components/YouTube.astro";
+import Img from "../../components/Img.astro";
+import { getWorks, coverOf, tagLabel, formatMonth, plain, type Work } from "../../lib/content";
+import { picture } from "../../lib/media";
+
+export async function getStaticPaths() {
+  const works = await getWorks();
+  return works.map((w, i) => ({
+    params: { slug: w.id },
+    props: { work: w, newer: works[i - 1] ?? null, older: works[i + 1] ?? null, all: works },
+  }));
+}
+interface Props {
+  work: Work;
+  newer: Work | null;
+  older: Work | null;
+  all: Work[];
+}
+const { work, newer, older, all } = Astro.props;
+const d = work.data;
+const key = (f: string) => `works/${work.id}/${f}`;
+
+const slides: Slide[] = [
+  ...d.photos.map((f, i) => ({ pic: picture(key(f), 800), alt: `${d.name}, photo ${i + 1}` })),
+  ...d.cps.map((f) => {
+    const pic = picture(key(f), 800);
+    return { pic, alt: `${d.name} crease pattern`, label: "Crease pattern", download: pic?.download };
+  }),
+];
+const related = d.related.map((r) => all.find((w) => w.id === r)).filter(Boolean) as Work[];
+const cover = coverOf(work, 1600);
+const description = plain(d.description) || `${d.name}, an original origami design by Brandon Wong (${d.date.getUTCFullYear()}).`;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "VisualArtwork",
+  name: d.name,
+  artform: "Origami",
+  artMedium: "Paper",
+  dateCreated: d.date.toISOString().slice(0, 10),
+  creator: { "@type": "Person", name: "Brandon Wong" },
+  image: cover?.large,
+  description,
+  keywords: d.tags.map(tagLabel).join(", "),
+};
+---
+<Base title={d.name} description={description} image={cover?.large} type="article" jsonLd={jsonLd}>
+  <a class="back muted" href="/gallery/" id="back">← Gallery</a>
+  <article>
+    <Viewer slides={slides} />
+    <div class="info">
+      <h1>{d.name}</h1>
+      <p class="muted">{formatMonth(d.date)}</p>
+      {d.description && <div class="prose" set:html={d.description} />}
+      {d.tags.length > 0 && (
+        <div class="chips">
+          {d.tags.map((t) => <a class="chip" href={`/gallery/?tag=${encodeURIComponent(t)}`}>{tagLabel(t)}</a>)}
+        </div>
+      )}
+      {d.cpDescription && (
+        <section>
+          <h2>Crease pattern notes</h2>
+          <div class="prose" set:html={d.cpDescription} />
+        </section>
+      )}
+      {d.diagrams && (
+        <section>
+          <h2>Diagrams</h2>
+          <p>Published in <a href={d.diagrams.url}>{d.diagrams.label}</a>.</p>
+        </section>
+      )}
+      {d.video && (
+        <section>
+          <h2>Video</h2>
+          <YouTube url={d.video} title={d.name} />
+        </section>
+      )}
+    </div>
+  </article>
+
+  {related.length > 0 && (
+    <section class="more">
+      <h2>Related</h2>
+      <ul class="mini">
+        {related.map((r) => (
+          <li><a href={`/gallery/${r.id}/`}><Img pic={coverOf(r, 400)} alt="" sizes="160px" />{r.data.name}</a></li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <nav class="pager" aria-label="More works">
+    {newer ? <a href={`/gallery/${newer.id}/`}>← {newer.data.name}</a> : <span />}
+    {older && <a href={`/gallery/${older.id}/`}>{older.data.name} →</a>}
+  </nav>
+</Base>
+
+<style>
+  .back { display: inline-block; margin-bottom: 14px; text-decoration: none; }
+  article { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 36px; align-items: start; }
+  .info { display: grid; gap: 14px; }
+  .info section { display: grid; gap: 8px; margin-top: 10px; }
+  .info a:not(.chip) { color: var(--accent); }
+  .more { margin-top: 48px; }
+  .mini { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin-top: 12px; }
+  .mini a { text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+  .mini :global(img) { aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); margin-bottom: 4px; }
+  .pager { display: flex; justify-content: space-between; gap: 16px; margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); }
+  .pager a { text-decoration: none; font-weight: 600; }
+  @media (max-width: 900px) {
+    article { grid-template-columns: 1fr; gap: 20px; }
+  }
+</style>
+
+<script>
+  // Return to the filtered gallery view the visitor came from, if any.
+  const back = document.getElementById("back") as HTMLAnchorElement;
+  if (document.referrer) {
+    const ref = new URL(document.referrer);
+    if (ref.origin === location.origin && ref.pathname === "/gallery/") back.href = ref.pathname + ref.search;
+  }
+</script>

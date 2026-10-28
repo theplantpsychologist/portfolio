@@ -1,0 +1,23 @@
+{
+  "name": "Turtle HP 2",
+  "date": "2022-08-01",
+  "description": "Originally intended as an HP version of the classic <a href='plants%20turtle.html'>Plant's Turtle</a>, but ended up significantly more complex--for example, the shell pattern is a more realistic hexagon pattern, and there are additional textures on the head and fins.",
+  "photos": [
+    "turtle hp-0103.png"
+  ],
+  "cps": [
+    "turtle hp cp.svg"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "animal",
+    "reptile",
+    "sea_life",
+    "hp",
+    "scales",
+    "portfolio"
+  ],
+  "related": []
+}

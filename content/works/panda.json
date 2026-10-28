@@ -1,0 +1,23 @@
+{
+  "name": "Panda cub",
+  "date": "2023-11-01",
+  "description": "",
+  "photos": [
+    "panda.jpg",
+    "panda2.JPG"
+  ],
+  "cps": [
+    "panda cub cp.png"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "color_change",
+    "animal",
+    "cute",
+    "mammal",
+    "22.5"
+  ],
+  "related": []
+}

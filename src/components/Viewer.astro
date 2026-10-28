@@ -1,0 +1,95 @@
+---
+// Main image plus a strip of thumbnails; click the main image for a lightbox.
+import type { Picture } from "../lib/media";
+import Img from "./Img.astro";
+
+export type Slide = { pic: Picture | null; alt: string; label?: string; video?: string | null; download?: string };
+interface Props {
+  slides: Slide[];
+}
+const { slides } = Astro.props;
+const sizes = "(max-width: 900px) 100vw, 720px";
+---
+<div class="viewer">
+  <div class="stage">
+    {slides.map((s, i) => (
+      <figure data-slide={i} hidden={i > 0}>
+        {s.video ? (
+          <video src={s.video} poster={s.pic?.src} controls playsinline preload="none" width={s.pic?.width} height={s.pic?.height} />
+        ) : (
+          <button type="button" class="zoom" data-large={s.pic?.large} aria-label={`Enlarge ${s.alt}`}>
+            <Img pic={s.pic} alt={s.alt} sizes={sizes} eager={i === 0} />
+          </button>
+        )}
+        {(s.label || s.download) && (
+          <figcaption>
+            {s.label}
+            {s.download && <a href={s.download} download>Download original</a>}
+          </figcaption>
+        )}
+      </figure>
+    ))}
+  </div>
+  {slides.length > 1 && (
+    <div class="strip" role="tablist" aria-label="Images">
+      {slides.map((s, i) => (
+        <button type="button" role="tab" data-go={i} aria-selected={i === 0 ? "true" : "false"} aria-label={s.label ?? s.alt}>
+          <Img pic={s.pic} alt="" sizes="80px" />
+          {s.video && <span class="play" aria-hidden="true">▶</span>}
+        </button>
+      ))}
+    </div>
+  )}
+  <dialog class="lightbox">
+    <form method="dialog"><button aria-label="Close">×</button></form>
+    <img alt="" />
+  </dialog>
+</div>
+
+<style>
+  .stage figure { margin: 0; }
+  .stage figure[hidden] { display: none; }
+  .zoom { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
+  .stage :global(img), .stage video { width: 100%; max-height: 78vh; object-fit: contain; border-radius: var(--radius); }
+  figcaption { display: flex; gap: 12px; justify-content: space-between; color: var(--muted); font-size: 0.9rem; padding-top: 6px; }
+  figcaption a { color: var(--accent); }
+  .strip { display: flex; gap: 8px; margin-top: 10px; overflow-x: auto; padding-bottom: 4px; }
+  .strip button { position: relative; flex: none; width: 72px; height: 72px; padding: 0; border: 2px solid transparent; border-radius: 8px; overflow: hidden; cursor: pointer; background: var(--chip); }
+  .strip button[aria-selected="true"] { border-color: var(--accent); }
+  .strip :global(img) { width: 100%; height: 100%; object-fit: cover; }
+  .play { position: absolute; inset: 0; display: grid; place-items: center; color: #fff; text-shadow: 0 1px 4px #000; }
+  .lightbox { padding: 0; border: 0; background: transparent; max-width: 96vw; max-height: 96vh; }
+  .lightbox::backdrop { background: rgb(0 0 0 / 0.85); }
+  .lightbox img { max-width: 96vw; max-height: 92vh; object-fit: contain; }
+  .lightbox form { position: fixed; top: 12px; right: 16px; }
+  .lightbox form button { font-size: 2rem; color: #fff; background: none; border: 0; cursor: pointer; }
+</style>
+
+<script>
+  for (const viewer of document.querySelectorAll<HTMLElement>(".viewer")) {
+    const figures = [...viewer.querySelectorAll<HTMLElement>("[data-slide]")];
+    const tabs = [...viewer.querySelectorAll<HTMLButtonElement>("[data-go]")];
+    const dialog = viewer.querySelector("dialog")!;
+    const go = (i: number) => {
+      figures.forEach((f, j) => {
+        f.hidden = j !== i;
+        if (j !== i) f.querySelector("video")?.pause();
+      });
+      tabs.forEach((t, j) => t.setAttribute("aria-selected", String(j === i)));
+    };
+    tabs.forEach((t) => t.addEventListener("click", () => go(Number(t.dataset.go))));
+    viewer.addEventListener("keydown", (e) => {
+      const cur = tabs.findIndex((t) => t.getAttribute("aria-selected") === "true");
+      if (cur < 0 || dialog.open) return;
+      if (e.key === "ArrowRight") go((cur + 1) % tabs.length);
+      if (e.key === "ArrowLeft") go((cur - 1 + tabs.length) % tabs.length);
+    });
+    for (const z of viewer.querySelectorAll<HTMLButtonElement>(".zoom")) {
+      z.addEventListener("click", () => {
+        dialog.querySelector("img")!.src = z.dataset.large!;
+        dialog.showModal();
+      });
+    }
+    dialog.addEventListener("click", (e) => e.target === dialog && dialog.close());
+  }
+</script>

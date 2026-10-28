@@ -1,0 +1,20 @@
+{
+  "name": "T-shirt",
+  "date": "2020-06-01",
+  "description": "A useful model for patterned paper.",
+  "photos": [
+    "tshirt.jpg"
+  ],
+  "cps": [
+    "shirt cp.png"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "object",
+    "bp",
+    "nonuniaxial"
+  ],
+  "related": []
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Cherubim",
+  "date": "2024-07-12",
+  "description": "Also known as a \"biblically accurate angel\", based off the description in <a href='https://www.biblegateway.com/passage/?search=Ezekiel%201&version=NIV'>Ezekiel 1</a>. ",
+  "photos": [
+    "angel and ezekiel-3.jpg",
+    "angel-4.jpg",
+    "angel-7.jpg"
+  ],
+  "cps": [
+    "cherubim.svg"
+  ],
+  "cpDescription": "The most notable aspect of this model is the fact that the grid changes from 64ths (for most of the model) to 80ths (for the heads and parts of the wings).",
+  "video": "https://youtu.be/WMiST0lcfns",
+  "diagrams": null,
+  "tags": [
+    "portfolio",
+    "bp",
+    "uniaxial",
+    "mythical",
+    "fantasy",
+    "human",
+    "metallic",
+    "biblical"
+  ],
+  "related": [
+    "ezekiel"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Viper",
+  "date": "2025-01-17",
+  "description": "The final model of the top comment series: a new hex pleated snake, with an entirely new diamond-shaped scale pattern. Although a huge pain to fold (the whole model took over 30 hours), these scales and other hex-pleating-specific tricks are the secret to this model's extremely high efficiency. The model was folded from a 2x3 rectangle, and from tongue to tail measures around 80% of the paper's long side. For reference, ryujin 3.5 as well as my previous hp snake are also around 80% efficiency, but this one only needs 2/3rds of the paper. Could these scales be used for a ryujin 4.0? Only time will tell.",
+  "photos": [
+    "viper 0.png",
+    "viper 1.png",
+    "viper head closeup.png",
+    "viper left.png",
+    "viper back.png",
+    "viper black.png",
+    "viper golden.png"
+  ],
+  "cps": [
+    "viper efficiency cp.png"
+  ],
+  "cpDescription": "",
+  "video": "https://youtube.com/shorts/Eqe3Ciab9N0",
+  "diagrams": null,
+  "tags": [
+    "reptile",
+    "portfolio",
+    "animal",
+    "hp",
+    "tessellation",
+    "top_comment"
+  ],
+  "related": []
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Piano keyboard",
+  "date": "2022-08-01",
+  "summary": "Made from 3d printed compliant keys and an arduino",
+  "body": "Made from 3d printed compliant keys and an arduino. When each key is pressed, the copper tapes under the key come into contact, sending a signal to an arduino mega that has a digital input for each key. The arduino then reports which keys are currently being pressed to a python script. The script then pulls from pre-recorded sound files of each note and combines the notes that are being played.<br><br>Sorry the video is so bad, I never properly learned how to play piano--in fact the motivation for making this was so that I could practice on a portable keyboard.",
+  "collaborators": [
+    "Kevin Pho"
+  ],
+  "images": [
+    "piano photo.jpg",
+    "piano internals.png"
+  ],
+  "video": "https://youtu.be/KVaO2rNYYuE",
+  "files": [],
+  "links": [],
+  "tags": [
+    "3d-printing",
+    "arduino",
+    "music",
+    "design",
+    "computer-science"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Deer Couple",
+  "date": "2022-01-01",
+  "description": "Using human anatomy tricks to create gendered animal figures, such as neck and shoulder width.",
+  "photos": [
+    "deer-6.png",
+    "deer.png",
+    "deer-2.png"
+  ],
+  "cps": [
+    "deer cp.svg"
+  ],
+  "cpDescription": "The cp on the left is the male; the reference line (green) is the intersection of a 22.5 crease with a crease of slope 3. The cp on the right is the female, using the \"Kamiya reference\". <br><br>To keep the model proportions with one another, fold the female with a slightly smaller sheet of paper.",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "22.5",
+    "animal",
+    "mammal",
+    "simple"
+  ],
+  "related": []
+}

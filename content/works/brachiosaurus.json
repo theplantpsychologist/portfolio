@@ -1,0 +1,21 @@
+{
+  "name": "Brachiosaurus",
+  "date": "2020-12-01",
+  "description": "",
+  "photos": [
+    "dinos.jpg"
+  ],
+  "cps": [
+    "brachiosaurus cp.png"
+  ],
+  "cpDescription": "My second attempt at tilted grid. The graft down the middle is not recommended for future designs.",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "tilted_grid",
+    "animal",
+    "dinosaur",
+    "reptile"
+  ],
+  "related": []
+}

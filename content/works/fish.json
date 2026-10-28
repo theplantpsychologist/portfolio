@@ -1,0 +1,21 @@
+{
+  "name": "Fish",
+  "date": "2021-02-01",
+  "description": "A very efficient fish, but a bit plain/generic.",
+  "photos": [
+    "fish tg.jpg"
+  ],
+  "cps": [
+    "fish cp.png"
+  ],
+  "cpDescription": "Uses a similar structure as <a href=\"./portfolio/divine boar.html\">Divine Boar</a>.",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "animal",
+    "fish",
+    "tilted_grid",
+    "sea_life"
+  ],
+  "related": []
+}

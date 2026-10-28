@@ -1,0 +1,18 @@
+---
+import { socials } from "../lib/site";
+---
+<footer>
+  <div class="inner">
+    <span>© {new Date().getFullYear()} Brandon Wong</span>
+    <nav aria-label="Social">
+      {socials.map((s) => <a href={s.url} rel="me noopener">{s.label}</a>)}
+    </nav>
+  </div>
+</footer>
+
+<style>
+  footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+  .inner { max-width: var(--max); margin: 0 auto; padding: 20px 16px; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
+  nav { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+  a { text-decoration: none; }
+</style>

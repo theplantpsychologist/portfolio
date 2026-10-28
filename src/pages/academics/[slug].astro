@@ -1,0 +1,76 @@
+---
+import Base from "../../layouts/Base.astro";
+import Viewer, { type Slide } from "../../components/Viewer.astro";
+import YouTube from "../../components/YouTube.astro";
+import { getProjects, formatMonth, plain, type Project } from "../../lib/content";
+import { picture, fileUrl, entry } from "../../lib/media";
+
+export async function getStaticPaths() {
+  return (await getProjects()).map((p) => ({ params: { slug: p.id }, props: { project: p } }));
+}
+interface Props {
+  project: Project;
+}
+const { project } = Astro.props;
+const d = project.data;
+const key = (f: string) => `academics/${project.id}/${f}`;
+
+const slides: Slide[] = d.images.map((f, i) => {
+  const e = entry(key(f));
+  return { pic: picture(key(f), 800), alt: `${d.title}, image ${i + 1}`, video: e?.kind === "video" ? fileUrl(key(f)) : null };
+});
+const localVideo = d.video && !/^https?:/.test(d.video) ? fileUrl(key(d.video)) : null;
+if (localVideo) slides.push({ pic: picture(key(d.video!), 800), alt: `${d.title} video`, video: localVideo, label: "Video" });
+
+const files = d.files.map((f) => {
+  const e = entry(key(f.file));
+  const mb = e?.kind === "file" ? ` (${(e.bytes / 1e6).toFixed(1)} MB)` : "";
+  return { label: f.label + mb, url: fileUrl(key(f.file)) };
+});
+const cover = d.images[0] ? picture(key(d.images[0]), 1600) : null;
+const label = (t: string) => t.replace(/-/g, " ").replace(/^./, (c) => c.toUpperCase());
+---
+<Base title={d.title} description={plain(d.summary)} image={cover?.large} type="article">
+  <a class="back muted" href="/academics/">← Academics</a>
+  <header>
+    <h1>{d.title}</h1>
+    <p class="muted">{formatMonth(d.date)}</p>
+    {d.collaborators.length > 0 && <p class="muted">With {d.collaborators.join(", ")}</p>}
+  </header>
+
+  <div class="body">
+    <div>
+      {slides.length > 0 && <Viewer slides={slides} />}
+      {d.video && !localVideo && <div class="video"><YouTube url={d.video} title={d.title} /></div>}
+    </div>
+    <div class="info">
+      <div class="prose" set:html={d.body || d.summary} />
+      {(files.length > 0 || d.links.length > 0) && (
+        <section>
+          <h2>Resources</h2>
+          <ul>
+            {files.map((f) => <li><a href={f.url}>{f.label}</a></li>)}
+            {d.links.map((l) => <li><a href={l.url}>{l.label}</a></li>)}
+          </ul>
+        </section>
+      )}
+      {d.tags.length > 0 && (
+        <div class="chips">{d.tags.map((t) => <a class="chip" href={`/academics/?tag=${t}`}>{label(t)}</a>)}</div>
+      )}
+    </div>
+  </div>
+</Base>
+
+<style>
+  .back { display: inline-block; margin-bottom: 14px; text-decoration: none; }
+  header { margin-bottom: 24px; display: grid; gap: 4px; }
+  .body { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 36px; align-items: start; }
+  .video { margin-top: 16px; }
+  .info { display: grid; gap: 20px; }
+  .info section { display: grid; gap: 8px; }
+  .info ul { padding-left: 1.2em; }
+  .info a:not(.chip) { color: var(--accent); }
+  @media (max-width: 900px) {
+    .body { grid-template-columns: 1fr; gap: 20px; }
+  }
+</style>

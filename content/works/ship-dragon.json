@@ -1,0 +1,20 @@
+{
+  "name": "Dragon ship",
+  "date": "2020-07-01",
+  "description": "An improved version of a previous <a href='ship.html'>ship</a> design, using a graft to create the dragon head and improve the sails.",
+  "photos": [
+    "ship.jpg"
+  ],
+  "cps": [
+    "ship cp.png"
+  ],
+  "cpDescription": "Used as an example of grafting. Unfortunately, I don't remember the exact reference for the graft.",
+  "video": "https://youtu.be/8bKl8ZpPVAc",
+  "diagrams": null,
+  "tags": [
+    "object",
+    "color_change",
+    "22.5"
+  ],
+  "related": []
+}

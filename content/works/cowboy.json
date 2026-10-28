@@ -1,0 +1,23 @@
+{
+  "name": "Cowboy",
+  "date": "2022-07-01",
+  "description": "Designed for an online design contest.",
+  "photos": [
+    "cowboy-9781.png"
+  ],
+  "cps": [
+    "cowboy cp.svg"
+  ],
+  "cpDescription": "A 32 grid with partial 64ths. The main challenge was how to get the rider to connect to the horse with a \"closed\" back.",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "human",
+    "animal",
+    "mammal",
+    "bp",
+    "uniaxial",
+    "multi_subject"
+  ],
+  "related": []
+}

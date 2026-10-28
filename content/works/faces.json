@@ -1,0 +1,21 @@
+{
+  "name": "Faces",
+  "date": "2021-01-01",
+  "description": "Some face experiments, with a structure able to be implemented into full human figure designs.",
+  "photos": [
+    "karen.jpg",
+    "faces.jpg"
+  ],
+  "cps": [
+    "karen cp.png"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "human",
+    "bp",
+    "uniaxial"
+  ],
+  "related": []
+}

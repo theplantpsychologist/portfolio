@@ -1,0 +1,23 @@
+{
+  "name": "Pikmin",
+  "date": "2018-07-01",
+  "description": "Pikmin 2 was one of my favorite games as a kid.",
+  "photos": [
+    "pikmin.JPG",
+    "pikmin2.png",
+    "pikmin scenic.png",
+    "red pikmin.png"
+  ],
+  "cps": [],
+  "cpDescription": "",
+  "video": "https://youtu.be/Ut6NX1FN3aA",
+  "diagrams": null,
+  "tags": [
+    "character",
+    "color_change",
+    "cute",
+    "bp",
+    "uniaxial"
+  ],
+  "related": []
+}

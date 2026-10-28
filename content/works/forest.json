@@ -1,0 +1,26 @@
+{
+  "name": "Forest",
+  "date": "2020-08-01",
+  "description": "Designed right after folding the <a href=\"https://youtu.be/OXqJ9PFsBpI?si=C0CNuRK-tdZwRv__\">Ryujin 3.5</a>, and scales were still fresh in my mind. Naturally, when I returned to the problem of creating trees, I thought of using a scale-like pattern as a leaf texture.",
+  "photos": [
+    "forest path-4.jpg",
+    "forest closeup.png",
+    "forest above.png"
+  ],
+  "cps": [
+    "forest cp.png"
+  ],
+  "cpDescription": "Each corner of the cp is one of the 4 trees, with two small trees on top and two big trees at the bottom.<br><br>Grid: 56x56, with partial 112ths for the leaf pleats.",
+  "video": "https://youtu.be/rsXfg6U-aso",
+  "diagrams": null,
+  "tags": [
+    "plant",
+    "bp",
+    "uniaxial",
+    "color_change",
+    "multi_subject",
+    "scales",
+    "portfolio"
+  ],
+  "related": []
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Vegetables",
+  "date": "2020-06-01",
+  "description": "",
+  "photos": [
+    "plant's plantation.jpg",
+    "eggplant.png",
+    "green onion.JPG",
+    "raspberry.png"
+  ],
+  "cps": [],
+  "cpDescription": "",
+  "video": "https://youtu.be/9ZnRDKWTcS8",
+  "diagrams": null,
+  "tags": [
+    "plant",
+    "nonuniaxial",
+    "food",
+    "22.5",
+    "bp"
+  ],
+  "related": []
+}

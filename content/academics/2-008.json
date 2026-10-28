@@ -1,0 +1,26 @@
+{
+  "title": "Yo-yo mass manufacturing",
+  "date": "2023-11-01",
+  "summary": "Produced 200 identical yo-yos via injection molding for 2.008 (Design and Manufacturing II)",
+  "body": "Produced 200 identical yo-yos for 2.008 (Design and Manufacturing II). The main bodies of the yo-yos were injection molded and carefully designed to press fit into each other. The molds were made by CNC milling. Although we didn't test the performance of the yo-yos, we measured the parts to ensure they were within tolerance.",
+  "collaborators": [
+    "Mustafa Al-Obaidi",
+    "Malachi Macon",
+    "Sebastian Monslavo",
+    "Sophia Pineda",
+    "Aidan Salazar"
+  ],
+  "images": [
+    "2.008 1.png",
+    "2.008 2.png",
+    "2.008 3.png",
+    "2.008 poster.png"
+  ],
+  "video": null,
+  "files": [],
+  "links": [],
+  "tags": [
+    "class-project",
+    "design"
+  ]
+}

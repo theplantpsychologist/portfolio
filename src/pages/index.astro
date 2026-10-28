@@ -1,0 +1,79 @@
+---
+import Base from "../layouts/Base.astro";
+import Img from "../components/Img.astro";
+import { getWorks, getProjects, coverOf } from "../lib/content";
+
+const works = await getWorks();
+const projects = await getProjects();
+const featured = works.filter((w) => w.data.tags.includes("portfolio")).slice(0, 12);
+const recent = works.slice(0, 6);
+---
+<Base>
+  <section class="hero">
+    <div class="copy">
+      <h1>Origami design at the meeting of art and engineering.</h1>
+      <p class="muted">
+        I'm Brandon Wong, an origami designer with {works.length}+ original models: intricate structures, crease patterns, and the stories behind them.
+      </p>
+      <div class="actions">
+        <a class="btn" href="/gallery/">Browse the gallery</a>
+        <a class="btn ghost" href="/about/#commissions">Commissions</a>
+      </div>
+    </div>
+    <ul class="mosaic" aria-label="Featured works">
+      {featured.slice(0, 9).map((w, i) => (
+        <li><a href={`/gallery/${w.id}/`} title={w.data.name}><Img pic={coverOf(w, 400)} alt={w.data.name} sizes="(max-width: 800px) 33vw, 180px" eager={i < 3} /></a></li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="row">
+    <div class="row-head">
+      <h2>Recent work</h2>
+      <a href="/gallery/">See all {works.length} →</a>
+    </div>
+    <ul class="strip">
+      {recent.map((w) => (
+        <li><a href={`/gallery/${w.id}/`}><Img pic={coverOf(w, 400)} alt="" sizes="(max-width: 640px) 50vw, 200px" /><span>{w.data.name}</span></a></li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="tiles">
+    <a href="/gallery/">
+      <h2>Gallery</h2>
+      <p>Original designs with crease patterns, backstories, and design notes. Filter by subject, technique, and more.</p>
+    </a>
+    <a href="/academics/">
+      <h2>Academics</h2>
+      <p>{projects.length} research and engineering projects: computational origami, metamaterials, robotics, and class work.</p>
+    </a>
+    <a href="/about/">
+      <h2>About & commissions</h2>
+      <p>Custom designs, folded models, tutorials, lessons, and sponsored content. Get in touch.</p>
+    </a>
+  </section>
+</Base>
+
+<style>
+  .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; padding: 24px 0 48px; }
+  .copy { display: grid; gap: 16px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+  .mosaic { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .mosaic :global(img), .mosaic :global(.missing) { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); }
+  .row { margin-bottom: 48px; }
+  .row-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+  .row-head a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .strip { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+  .strip a { text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+  .strip :global(img), .strip :global(.missing) { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); margin-bottom: 4px; }
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .tiles a { display: grid; gap: 6px; align-content: start; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); text-decoration: none; }
+  .tiles a:hover { border-color: var(--accent); color: inherit; }
+  .tiles p { color: var(--muted); }
+  @media (max-width: 800px) {
+    .hero { grid-template-columns: minmax(0, 1fr); gap: 24px; padding-top: 8px; }
+    .strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .tiles { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,23 @@
+{
+  "name": "Flutist",
+  "date": "2020-12-01",
+  "description": "Designed as a commission for a sheet music publisher.",
+  "photos": [
+    "flutist-8.jpg",
+    "flutist-9.png"
+  ],
+  "cps": [
+    "flutist cp.png"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "human",
+    "color_change",
+    "uniaxial",
+    "bp",
+    "commission"
+  ],
+  "related": []
+}

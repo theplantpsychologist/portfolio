@@ -1,0 +1,22 @@
+{
+  "name": "Whale shark",
+  "date": "2022-06-01",
+  "description": "Designed during Winston Lee's OUSA 2022 design workshop.",
+  "photos": [
+    "whale shark.jpg"
+  ],
+  "cps": [
+    "whale shark cp.jpg"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "animal",
+    "sea_life",
+    "bp",
+    "color_change",
+    "simple"
+  ],
+  "related": []
+}

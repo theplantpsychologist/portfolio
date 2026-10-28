@@ -1,0 +1,25 @@
+{
+  "name": "Rose",
+  "date": "2025-02-12",
+  "description": "A 6 petal rose. Designed for a commission.",
+  "photos": [
+    "rose top.JPG",
+    "rose side.JPG"
+  ],
+  "cps": [
+    "rose cp.png"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "hp",
+    "plant",
+    "flower",
+    "3d",
+    "nonuniaxial",
+    "commission",
+    "cute"
+  ],
+  "related": []
+}

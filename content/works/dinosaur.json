@@ -1,0 +1,20 @@
+{
+  "name": "Dinosaur",
+  "date": "2019-04-01",
+  "description": "",
+  "photos": [
+    "dinosaur.JPG"
+  ],
+  "cps": [],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "animal",
+    "reptile",
+    "bp",
+    "uniaxial",
+    "dinosaur"
+  ],
+  "related": []
+}

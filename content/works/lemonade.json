@@ -1,0 +1,22 @@
+{
+  "name": "Lemonade",
+  "date": "2021-10-05",
+  "description": "Designed as part of an \"Inktober\" challenge",
+  "photos": [
+    "lemoade.jpg"
+  ],
+  "cps": [
+    "lemonade cp.png"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "object",
+    "color_change",
+    "bp",
+    "nonuniaxial",
+    "inktober"
+  ],
+  "related": []
+}

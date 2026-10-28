@@ -1,0 +1,20 @@
+{
+  "name": "Warrior monk",
+  "date": "2021-01-01",
+  "description": "",
+  "photos": [
+    "fighter-6.jpg"
+  ],
+  "cps": [
+    "warrior monk cp.png"
+  ],
+  "cpDescription": "Features an unusual arrangement, where the head is in the corner and an arm is in the center. I believe this is the most efficient arrangement for this figure.",
+  "video": "https://youtu.be/r3Wq9KD85VI?si=hjv5NdrWxNYiFD6x",
+  "diagrams": null,
+  "tags": [
+    "human",
+    "bp",
+    "uniaxial"
+  ],
+  "related": []
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Rat (new)",
+  "date": "2017-08-01",
+  "description": "A redesign of <a href='rat old.html'>an older design</a>, with the grid size reduced from 32 to 13.",
+  "photos": [
+    "rat new.JPG",
+    "rat back.png"
+  ],
+  "cps": [
+    "rat cp.png"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "animal",
+    "mammal",
+    "bp"
+  ],
+  "related": []
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Life sized chair",
+  "date": "2024-08-10",
+  "description": "A fully functional chair (stool) that can support a person's weight. Folded from a 120cm square of 2-ply cardboard. Designed for a challenge as part of the top comment series.",
+  "photos": [
+    "chair thinker.jpg",
+    "chair.JPG"
+  ],
+  "cps": [
+    "chair cp.png",
+    "chair template.png"
+  ],
+  "cpDescription": "The first image is the crease pattern--the second image is how to combine multiple sheets of cardboard into a larger square. The direction of the grain is important for the strength of the chair.",
+  "video": "https://youtube.com/shorts/mQGd-1B7jHU?feature=share",
+  "diagrams": null,
+  "tags": [
+    "functional",
+    "top_comment",
+    "simple"
+  ],
+  "related": []
+}

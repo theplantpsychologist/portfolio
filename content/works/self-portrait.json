@@ -1,0 +1,22 @@
+{
+  "name": "Self portrait",
+  "date": "2024-07-28",
+  "description": "A self portrait, based on my online profile picture (see my <a href='../../about.html'>about page</a>). Designed as part of the top comment series.",
+  "photos": [
+    "self portrait.JPG"
+  ],
+  "cps": [
+    "self portrait cp.jpg"
+  ],
+  "cpDescription": "The crease pattern is intentionally not flat-foldable.",
+  "video": "https://youtube.com/shorts/Ks_etMiCOcE?feature=share",
+  "diagrams": null,
+  "tags": [
+    "bp",
+    "human",
+    "color_change",
+    "top_comment",
+    "uniaxial"
+  ],
+  "related": []
+}

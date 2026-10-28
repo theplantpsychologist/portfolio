@@ -1,0 +1,22 @@
+{
+  "title": "2.007 Robot",
+  "date": "2023-05-01",
+  "summary": "Final project for 2.007 (Design and Manufacturing I)",
+  "body": "Final project for 2.007 (Design and Manufacturing I). This class is what high school robotics competitions are based off of, except instead of a team of 20 high schoolers for half a year you're a solo college student for 4 months.<br><br>The robot is tasked with scoring as many points as possible on the game board. The year that I took the class, the game board was based off the <i>Wakanda Forever</i> movie that was partly filmed at MIT. The task my robot completed was to \"assemble the DNA\" by placing red balls onto a rotating elevated plate. See the video demo below--actually placing the balls is very difficult with the rotating helix, but the robot is at least able to reliably lift the balls up to the plate.",
+  "collaborators": [],
+  "images": [
+    "2.007 1.png",
+    "2.007 2.png",
+    "2.007 3.png",
+    "2.007 4.png"
+  ],
+  "video": "2.007 video.MOV",
+  "files": [],
+  "links": [],
+  "tags": [
+    "class-project",
+    "robotics",
+    "mechanics",
+    "design"
+  ]
+}

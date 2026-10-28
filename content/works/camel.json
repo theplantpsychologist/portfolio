@@ -1,0 +1,22 @@
+{
+  "name": "Camel",
+  "date": "2021-04-01",
+  "description": "Two different variations: one where the legs are a bit too short, and one where the neck is a bit too short. Proportions can be difficult sometimes.",
+  "photos": [
+    "camel.png",
+    "camels.png"
+  ],
+  "cps": [
+    "camel cp.png"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "tilted_grid",
+    "nonuniaxial",
+    "animal",
+    "mammal"
+  ],
+  "related": []
+}

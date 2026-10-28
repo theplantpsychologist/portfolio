@@ -1,0 +1,21 @@
+{
+  "name": "Reindeer",
+  "date": "2020-12-07",
+  "description": "",
+  "photos": [
+    "reindeer.png"
+  ],
+  "cps": [
+    "reindeer cp.png"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "animal",
+    "mammal",
+    "bp",
+    "uniaxial"
+  ],
+  "related": []
+}

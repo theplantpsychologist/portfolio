@@ -1,0 +1,35 @@
+{
+  "title": "Algorithmic transitions between parallel pleats",
+  "date": "2024-07-01",
+  "summary": "A generalized algorithm for ridge level shifters, submitted and presented to 8OSME",
+  "body": "A generalized algorithm for ridge level shifters, submitted and presented to 8OSME. This algorithm generates the transition crease pattern in linear time and also has implications for solving dense bouncing. An interactive implementation of this algorithm can be viewed <a href='https://web.mit.edu/wongb/www/transitions-implementation/'>here</a>.",
+  "collaborators": [
+    "Erik Demaine"
+  ],
+  "images": [
+    "transitions image.svg"
+  ],
+  "video": "https://youtu.be/hshLzohvMWc",
+  "files": [
+    {
+      "label": "transitions paper",
+      "file": "transitions paper.pdf"
+    },
+    {
+      "label": "transitions slides",
+      "file": "transitions slides.pdf"
+    }
+  ],
+  "links": [
+    {
+      "label": "Project link",
+      "url": "https://web.mit.edu/wongb/www/transitions-implementation/"
+    }
+  ],
+  "tags": [
+    "research",
+    "origami",
+    "computer-science",
+    "theoretical"
+  ]
+}

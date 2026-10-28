@@ -1,0 +1,22 @@
+{
+  "name": "Rabbit",
+  "date": "2021-11-01",
+  "description": "",
+  "photos": [
+    "rabbit.jpg"
+  ],
+  "cps": [
+    "rabbit cp.jpg"
+  ],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "animal",
+    "mammal",
+    "simple",
+    "22.5",
+    "cute"
+  ],
+  "related": []
+}

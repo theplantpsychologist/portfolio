@@ -1,0 +1,24 @@
+{
+  "name": "Dragon",
+  "date": "2022-08-01",
+  "description": "",
+  "photos": [
+    "dragon-9838.png",
+    "dragon glowing.png"
+  ],
+  "cps": [
+    "dragon cp.svg"
+  ],
+  "cpDescription": "From a technical standpoint, this design utilizes 3 techniques beyond basic hp (which is by no means \"basic\") that makes it stand out. First, it uses hp ridge squashes to create the horizontal scale pleats; then it uses complex level shifters to create the vertical scale pleats, that together form the grid of scales. Both of these techniques are much more efficient than what bp designs usually use to create scales--they are also arguably easier to fold, as you can collapse the base first and then construct the scales. And third, this design does not shape the scales but rather leaves them as intersecting pleats, which if you carefully distort, you can use to control the 3d curvature of the body (ie, bulges and saddle points).",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "hp",
+    "uniaxial",
+    "scales",
+    "mythical",
+    "animal",
+    "portfolio"
+  ],
+  "related": []
+}

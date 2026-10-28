@@ -1,0 +1,25 @@
+{
+  "name": "Japanese Spiny Lobster",
+  "date": "2023-03-01",
+  "description": "A few years prior, <a href=\"https://x.com/tuok3110/status/1123586042169159680\">Kota Imai's box pleated design of a japanese spiny lobster</a> gained a lot of attention for the sheer complexity that went into making all the spines and textures of a lobster. It has since become among the ranks of the ryujin 3.5 as one of the top landmarks of complex origami. Thus, since the beginning of my hp journey, it has been a goal of mine to recreate the JSL in hex pleating.",
+  "photos": [
+    "jsl hp.jpg",
+    "lobster 2.png"
+  ],
+  "cps": [
+    "jslcp.svg"
+  ],
+  "cpDescription": "This could be described as \"multiaxial\" hex pleating, or you could call it normal hp with some really complicated level shifters. In any case, it uses a weird layout to create the solid width of the body",
+  "video": null,
+  "diagrams": null,
+  "tags": [
+    "hp",
+    "uniaxial",
+    "multiaxial",
+    "portfolio",
+    "sea_life",
+    "animal",
+    "scales"
+  ],
+  "related": []
+}

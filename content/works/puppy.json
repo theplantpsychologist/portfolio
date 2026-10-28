@@ -1,0 +1,25 @@
+{
+  "name": "Puppy",
+  "date": "2020-11-01",
+  "description": "My first tilted grid design. Taught at OUSA's Foldfest 2021",
+  "photos": [
+    "tgdogs.jpg"
+  ],
+  "cps": [
+    "puppy cp.svg"
+  ],
+  "cpDescription": "",
+  "video": "https://youtu.be/rnsL1Vz7y20",
+  "diagrams": {
+    "url": "https://origamiusa.org/catalog/products/2021-origami-collection-pdf",
+    "label": "Origami USA 2021 Collection"
+  },
+  "tags": [
+    "animal",
+    "mammal",
+    "cute",
+    "tilted_grid",
+    "portfolio"
+  ],
+  "related": []
+}
