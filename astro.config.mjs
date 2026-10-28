@@ -5,6 +5,17 @@ import { loadEnv } from "vite";
 
 const env = loadEnv(process.env.NODE_ENV ?? "development", process.cwd(), "");
 
+// On Cloudflare Pages builds, show which settings the build can see, and stop
+// instead of deploying a site whose images point at the wrong host.
+if (process.env.CF_PAGES) {
+  for (const name of ["PUBLIC_MEDIA_BASE", "SITE_URL", "PUBLIC_TURNSTILE_SITE_KEY"]) {
+    console.log(`[config] ${name} = ${env[name] ? JSON.stringify(env[name]) : "(not set)"}`);
+  }
+  if (!env.PUBLIC_MEDIA_BASE) {
+    throw new Error("PUBLIC_MEDIA_BASE isn't set for this build. Add it in Pages → Settings → Variables and Secrets for this environment, then retry the deployment.");
+  }
+}
+
 // In dev, serve processed media from .media-out/ when PUBLIC_MEDIA_BASE is unset.
 const localMedia = {
   name: "local-media",
