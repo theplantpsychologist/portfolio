@@ -1,0 +1,12 @@
+{
+  "name": "Kumamon",
+  "date": "2025-07-26",
+  "description": "Folded (and photographed) while traveling in rural Kumamoto, Japan. Kumamon is the popular mascot of the prefecture.",
+  "photos": ["kumamon.jpg"],
+  "cps": ["kumamoncp.jpg"],
+  "cpDescription": "The nose color change is fake",
+  "video": null,
+  "diagrams": null,
+  "tags": ["character","color_change","2d"],
+  "related": []
+}

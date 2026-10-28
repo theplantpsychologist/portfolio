@@ -1,0 +1,12 @@
+{
+  "name": "Winged unicorn",
+  "date": "2025-08-03",
+  "description": "A milestone 22.5 design for me when it finally started to \"click\". Taught this model at PCOC 2025.",
+  "photos": ["unicorn-12.jpg","unicorn-6.jpg"],
+  "cps": ["unicorncp.jpg"],
+  "cpDescription": "Left: raw base, right: with a bit more shaping.",
+  "video": "https://youtube.com/shorts/DHIL7WlvOYg",
+  "diagrams": { "url": "https://ko-fi.com/s/b817892ac3", "label": "CP and precreasing diagrams available on kofi" },
+  "tags": ["animal", "mythical", "fantasy","22.5", "portfolio"],
+  "related": []
+}

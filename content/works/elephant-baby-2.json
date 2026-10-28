@@ -1,0 +1,12 @@
+{
+  "name": "elephant baby 2",
+  "date": "2026-5-14",
+  "description": "",
+  "photos": ["elephant1.JPG","elephant2.JPG"],
+  "cps": ["elephantcp.jpg"],
+  "cpDescription": "Made with ExplOri, though with significant modification from anythinng recognizably uniaxial.",
+  "video": null,
+  "diagrams": null,
+  "tags": ["explori","animal","mammal","metallic"],
+  "related": []
+}

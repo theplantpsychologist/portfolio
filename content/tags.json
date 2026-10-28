@@ -3,6 +3,7 @@
     "label": "Subject",
     "tags": {
       "animal": "Animal",
+      "amphibian": "Amphibian",
       "mammal": "Mammal",
       "bird": "Bird",
       "sea_life": "Sea life",
@@ -30,7 +31,9 @@
       "22.5": "22.5°",
       "15": "15°",
       "tilted_grid": "Tilted grid",
-      "tessellation": "Tessellation"
+      "tessellation": "Tessellation",
+      "explori": "ExplOri",
+      "wetfold": "Wetfolding"
     }
   },
   "structure": {
@@ -52,9 +55,7 @@
       "x_ray": "X-ray",
       "functional": "Functional",
       "action": "Action",
-      "multi_subject": "Multiple subjects",
-      "cute": "Cute",
-      "simple": "Simple"
+      "multi_subject": "Multiple subjects"
     }
   },
   "collection": {
@@ -64,7 +65,10 @@
       "commission": "Commission",
       "collaboration": "Collaboration",
       "inktober": "Inktober",
-      "top_comment": "Top comment"
+      "top_comment": "Top comment",
+      "sketch": "Sketch",
+      "cute": "Cute",
+      "simple": "Simple"
     }
   }
 }

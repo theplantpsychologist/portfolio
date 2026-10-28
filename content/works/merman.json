@@ -1,0 +1,12 @@
+{
+  "name": "Buff merman",
+  "date": "2026-03-31",
+  "description": "",
+  "photos": ["merman1.jpg","merman2.JPG"],
+  "cps": ["mermancp.svg"],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": { "url": "https://ko-fi.com/s/7cf7b9ae4b", "label": "CP and precreasing diagrams available on kofi" },
+  "tags": ["color_change","human","mythical","fantasy","sea_life","22.5"],
+  "related": []
+}

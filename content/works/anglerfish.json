@@ -1,0 +1,12 @@
+{
+  "name": "Anglerfish",
+  "date": "2026-07-05",
+  "description": "",
+  "photos": ["anglerfish.jpg"],
+  "cps": ["anglerfishcp.jpg"],
+  "cpDescription": "Intentionally does not fold flat.",
+  "video": null,
+  "diagrams": null,
+  "tags": ["animal","fish","sea_life","22.5","3d"],
+  "related": []
+}

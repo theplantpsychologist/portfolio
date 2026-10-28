@@ -1,0 +1,12 @@
+{
+  "name": "Low poly dino",
+  "date": "2026-09-04",
+  "description": "",
+  "photos": ["dino1.jpg","dino2.jpg"],
+  "cps": ["dinocp.svg"],
+  "cpDescription": "",
+  "video": null,
+  "diagrams": null,
+  "tags": ["hp","3d","animal","reptile","dinosaur"],
+  "related": []
+}

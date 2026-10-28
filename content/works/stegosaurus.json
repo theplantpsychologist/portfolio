@@ -1,0 +1,12 @@
+{
+  "name": "Stegosaurus",
+  "date": "2026-05-15",
+  "description": "",
+  "photos": ["stegosaurus.jpg"],
+  "cps": ["stegosauruscp.jpg"],
+  "cpDescription": "Possibly one of the most complex models designed from ExplOri. Like many others, the cp as seen here is after modifications far beyond anything recognizably uniaxial.",
+  "video": null,
+  "diagrams": null,
+  "tags": ["22.5","explori","animal","reptile","dinosaur"],
+  "related": []
+}

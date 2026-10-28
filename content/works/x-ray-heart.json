@@ -1,0 +1,12 @@
+{
+  "name": "X-ray heart",
+  "date": "2026-02-11",
+  "description": "",
+  "photos": ["heart.JPG"],
+  "cps": [],
+  "cpDescription": "",
+  "video": "https://youtube.com/shorts/Zf0jn8Ure_k",
+  "diagrams": null,
+  "tags": ["x_ray","2d","simple"],
+  "related": []
+}

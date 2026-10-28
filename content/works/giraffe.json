@@ -1,0 +1,12 @@
+{
+  "name": "Giraffe",
+  "date": "2026-05-14",
+  "description": "The first model to be designed with ExplOri.",
+  "photos": ["giraffe.jpg"],
+  "cps": ["giraffecp.png"],
+  "cpDescription": "A blast from the past of the very first ExplOri UI used to look like. The crease pattern is in the top right panel.",
+  "video": null,
+  "diagrams": null,
+  "tags": ["animal", "mammal", "explori","22.5"],
+  "related": []
+}

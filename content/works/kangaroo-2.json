@@ -1,0 +1,12 @@
+{
+  "name": "Kangaroo 2",
+  "date": "2026-06-17",
+  "description": "Poster child ExplOri design",
+  "photos": ["kangaroo.jpg"],
+  "cps": ["kangaroocp.jpg"],
+  "cpDescription": "",
+  "video": "https://youtu.be/M6ewRG1zto4",
+  "diagrams": null,
+  "tags": ["explori","animal","mammal","22.5"],
+  "related": []
+}

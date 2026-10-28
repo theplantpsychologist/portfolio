@@ -750,6 +750,32 @@
       1600
     ]
   },
+  "works/100k/100k.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "7b7c96e4eac6962f",
+    "width": 4032,
+    "height": 3024,
+    "color": "#384858",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/100k/100kcp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "c3a6754e18aa3ec3",
+    "width": 1884,
+    "height": 1376,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
   "works/agony-in-the-garden/agony in the garden cp.jpg": {
     "kind": "image",
     "v": 2,
@@ -822,6 +848,71 @@
     "width": 2551,
     "height": 2470,
     "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/anglerfish/anglerfish.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "3f9bae322d6e83b8",
+    "width": 2693,
+    "height": 2020,
+    "color": "#584838",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/anglerfish/anglerfishcp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "d2189ff77160c51d",
+    "width": 804,
+    "height": 788,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      804
+    ]
+  },
+  "works/arm-study/arm.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "cad2a6399e2bab28",
+    "width": 3024,
+    "height": 3024,
+    "color": "#787878",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/axolotl/axolotl.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "a95315f4c201cd69",
+    "width": 4032,
+    "height": 3024,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/axolotl/axolotlcp.jpeg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "3d5b83e0c93fdbc0",
+    "width": 1600,
+    "height": 1215,
+    "color": "#282828",
     "widths": [
       400,
       800,
@@ -926,6 +1017,19 @@
     "width": 3024,
     "height": 4032,
     "color": "#685848",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/bear-cub/bearcub.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "73698148aeca0e79",
+    "width": 3024,
+    "height": 4032,
+    "color": "#787848",
     "widths": [
       400,
       800,
@@ -1121,6 +1225,32 @@
     "width": 2564,
     "height": 1442,
     "color": "#d8e8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/bunny-round/bunny1.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "08201f24b3d760e1",
+    "width": 3024,
+    "height": 4032,
+    "color": "#789878",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/bunny-round/bunny2.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "8ab10d08eba5e64f",
+    "width": 3697,
+    "height": 2771,
+    "color": "#d8d8c8",
     "widths": [
       400,
       800,
@@ -1502,6 +1632,19 @@
     "width": 3024,
     "height": 4032,
     "color": "#382808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/cowboy-cat/cowboy cat 3.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "df7928582c1cf525",
+    "width": 3024,
+    "height": 4032,
+    "color": "#687858",
     "widths": [
       400,
       800,
@@ -1954,6 +2097,32 @@
       1600
     ]
   },
+  "works/dreaming-girl/dreamgirl1.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "4e626703f9f98a5e",
+    "width": 2846,
+    "height": 3795,
+    "color": "#281808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/dreaming-girl/dreamgirl2.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "a9ffc1b7d5fd7bbf",
+    "width": 3034,
+    "height": 4046,
+    "color": "#988878",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
   "works/edamame/edamame comparison.png": {
     "kind": "image",
     "v": 2,
@@ -1974,6 +2143,45 @@
     "width": 3300,
     "height": 2475,
     "color": "#d8d8c8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/elephant-baby-2/elephant1.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "311b4f9a017e8f7e",
+    "width": 2422,
+    "height": 3230,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/elephant-baby-2/elephant2.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "bbed99a041c614f1",
+    "width": 4032,
+    "height": 3024,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/elephant-baby-2/elephantcp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "00fdaf40512e02de",
+    "width": 2086,
+    "height": 1416,
+    "color": "#282828",
     "widths": [
       400,
       800,
@@ -2190,6 +2398,32 @@
       1600
     ]
   },
+  "works/female-hair-studies/hair.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "7f9175b676b76e65",
+    "width": 1975,
+    "height": 2634,
+    "color": "#989888",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/female-hair-studies/hair1.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "f651c8ce738c643a",
+    "width": 3024,
+    "height": 4032,
+    "color": "#787868",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
   "works/fight-or-flight/fight or flight.JPG": {
     "kind": "image",
     "v": 2,
@@ -2197,6 +2431,19 @@
     "width": 1900,
     "height": 3017,
     "color": "#181818",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/fish-and-loaves/fishandloaves.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "2e1b7b9ff646ff70",
+    "width": 2869,
+    "height": 2154,
+    "color": "#884808",
     "widths": [
       400,
       800,
@@ -2249,6 +2496,32 @@
     "width": 2926,
     "height": 2195,
     "color": "#084868",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/fishing-bird/fishingbird1.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9312195e49e28942",
+    "width": 3421,
+    "height": 1925,
+    "color": "#b8b8b8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/fishing-bird/fishingbird2.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "aad0bb1587e228f4",
+    "width": 3024,
+    "height": 2268,
+    "color": "#a89878",
     "widths": [
       400,
       800,
@@ -2445,6 +2718,32 @@
     "width": 3024,
     "height": 4032,
     "color": "#c8b8a8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/giraffe/giraffe.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "5b3f01cb7a1579c9",
+    "width": 4898,
+    "height": 3266,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/giraffe/giraffecp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "3621716b009c2c77",
+    "width": 2770,
+    "height": 1564,
+    "color": "#080818",
     "widths": [
       400,
       800,
@@ -2671,6 +2970,19 @@
       1600
     ]
   },
+  "works/ikebana/ikebana.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "4eeef00ec2baa685",
+    "width": 3024,
+    "height": 4032,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
   "works/jellyfish/jellyfish cp.jpg": {
     "kind": "image",
     "v": 2,
@@ -2704,6 +3016,32 @@
     "width": 2730,
     "height": 3640,
     "color": "#181808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/jimothy/jimothy1.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "b6e5a3f635b6d754",
+    "width": 2832,
+    "height": 2124,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/jimothy/jimothy2.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "53676403f292b0ce",
+    "width": 2883,
+    "height": 2162,
+    "color": "#d8c8b8",
     "widths": [
       400,
       800,
@@ -2748,6 +3086,32 @@
       400,
       800,
       1600
+    ]
+  },
+  "works/kangaroo-2/kangaroo.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "58395392c04aa5b1",
+    "width": 3310,
+    "height": 2378,
+    "color": "#d8d8d8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/kangaroo-2/kangaroocp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "d0e5903e97ffaea9",
+    "width": 1425,
+    "height": 815,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1425
     ]
   },
   "works/kangaroo/kangaroo cp.png": {
@@ -2907,6 +3271,32 @@
       1600
     ]
   },
+  "works/kumamon/kumamon.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "52fcc725e1aba57e",
+    "width": 4552,
+    "height": 3414,
+    "color": "#486808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/kumamon/kumamoncp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "5f1dc2d092181fec",
+    "width": 1332,
+    "height": 1320,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      1332
+    ]
+  },
   "works/lemonade/lemoade.jpg": {
     "kind": "image",
     "v": 2,
@@ -3012,6 +3402,72 @@
       1600
     ]
   },
+  "works/low-poly-dino/dino1.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "935ebe8a652a8fca",
+    "width": 5283,
+    "height": 3522,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/low-poly-dino/dino2.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "89197a48d351c888",
+    "width": 5412,
+    "height": 3608,
+    "color": "#e8e8e8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/low-poly-dino/dinocp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "e11c196f2dbafd9b",
+    "width": 1987,
+    "height": 2002,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "e11c196f2dbafd9b/dinocp.svg"
+  },
+  "works/male-torso/torso1.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "3dd79eeade08f74b",
+    "width": 3024,
+    "height": 4032,
+    "color": "#989888",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/male-torso/torso2.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "21a4d150a70456eb",
+    "width": 3024,
+    "height": 4032,
+    "color": "#989888",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
   "works/mermaid/mermaid cp.svg": {
     "kind": "image",
     "v": 2,
@@ -3039,6 +3495,46 @@
       1600
     ]
   },
+  "works/merman/merman1.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "4fc898f292938226",
+    "width": 3310,
+    "height": 4415,
+    "color": "#083838",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/merman/merman2.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "30b8e4c8cead2c90",
+    "width": 3024,
+    "height": 4032,
+    "color": "#080868",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/merman/mermancp.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "7c3ad052fbdc3034",
+    "width": 2001,
+    "height": 2001,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "7c3ad052fbdc3034/mermancp.svg"
+  },
   "works/mit/mit cp.svg": {
     "kind": "image",
     "v": 2,
@@ -3060,6 +3556,32 @@
     "width": 3480,
     "height": 2610,
     "color": "#888888",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/mushroom-house/mushroom1.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0eac3c34dedfd756",
+    "width": 2678,
+    "height": 3573,
+    "color": "#e8e8e8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/mushroom-house/mushroom2.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "05aed7a460d0e165",
+    "width": 3317,
+    "height": 2487,
+    "color": "#080808",
     "widths": [
       400,
       800,
@@ -3350,6 +3872,33 @@
       800,
       1066
     ]
+  },
+  "works/plantcient-dragon/plantcientdragon.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "3f65afe9cf974a06",
+    "width": 4819,
+    "height": 3213,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/plantcient-dragon/plantcientdragon.svg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "ffb880ad1e684032",
+    "width": 2000,
+    "height": 2000,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ],
+    "download": "ffb880ad1e684032/plantcientdragon.svg"
   },
   "works/plants-turtle/plants turtle cp.svg": {
     "kind": "image",
@@ -3873,6 +4422,19 @@
       480
     ]
   },
+  "works/siamese-cat/siamese.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "d7116943e2b514ed",
+    "width": 3024,
+    "height": 4032,
+    "color": "#b89878",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
   "works/snoopy/snoopy.JPG": {
     "kind": "image",
     "v": 2,
@@ -3944,6 +4506,58 @@
     "width": 2480,
     "height": 1860,
     "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/stanford-logo/stanford logo cp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9948cddd4c42523d",
+    "width": 1018,
+    "height": 1008,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      1018
+    ]
+  },
+  "works/stanford-logo/stanford logo.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "75717b6b4c5cb01b",
+    "width": 3024,
+    "height": 4032,
+    "color": "#a89888",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/stegosaurus/stegosaurus.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "bebb24784098e1ca",
+    "width": 4225,
+    "height": 2817,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/stegosaurus/stegosauruscp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "0f17ce420103cf58",
+    "width": 2004,
+    "height": 1220,
+    "color": "#282828",
     "widths": [
       400,
       800,
@@ -4130,6 +4744,45 @@
     "widths": [
       400,
       711
+    ]
+  },
+  "works/teenage-mutant-ninja-turtles/tmnt.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "b4853a8e1f83125b",
+    "width": 4032,
+    "height": 3024,
+    "color": "#d8d8d8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/teenage-mutant-ninja-turtles/tmntcp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "6b63a1d9105aad38",
+    "width": 862,
+    "height": 850,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      862
+    ]
+  },
+  "works/tortoise/tortoise.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "c1dec55fc8a86ab0",
+    "width": 4032,
+    "height": 3024,
+    "color": "#988818",
+    "widths": [
+      400,
+      800,
+      1600
     ]
   },
   "works/tree-man/tree man cp.png": {
@@ -4510,6 +5163,32 @@
     ],
     "download": "3152bb20f8db3b15/windy.svg"
   },
+  "works/walrus/walrus.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "8694356841f8ecbc",
+    "width": 4032,
+    "height": 3024,
+    "color": "#888878",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/walrus/walruscp.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9023ff346005dcda",
+    "width": 2614,
+    "height": 1484,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
   "works/warrior-monk/fighter-6.jpg": {
     "kind": "image",
     "v": 2,
@@ -4556,6 +5235,58 @@
     "width": 2807,
     "height": 2106,
     "color": "#e8a888",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/winged-unicorn/unicorn-12.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "3958f092ef4848a8",
+    "width": 4898,
+    "height": 3266,
+    "color": "#d8b858",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/winged-unicorn/unicorn-6.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "16d0b39869930969",
+    "width": 4913,
+    "height": 3275,
+    "color": "#685848",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/winged-unicorn/unicorncp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "2a630db4ccda21ab",
+    "width": 2682,
+    "height": 1292,
+    "color": "#282828",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/x-ray-heart/heart.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "eebd4ef69b325623",
+    "width": 3024,
+    "height": 4032,
+    "color": "#c8c8b8",
     "widths": [
       400,
       800,
