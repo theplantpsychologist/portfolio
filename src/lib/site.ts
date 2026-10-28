@@ -1,5 +1,3 @@
-export const email = "theplantpsychologist@gmail.com";
-
 export const socials = [
   { label: "Instagram", url: "https://www.instagram.com/theplantpsychologist/" },
   { label: "YouTube", url: "https://www.youtube.com/c/ThePlantPsychologist" },
@@ -8,5 +6,4 @@ export const socials = [
   { label: "LinkedIn", url: "https://www.linkedin.com/in/brandonwong1/" },
   { label: "X", url: "https://twitter.com/brandon_w0ng" },
   { label: "Discord", url: "https://discord.gg/AyQ3mNrkdr" },
-  { label: "Email", url: `mailto:${email}` },
 ];

@@ -1,6 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
-import { email, socials } from "../lib/site";
+import ContactForm from "../components/ContactForm.astro";
+import { socials } from "../lib/site";
 
 const services = [
   { name: "Original design", price: "$100–300", note: "Creating a new design. Not included if you want one of my existing designs." },
@@ -13,7 +14,7 @@ const services = [
 ---
 <Base title="About" description="About Brandon Wong, origami designer and engineer. Commissions, lessons, and contact information.">
   <section class="bio">
-    <img src="/img/portrait.webp" alt="Brandon Wong" width="640" height="427" />
+    <img src="/img/portrait1.jpg" alt="Brandon Wong" width="640" height="427" />
     <div class="prose">
       <h1>About</h1>
       <p>
@@ -51,10 +52,10 @@ const services = [
 
   <section id="contact">
     <h2>Contact</h2>
-    <p class="muted">For a quote, describe your request in as much detail as you can.</p>
-    <p><a class="btn" href={`mailto:${email}`}>{email}</a></p>
+    <p class="muted">For a quote, describe your request in as much detail as you can. I'll reply by email.</p>
+    <ContactForm />
     <ul class="chips socials">
-      {socials.filter((s) => s.label !== "Email").map((s) => <li><a class="chip" href={s.url} rel="me noopener">{s.label}</a></li>)}
+      {socials.map((s) => <li><a class="chip" href={s.url} rel="me noopener">{s.label}</a></li>)}
     </ul>
   </section>
 </Base>
@@ -70,8 +71,7 @@ const services = [
   .services div { display: flex; justify-content: space-between; gap: 12px; }
   .services span { color: var(--accent); font-weight: 700; white-space: nowrap; }
   .services p { font-size: 0.92rem; }
-  #contact p { margin-top: 8px; }
-  .socials { list-style: none; padding: 0; margin-top: 16px; }
+  .socials { list-style: none; padding: 0; margin-top: 28px; }
   a:not(.btn):not(.chip) { color: var(--accent); }
   @media (max-width: 760px) {
     .bio { grid-template-columns: 1fr; }

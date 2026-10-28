@@ -78,11 +78,24 @@ const sizes = "(max-width: 900px) 100vw, 720px";
       tabs.forEach((t, j) => t.setAttribute("aria-selected", String(j === i)));
     };
     tabs.forEach((t) => t.addEventListener("click", () => go(Number(t.dataset.go))));
-    viewer.addEventListener("keydown", (e) => {
+    const step = (by: number) => {
       const cur = tabs.findIndex((t) => t.getAttribute("aria-selected") === "true");
-      if (cur < 0 || dialog.open) return;
-      if (e.key === "ArrowRight") go((cur + 1) % tabs.length);
-      if (e.key === "ArrowLeft") go((cur - 1 + tabs.length) % tabs.length);
+      if (cur >= 0) go((cur + by + tabs.length) % tabs.length);
+    };
+    viewer.addEventListener("keydown", (e) => {
+      if (dialog.open) return;
+      if (e.key === "ArrowRight") step(1);
+      if (e.key === "ArrowLeft") step(-1);
+    });
+    // Horizontal swipe on the main image switches slides on touch screens.
+    const stage = viewer.querySelector<HTMLElement>(".stage")!;
+    let startX = 0;
+    let startY = 0;
+    stage.addEventListener("touchstart", (e) => ([startX, startY] = [e.touches[0].clientX, e.touches[0].clientY]), { passive: true });
+    stage.addEventListener("touchend", (e) => {
+      const dx = e.changedTouches[0].clientX - startX;
+      const dy = e.changedTouches[0].clientY - startY;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > 2 * Math.abs(dy)) step(dx < 0 ? 1 : -1);
     });
     for (const z of viewer.querySelectorAll<HTMLButtonElement>(".zoom")) {
       z.addEventListener("click", () => {

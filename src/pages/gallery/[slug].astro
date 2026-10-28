@@ -98,7 +98,7 @@ const jsonLd = {
 </Base>
 
 <style>
-  .back { display: inline-block; margin-bottom: 14px; text-decoration: none; }
+  .back { display: inline-block; padding: 8px 0; margin-bottom: 6px; text-decoration: none; }
   article { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 36px; align-items: start; }
   .info { display: grid; gap: 14px; }
   .info section { display: grid; gap: 8px; margin-top: 10px; }
@@ -110,7 +110,7 @@ const jsonLd = {
   .pager { display: flex; justify-content: space-between; gap: 16px; margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); }
   .pager a { text-decoration: none; font-weight: 600; }
   @media (max-width: 900px) {
-    article { grid-template-columns: 1fr; gap: 20px; }
+    article { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   }
 </style>
 

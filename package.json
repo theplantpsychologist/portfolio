@@ -7,7 +7,8 @@
     "preview": "astro preview",
     "new": "node scripts/new.mjs",
     "publish": "node --env-file-if-exists=.env scripts/publish.mjs",
-    "check": "astro check"
+    "check": "astro check",
+    "preview:functions": "astro build && wrangler pages dev dist"
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +18,9 @@
     "sharp": "^0.34.5"
   },
   "devDependencies": {
-    "@aws-sdk/client-s3": "^3.1158.0"
+    "@aws-sdk/client-s3": "^3.1158.0",
+    "@cloudflare/workers-types": "^5.20261027.1",
+    "wrangler": "^4.154.0"
   },
   "private": true
 }

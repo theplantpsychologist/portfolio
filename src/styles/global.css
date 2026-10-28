@@ -26,6 +26,7 @@
 
 * { box-sizing: border-box; margin: 0; }
 html { -webkit-text-size-adjust: 100%; }
+[id] { scroll-margin-top: 80px; }
 body {
   font-family: var(--font);
   background: var(--bg);

@@ -15,6 +15,7 @@ const { title, description = "Original origami designs, crease patterns, and eng
 const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const beacon = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
+const gaId = import.meta.env.PUBLIC_GA_ID;
 ---
 <!doctype html>
 <html lang="en">
@@ -36,6 +37,17 @@ const beacon = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
     {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
     {beacon && (
       <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({ token: beacon })} />
+    )}
+    {gaId && (
+      <>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
+        <script is:inline define:vars={{ gaId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag("js", new Date());
+          gtag("config", gaId);
+        </script>
+      </>
     )}
   </head>
   <body>

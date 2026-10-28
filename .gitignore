@@ -8,3 +8,5 @@ dist/
 media/
 .media-out/
 .cache/
+.dev.vars
+.wrangler/

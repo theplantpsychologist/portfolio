@@ -1,0 +1,81 @@
+---
+// Posts to functions/api/contact.ts. Works without JavaScript too
+// (the function redirects back here with ?sent=1 or ?sent=0).
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+const topics = ["Commission", "Lessons", "Collaboration / sponsorship", "Academic", "Other"];
+---
+<form class="contact" method="post" action="/api/contact">
+  <div class="row">
+    <label>Name <input name="name" required maxlength="100" autocomplete="name" /></label>
+    <label>Email <input name="email" type="email" required maxlength="200" autocomplete="email" /></label>
+  </div>
+  <label>Topic
+    <select name="topic">{topics.map((t) => <option>{t}</option>)}</select>
+  </label>
+  <label>Message
+    <textarea name="message" required minlength="10" maxlength="5000" rows="6" placeholder="What would you like made? Size, colors, deadline, budget…"></textarea>
+  </label>
+  <label class="hp" aria-hidden="true">Website <input name="website" tabindex="-1" autocomplete="off" /></label>
+  {siteKey ? (
+    <div class="cf-turnstile" data-sitekey={siteKey} data-theme="auto"></div>
+  ) : (
+    <p class="muted note">Spam protection is off because PUBLIC_TURNSTILE_SITE_KEY isn't set.</p>
+  )}
+  <div class="actions">
+    <button class="btn" type="submit">Send message</button>
+    <p class="status" role="status" aria-live="polite"></p>
+  </div>
+</form>
+{siteKey && <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
+
+<style>
+  .contact { display: grid; gap: 14px; max-width: 640px; margin-top: 16px; }
+  .row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  label { display: grid; gap: 4px; font-weight: 600; font-size: 0.92rem; }
+  input, select, textarea {
+    font: inherit; font-weight: 400; font-size: 1rem; padding: 10px 12px; width: 100%;
+    border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink);
+  }
+  input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  textarea { resize: vertical; }
+  .hp { position: absolute; left: -9999px; }
+  .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .status { margin: 0; }
+  .status.ok { color: #2f8a4d; }
+  .status.err { color: var(--accent); }
+  .note { font-size: 0.85rem; }
+  @media (max-width: 560px) {
+    .row { grid-template-columns: minmax(0, 1fr); }
+  }
+</style>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>("form.contact")!;
+  const status = form.querySelector<HTMLParagraphElement>(".status")!;
+  const button = form.querySelector<HTMLButtonElement>("button[type=submit]")!;
+  const show = (ok: boolean, msg: string) => {
+    status.textContent = msg;
+    status.className = `status ${ok ? "ok" : "err"}`;
+  };
+
+  // Result of a no-JavaScript submission.
+  const sent = new URLSearchParams(location.search).get("sent");
+  if (sent) show(sent === "1", sent === "1" ? "Thanks! Your message was sent." : "Sorry, something went wrong. Please try again.");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    button.disabled = true;
+    show(true, "Sending…");
+    try {
+      const res = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
+      const data = await res.json();
+      show(data.ok, data.message);
+      if (data.ok) form.reset();
+    } catch {
+      show(false, "Sorry, the message couldn't be sent. Please check your connection and try again.");
+    } finally {
+      button.disabled = false;
+      (window as any).turnstile?.reset();
+    }
+  });
+</script>
