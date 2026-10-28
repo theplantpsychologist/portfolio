@@ -38,6 +38,8 @@ This creates `content/works/cardinal.json` and an empty `media/works/cardinal/` 
 }
 ```
 
+Add `portfolio` to the tags for a standout piece or `sketch` for a quick one; anything else counts as polished. Portfolio pieces get a double-size tile in the gallery, and the gallery's Highlights / Polished / All switch filters by these. They're in the `tier` group of `content/tags.json`.
+
 The first photo is the gallery thumbnail. "Has crease pattern", "has video", "has diagrams", and the year are added automatically. To use a new tag, add it to a group in `content/tags.json` first; misspelled tags fail the publish step.
 
 ```bash

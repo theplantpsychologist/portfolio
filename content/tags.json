@@ -61,14 +61,19 @@
   "collection": {
     "label": "Collection",
     "tags": {
-      "portfolio": "Portfolio highlights",
       "commission": "Commission",
       "collaboration": "Collaboration",
       "inktober": "Inktober",
       "top_comment": "Top comment",
-      "sketch": "Sketch",
       "cute": "Cute",
       "simple": "Simple"
+    }
+  },
+  "tier": {
+    "label": "Tier",
+    "tags": {
+      "portfolio": "Portfolio highlight",
+      "sketch": "Sketch"
     }
   }
 }

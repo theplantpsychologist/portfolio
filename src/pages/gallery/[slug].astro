@@ -3,7 +3,7 @@ import Base from "../../layouts/Base.astro";
 import Viewer, { type Slide } from "../../components/Viewer.astro";
 import YouTube from "../../components/YouTube.astro";
 import Img from "../../components/Img.astro";
-import { getWorks, coverOf, tagLabel, formatMonth, plain, type Work } from "../../lib/content";
+import { getWorks, coverOf, tagLabel, tagGroupOf, formatMonth, plain, type Work } from "../../lib/content";
 import { picture } from "../../lib/media";
 
 export async function getStaticPaths() {
@@ -30,6 +30,7 @@ const slides: Slide[] = [
     return { pic, alt: `${d.name} crease pattern`, label: "Crease pattern", download: pic?.download };
   }),
 ];
+const chips = d.tags.filter((t) => tagGroupOf(t) !== "tier");
 const related = d.related.map((r) => all.find((w) => w.id === r)).filter(Boolean) as Work[];
 const cover = coverOf(work, 1600);
 const description = plain(d.description) || `${d.name}, an original origami design by Brandon Wong (${d.date.getUTCFullYear()}).`;
@@ -54,9 +55,9 @@ const jsonLd = {
       <h1>{d.name}</h1>
       <p class="muted">{formatMonth(d.date)}</p>
       {d.description && <div class="prose" set:html={d.description} />}
-      {d.tags.length > 0 && (
+      {chips.length > 0 && (
         <div class="chips">
-          {d.tags.map((t) => <a class="chip" href={`/gallery/?tag=${encodeURIComponent(t)}`}>{tagLabel(t)}</a>)}
+          {chips.map((t) => <a class="chip" href={`/gallery/?tag=${encodeURIComponent(t)}`}>{tagLabel(t)}</a>)}
         </div>
       )}
       {d.cpDescription && (

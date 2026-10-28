@@ -9,8 +9,9 @@ const years = [...new Set(works.map((w) => String(w.data.date.getUTCFullYear()))
 
 // Facet groups, in sidebar order. Only tags actually in use are shown.
 const used = new Set(works.flatMap((w) => [...w.data.tags, ...derivedTags(w)]));
+// The tier group drives the Show switch and tile sizes instead of a filter.
 const facets = [
-  ...Object.entries(tagGroups).map(([id, g]) => ({
+  ...Object.entries(tagGroups).filter(([id]) => id !== "tier").map(([id, g]) => ({
     id,
     label: g.label,
     tags: Object.entries(g.tags).filter(([t]) => used.has(t)),
@@ -23,6 +24,7 @@ const cards = works.map((w) => {
   const tags = [...w.data.tags, ...derivedTags(w)];
   return {
     w,
+    tier: tags.includes("portfolio") ? "highlight" : tags.includes("sketch") ? "sketch" : "polished",
     cover: coverOf(w, 400),
     cp: cpCoverOf(w, 400),
     year: String(w.data.date.getUTCFullYear()),
@@ -47,6 +49,11 @@ const cards = works.map((w) => {
         <option value="az">A–Z</option>
       </select>
       <div class="seg" role="group" aria-label="Show">
+        <button type="button" data-show="highlight" aria-pressed="false">Highlights</button>
+        <button type="button" data-show="polished" aria-pressed="false">Polished</button>
+        <button type="button" data-show="all" aria-pressed="true">All</button>
+      </div>
+      <div class="seg" role="group" aria-label="Image type">
         <button type="button" data-view="photo" aria-pressed="true">Photos</button>
         <button type="button" data-view="cp" aria-pressed="false">Crease patterns</button>
       </div>
@@ -77,11 +84,11 @@ const cards = works.map((w) => {
 
     <section>
       <ul id="grid" class="grid">
-        {cards.map(({ w, cover, cp, year, tags, search }) => (
-          <li data-tags={tags.join(" ")} data-year={year} data-date={w.data.date.getTime()} data-name={w.data.name} data-search={search}>
+        {cards.map(({ w, tier, cover, cp, year, tags, search }) => (
+          <li class={tier} data-tier={tier} data-tags={tags.join(" ")} data-year={year} data-date={w.data.date.getTime()} data-name={w.data.name} data-search={search}>
             <a href={`/gallery/${w.id}/`}>
-              <Img pic={cover} alt={w.data.name} sizes="(max-width: 640px) 50vw, 240px" class="photo" />
-              {cp && <Img pic={cp} alt={`${w.data.name} crease pattern`} sizes="(max-width: 640px) 50vw, 240px" class="cp" />}
+              <Img pic={cover} alt={w.data.name} sizes={tier === "highlight" ? "(max-width: 800px) 100vw, 480px" : "(max-width: 800px) 50vw, 240px"} class="photo" />
+              {cp && <Img pic={cp} alt={`${w.data.name} crease pattern`} sizes={tier === "highlight" ? "(max-width: 800px) 100vw, 480px" : "(max-width: 800px) 50vw, 240px"} class="cp" />}
               <span class="caption">{w.data.name} <small>{year}</small></span>
             </a>
           </li>
@@ -113,7 +120,12 @@ const cards = works.map((w) => {
   .facet:has(input:focus-visible) { outline: 2px solid var(--accent); }
   .facet.zero { opacity: 0.4; }
 
-  .grid { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 14px; }
+  .grid { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); grid-auto-flow: dense; gap: 14px; }
+  /* Highlights take a 2×2 cell; dense packing lets smaller tiles fill the gaps around them. */
+  .grid li.highlight { grid-column: span 2; grid-row: span 2; contain-intrinsic-size: auto 500px; }
+  .grid li.highlight a { display: flex; flex-direction: column; height: 100%; }
+  .grid li.highlight :global(img), .grid li.highlight :global(.missing) { flex: 1; min-height: 0; aspect-ratio: auto; }
+  .grid li.highlight .caption { font-size: 1.05rem; }
   .grid li { content-visibility: auto; contain-intrinsic-size: auto 240px; }
   .grid li[hidden] { display: none; }
   .grid a { display: block; text-decoration: none; }
@@ -129,6 +141,9 @@ const cards = works.map((w) => {
     .layout { grid-template-columns: minmax(0, 1fr); }
     aside { position: static; max-height: none; }
     .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    /* Two columns: a highlight already fills its row, so keep it square. */
+    .grid li.highlight { grid-row: auto; }
+    .grid li.highlight :global(img), .grid li.highlight :global(.missing) { flex: none; aspect-ratio: 1; }
   }
 </style>
 
@@ -139,7 +154,11 @@ const cards = works.map((w) => {
   const q = document.getElementById("q") as HTMLInputElement;
   const sort = document.getElementById("sort") as HTMLSelectElement;
   const viewButtons = [...document.querySelectorAll<HTMLButtonElement>("[data-view]")];
+  const showButtons = [...document.querySelectorAll<HTMLButtonElement>("[data-show]")];
   let view = "photo";
+  let show = "all";
+  const tierOk = (c: HTMLLIElement) =>
+    show === "all" || c.dataset.tier === "highlight" || (show === "polished" && c.dataset.tier === "polished");
 
   const tagsOf = new Map(cards.map((c) => [c, new Set([...c.dataset.tags!.split(" "), c.dataset.year!])]));
   const checked = (g: HTMLFieldSetElement) =>
@@ -149,6 +168,7 @@ const cards = works.map((w) => {
   function matches(card: HTMLLIElement, selection: Map<string, string[]>, words: string[], skip?: string) {
     const tags = tagsOf.get(card)!;
     if (view === "cp" && !tags.has("has_cp")) return false;
+    if (!tierOk(card)) return false;
     for (const [g, sel] of selection) if (g !== skip && sel.length && !sel.some((t) => tags.has(t))) return false;
     return words.every((w) => card.dataset.search!.includes(w));
   }
@@ -178,6 +198,7 @@ const cards = works.map((w) => {
     document.getElementById("active-count")!.textContent = active ? `(${active})` : "";
     grid.classList.toggle("show-cp", view === "cp");
     viewButtons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.view === view)));
+    showButtons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.show === show)));
     if (pushUrl) writeUrl(selection);
   }
 
@@ -196,6 +217,7 @@ const cards = works.map((w) => {
     if (q.value.trim()) p.set("q", q.value.trim());
     if (sort.value !== "new") p.set("sort", sort.value);
     if (view !== "photo") p.set("view", view);
+    if (show !== "all") p.set("show", show);
     const s = p.toString().replace(/%2C/g, ",");
     history.replaceState(null, "", s ? `?${s}` : location.pathname);
   }
@@ -210,6 +232,7 @@ const cards = works.map((w) => {
     q.value = p.get("q") ?? "";
     sort.value = p.get("sort") ?? "new";
     view = p.get("view") === "cp" ? "cp" : "photo";
+    show = ["highlight", "polished"].includes(p.get("show") ?? "") ? p.get("show")! : "all";
   }
 
   readUrl();
@@ -221,6 +244,7 @@ const cards = works.map((w) => {
   q.addEventListener("input", () => update());
   sort.addEventListener("change", () => (applySort(), update()));
   viewButtons.forEach((b) => b.addEventListener("click", () => ((view = b.dataset.view!), update())));
+  showButtons.forEach((b) => b.addEventListener("click", () => ((show = b.dataset.show!), update())));
   document.getElementById("clear")!.addEventListener("click", () => {
     groups.forEach((g) => g.querySelectorAll("input").forEach((i) => (i.checked = false)));
     q.value = "";
