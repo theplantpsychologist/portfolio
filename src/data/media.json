@@ -3691,6 +3691,45 @@
       800
     ]
   },
+  "works/ox/ox1.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "9257fc7c2562be48",
+    "width": 3462,
+    "height": 2597,
+    "color": "#383838",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/ox/ox2.JPG": {
+    "kind": "image",
+    "v": 2,
+    "hash": "d1f33fe993a5cb30",
+    "width": 3728,
+    "height": 2796,
+    "color": "#080808",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/ox/oxcp.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "e7a30342b4fc5aff",
+    "width": 919,
+    "height": 928,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      919
+    ]
+  },
   "works/panda/panda cub cp.png": {
     "kind": "image",
     "v": 2,
@@ -3808,13 +3847,26 @@
       1600
     ]
   },
-  "works/penguin-tall/tall penguin.jpg": {
+  "works/penguin-tall/tall penguin cp.jpg": {
     "kind": "image",
     "v": 2,
     "hash": "319e57f4a01046bb",
     "width": 1780,
     "height": 1202,
     "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "works/penguin-tall/tall penguin.jpg": {
+    "kind": "image",
+    "v": 2,
+    "hash": "12e008e04379bad9",
+    "width": 1722,
+    "height": 2587,
+    "color": "#b8b8a8",
     "widths": [
       400,
       800,
