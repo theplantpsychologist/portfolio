@@ -1,0 +1,23 @@
+{
+  "title": "Talk: Origami and post-secondary math education",
+  "date": "2026-05-15",
+  "summary": "Origami math content presented at CFC6",
+  "body": "Most discussions of origami in math education center around geometric intuition for young students, occasionally reaching the level of high school geometry (ex: Haga's theorem, etc.) but rarely further. However, most people (including many folders) do not realize that the math of origami goes deep into the world of higher education, including constrained nonlinear optimization, Boolean algebra, quaternions, 22.5 as a quadratic field extension, and spectral graph theory. The connection of these abstract concepts to the tangible medium of origami provides a valuable context and motivator for students studying these branches of mathematics. In this talk, I will use visual math animations to walk through a few of these lessons involving the use of higher math in origami.",
+  "collaborators": [
+  ],
+  "images": [
+    "cfcmath.png"
+  ],
+  "video": "https://youtu.be/MQnaDqHi0eY",
+  "files": [
+    {
+      "label": "Slides (originally animated)",
+      "file": "cfcmath.pdf"
+    }
+  ],
+  "links": [],
+  "tags": [
+    "conference_talk",
+    "origami","math","personal"
+  ]
+}

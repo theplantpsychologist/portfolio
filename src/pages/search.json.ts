@@ -1,6 +1,5 @@
 import type { APIRoute } from "astro";
-import { getWorks, getProjects, coverOf, tagLabel } from "../lib/content";
-import { picture } from "../lib/media";
+import { getWorks, getProjects, coverOf, projectCover, tagLabel, academicTagLabel } from "../lib/content";
 
 // Compact index for the nav search box: t=title, u=url, s=search text, k=kind, i=thumbnail.
 export const GET: APIRoute = async () => {
@@ -14,9 +13,9 @@ export const GET: APIRoute = async () => {
   const projects = (await getProjects()).map((p) => ({
     t: p.data.title,
     u: `/academics/${p.id}/`,
-    s: [p.data.title, p.data.summary, ...p.data.tags].join(" ").toLowerCase(),
+    s: [p.data.title, p.data.summary, ...p.data.tags.map(academicTagLabel)].join(" ").toLowerCase(),
     k: `Academics · ${p.data.date.getUTCFullYear()}`,
-    i: p.data.images[0] ? picture(`academics/${p.id}/${p.data.images[0]}`, 400)?.src : undefined,
+    i: projectCover(p, 400)?.src,
   }));
   return new Response(JSON.stringify([...works, ...projects]), { headers: { "Content-Type": "application/json" } });
 };

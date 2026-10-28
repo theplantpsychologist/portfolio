@@ -1,29 +1,43 @@
 ---
 import Base from "../../layouts/Base.astro";
 import Img from "../../components/Img.astro";
-import { getProjects } from "../../lib/content";
-import { picture } from "../../lib/media";
+import { getProjects, academicTagGroups, projectCover } from "../../lib/content";
 
 const projects = await getProjects();
-const label = (t: string) => t.replace(/-/g, " ").replace(/^./, (c) => c.toUpperCase());
-const counts = new Map<string, number>();
-for (const p of projects) for (const t of p.data.tags) counts.set(t, (counts.get(t) ?? 0) + 1);
-const tags = [...counts].sort((a, b) => b[1] - a[1]).map(([t]) => t);
+
+// Filter groups from content/academic-tags.json. Only tags actually in use are shown.
+const used = new Set(projects.flatMap((p) => p.data.tags));
+const facets = Object.entries(academicTagGroups)
+  .map(([id, g]) => ({ id, label: g.label, tags: Object.entries(g.tags).filter(([t]) => used.has(t)) }))
+  .filter((f) => f.tags.length);
 ---
 <Base title="Academics" description="Research, class projects, and engineering work by Brandon Wong: computational origami, metamaterials, robotics, and more.">
   <h1>Academics</h1>
   <p class="muted intro">Research papers, class projects, and engineering work beyond paper folding.</p>
 
-  <div class="chips filters" role="group" aria-label="Filter by topic">
-    <button type="button" class="chip" aria-pressed="true" data-tag="">All</button>
-    {tags.map((t) => <button type="button" class="chip" aria-pressed="false" data-tag={t}>{label(t)}</button>)}
+  <div class="filters">
+    {facets.map((f) => (
+      <fieldset data-group={f.id}>
+        <legend>{f.label}</legend>
+        <div class="chips">
+          {f.tags.map(([t, label]) => (
+            <label class="facet">
+              <input type="checkbox" value={t} />
+              <span>{label}</span>
+              <small data-count />
+            </label>
+          ))}
+        </div>
+      </fieldset>
+    ))}
+    <button type="button" class="btn ghost" id="clear" hidden>Clear filters</button>
   </div>
 
   <ul class="cards">
     {projects.map((p) => (
       <li data-tags={p.data.tags.join(" ")}>
         <a href={`/academics/${p.id}/`}>
-          <Img pic={p.data.images[0] ? picture(`academics/${p.id}/${p.data.images[0]}`, 800) : null} alt="" sizes="(max-width: 640px) 100vw, 380px" />
+          <Img pic={projectCover(p, 800)} alt="" sizes="(max-width: 640px) 100vw, 380px" />
           <div>
             <h2>{p.data.title}</h2>
             <p class="muted">{p.data.date.getUTCFullYear()}</p>
@@ -33,32 +47,82 @@ const tags = [...counts].sort((a, b) => b[1] - a[1]).map(([t]) => t);
       </li>
     ))}
   </ul>
+  <p id="empty" class="muted" hidden>No projects match these filters.</p>
 </Base>
 
 <style>
   .intro { margin: 6px 0 20px; }
-  .filters { margin-bottom: 24px; }
-  .filters button { font: inherit; font-size: 0.85rem; cursor: pointer; }
-  .filters button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
-  .cards { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+  .filters { display: flex; flex-wrap: wrap; align-items: end; gap: 12px 28px; margin-bottom: 24px; }
+  fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+  legend { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 6px; }
+  .facet { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 999px; background: var(--chip); font-size: 0.85rem; cursor: pointer; border: 1px solid transparent; user-select: none; }
+  .facet input { position: absolute; opacity: 0; pointer-events: none; }
+  .facet small { color: var(--muted); }
+  .facet:has(input:checked) { background: var(--ink); color: var(--bg); }
+  .facet:has(input:checked) small { color: inherit; opacity: 0.7; }
+  .facet:has(input:focus-visible) { outline: 2px solid var(--accent); }
+  .facet.zero { opacity: 0.4; }
+  #clear[hidden] { display: none; }
+  .cards { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 20px; }
   .cards li[hidden] { display: none; }
   .cards a { display: flex; flex-direction: column; height: 100%; text-decoration: none; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
   .cards a:hover { border-color: var(--accent); color: inherit; }
-  .cards :global(img), .cards :global(.missing) { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+  .cards :global(img), .cards :global(.missing) { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
   .cards div { padding: 14px 16px 18px; display: grid; gap: 4px; }
   .cards h2 { font-size: 1.1rem; }
   .cards p:last-child { font-size: 0.92rem; }
 </style>
 
 <script>
-  const buttons = [...document.querySelectorAll<HTMLButtonElement>(".filters button")];
   const cards = [...document.querySelectorAll<HTMLLIElement>(".cards li")];
-  function select(tag: string) {
-    buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.tag === tag)));
-    cards.forEach((c) => (c.hidden = !!tag && !c.dataset.tags!.split(" ").includes(tag)));
-    history.replaceState(null, "", tag ? `?tag=${tag}` : location.pathname);
+  const groups = [...document.querySelectorAll<HTMLFieldSetElement>("fieldset[data-group]")];
+  const clear = document.getElementById("clear")!;
+  const tagsOf = new Map(cards.map((c) => [c, new Set(c.dataset.tags!.split(" "))]));
+  const checked = (g: HTMLFieldSetElement) => [...g.querySelectorAll<HTMLInputElement>("input:checked")].map((i) => i.value);
+
+  // Within a group, any selected tag matches; across groups, all must match.
+  const matches = (card: HTMLLIElement, selection: Map<string, string[]>, skip?: string) =>
+    [...selection].every(([g, sel]) => g === skip || !sel.length || sel.some((t) => tagsOf.get(card)!.has(t)));
+
+  function update(pushUrl = true) {
+    const selection = new Map(groups.map((g) => [g.dataset.group!, checked(g)]));
+    let shown = 0;
+    for (const c of cards) {
+      c.hidden = !matches(c, selection);
+      if (!c.hidden) shown++;
+    }
+    // Counts: how many results each tag would give, given the other groups' filters.
+    for (const g of groups) {
+      const pool = cards.filter((c) => matches(c, selection, g.dataset.group));
+      for (const label of g.querySelectorAll<HTMLLabelElement>(".facet")) {
+        const input = label.querySelector("input")!;
+        const n = pool.filter((c) => tagsOf.get(c)!.has(input.value)).length;
+        label.querySelector("small")!.textContent = String(n);
+        label.classList.toggle("zero", n === 0 && !input.checked);
+      }
+    }
+    document.getElementById("empty")!.hidden = shown > 0;
+    clear.hidden = ![...selection.values()].flat().length;
+    if (!pushUrl) return;
+    // Filters live in the URL, e.g. /academics/?type=research&field=math
+    const p = new URLSearchParams();
+    for (const [g, sel] of selection) if (sel.length) p.set(g, sel.join(","));
+    const s = p.toString().replace(/%2C/g, ",");
+    history.replaceState(null, "", s ? `?${s}` : location.pathname);
   }
-  buttons.forEach((b) => b.addEventListener("click", () => select(b.dataset.tag!)));
-  const initial = new URLSearchParams(location.search).get("tag");
-  if (initial && buttons.some((b) => b.dataset.tag === initial)) select(initial);
+
+  // ?tag=x (from a project page's chips) selects that tag in whichever group has it.
+  const params = new URLSearchParams(location.search);
+  const want = new Set(params.getAll("tag").flatMap((t) => t.split(",")));
+  for (const g of groups) {
+    const sel = new Set([...(params.get(g.dataset.group!)?.split(",") ?? []), ...want]);
+    for (const i of g.querySelectorAll<HTMLInputElement>("input")) i.checked = sel.has(i.value);
+  }
+  update(want.size > 0);
+
+  for (const g of groups) g.addEventListener("change", () => update());
+  clear.addEventListener("click", () => {
+    groups.forEach((g) => g.querySelectorAll("input").forEach((i) => (i.checked = false)));
+    update();
+  });
 </script>

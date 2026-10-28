@@ -1,0 +1,23 @@
+{
+  "title": "Talk: Is this the future of 22.5 design?",
+  "date": "2026-05-17",
+  "summary": "22.5 algorithm presented at CFC6",
+  "body": "The computational design of uniaxial 22.5 crease patterns has been a long unsolved problem. The discrete nature of the 22.5 system cannot be easily adapted to fit conventional circle packing techniques, and the presence of irrational √2 terms in 22.5 geometry provides further complications. In this talk, I will present my recent work on computational uniaxial 22.5, in which the system does: (1) pre-generates millions of random packings/crease patterns/trees, in a 4D system to avoid floating point errors, then (2) uses the eigenvalues of the trees as an embedding vector to quickly search the database for the closest tree to the user's query. All relevant math concepts will be explained; no prior knowledge is necessary.",
+  "collaborators": [
+  ],
+  "images": [
+    "cfc225.png"
+  ],
+  "video": "https://youtu.be/Cw9lNxzSVf0",
+  "files": [{
+      "label": "Slides",
+      "file": "cfc225.pdf"
+    }],
+  "links": [],
+  "tags": [
+    "conference_talk",
+    "origami",
+    "research",
+    "algorithms","math"
+  ]
+}

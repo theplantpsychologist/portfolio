@@ -2,7 +2,8 @@
 import Base from "../../layouts/Base.astro";
 import Viewer, { type Slide } from "../../components/Viewer.astro";
 import YouTube from "../../components/YouTube.astro";
-import { getProjects, formatMonth, plain, type Project } from "../../lib/content";
+import Img from "../../components/Img.astro";
+import { getProjects, formatMonth, plain, projectCover, academicTagLabel, type Project } from "../../lib/content";
 import { picture, fileUrl, entry } from "../../lib/media";
 
 export async function getStaticPaths() {
@@ -25,10 +26,11 @@ if (localVideo) slides.push({ pic: picture(key(d.video!), 800), alt: `${d.title}
 const files = d.files.map((f) => {
   const e = entry(key(f.file));
   const mb = e?.kind === "file" ? ` (${(e.bytes / 1e6).toFixed(1)} MB)` : "";
-  return { label: f.label + mb, url: fileUrl(key(f.file)) };
+  return { label: f.label, size: mb, url: fileUrl(key(f.file)), pdf: /\.pdf$/i.test(f.file), preview: picture(key(f.file), 800) };
 });
-const cover = d.images[0] ? picture(key(d.images[0]), 1600) : null;
-const label = (t: string) => t.replace(/-/g, " ").replace(/^./, (c) => c.toUpperCase());
+const pdfs = files.filter((f) => f.pdf && f.url);
+const cover = projectCover(project, 1600);
+const media = slides.length > 0 || (d.video && !localVideo);
 ---
 <Base title={d.title} description={plain(d.summary)} image={cover?.large} type="article">
   <a class="back muted" href="/academics/">← Academics</a>
@@ -38,27 +40,51 @@ const label = (t: string) => t.replace(/-/g, " ").replace(/^./, (c) => c.toUpper
     {d.collaborators.length > 0 && <p class="muted">With {d.collaborators.join(", ")}</p>}
   </header>
 
-  <div class="body">
-    <div>
-      {slides.length > 0 && <Viewer slides={slides} />}
-      {d.video && !localVideo && <div class="video"><YouTube url={d.video} title={d.title} /></div>}
-    </div>
+  <div class:list={["body", { solo: !media }]}>
+    {media && (
+      <div>
+        {slides.length > 0 && <Viewer slides={slides} />}
+        {d.video && !localVideo && <div class="video"><YouTube url={d.video} title={d.title} /></div>}
+      </div>
+    )}
     <div class="info">
       <div class="prose" set:html={d.body || d.summary} />
       {(files.length > 0 || d.links.length > 0) && (
         <section>
           <h2>Resources</h2>
           <ul>
-            {files.map((f) => <li><a href={f.url}>{f.label}</a></li>)}
+            {files.map((f) => <li><a href={f.url} target={f.pdf ? "_blank" : undefined}>{f.label}{f.size}</a></li>)}
             {d.links.map((l) => <li><a href={l.url}>{l.label}</a></li>)}
           </ul>
         </section>
       )}
       {d.tags.length > 0 && (
-        <div class="chips">{d.tags.map((t) => <a class="chip" href={`/academics/?tag=${t}`}>{label(t)}</a>)}</div>
+        <div class="chips">{d.tags.map((t) => <a class="chip" href={`/academics/?tag=${t}`}>{academicTagLabel(t)}</a>)}</div>
       )}
     </div>
   </div>
+
+  {pdfs.length > 0 && (
+    <section class="docs" id="documents">
+      <div class="docs-head">
+        <h2>{pdfs.length > 1 ? "Documents" : pdfs[0].label}</h2>
+        {pdfs.length > 1 && (
+          <div class="seg" role="group" aria-label="Document">
+            {pdfs.map((f, i) => <button type="button" data-doc={i} aria-pressed={i === 0 ? "true" : "false"}>{f.label}</button>)}
+          </div>
+        )}
+      </div>
+      {pdfs.map((f, i) => (
+        <div class="doc" data-doc-panel={i} data-src={f.url} data-title={f.label} hidden={i > 0}>
+          {/* Replaced by an inline viewer where the browser can show PDFs; otherwise opens in a new tab. */}
+          <a class="page" href={f.url} target="_blank">
+            <Img pic={f.preview} alt={`First page of ${f.label}`} sizes="(max-width: 900px) 100vw, 560px" />
+            <span class="btn">Open {f.label}{f.size}</span>
+          </a>
+        </div>
+      ))}
+    </section>
+  )}
 </Base>
 
 <style>
@@ -70,7 +96,41 @@ const label = (t: string) => t.replace(/-/g, " ").replace(/^./, (c) => c.toUpper
   .info section { display: grid; gap: 8px; }
   .info ul { padding-left: 1.2em; }
   .info a:not(.chip) { color: var(--accent); }
+  .body.solo { grid-template-columns: minmax(0, 1fr); max-width: 760px; }
+  .docs { margin-top: 40px; display: grid; gap: 12px; }
+  .docs-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+  .seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+  .seg button { font: inherit; font-size: 0.9rem; border: 0; padding: 7px 14px; background: var(--surface); color: var(--muted); cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+  .doc[hidden] { display: none; }
+  .doc :global(iframe) { display: block; width: 100%; height: 85vh; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+  .page { position: relative; display: block; max-width: 560px; }
+  .page :global(img), .page :global(.missing) { width: 100%; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+  .page .btn { position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); white-space: nowrap; box-shadow: 0 2px 10px rgb(0 0 0 / 0.25); }
   @media (max-width: 900px) {
     .body { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   }
 </style>
+
+<script>
+  // Show PDFs inline where the browser has a built-in viewer (desktop Chrome, Safari, Firefox, Edge).
+  // Phones keep the first-page image, which opens the PDF full screen in a new tab.
+  const docs = document.getElementById("documents");
+  if (docs && navigator.pdfViewerEnabled && matchMedia("(min-width: 800px)").matches) {
+    for (const panel of docs.querySelectorAll<HTMLElement>("[data-doc-panel]")) {
+      const frame = document.createElement("iframe");
+      frame.src = `${panel.dataset.src}#view=FitH`;
+      frame.title = panel.dataset.title!;
+      frame.loading = "lazy";
+      panel.replaceChildren(frame);
+    }
+  }
+  const tabs = [...(docs?.querySelectorAll<HTMLButtonElement>("[data-doc]") ?? [])];
+  const panels = [...(docs?.querySelectorAll<HTMLElement>("[data-doc-panel]") ?? [])];
+  tabs.forEach((t) =>
+    t.addEventListener("click", () => {
+      tabs.forEach((b) => b.setAttribute("aria-pressed", String(b === t)));
+      panels.forEach((p) => (p.hidden = p.dataset.docPanel !== t.dataset.doc));
+    }),
+  );
+</script>

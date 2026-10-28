@@ -38,6 +38,8 @@ const errors = [];
 const refs = new Set();
 const groups = readJson(path.join(root, "content/tags.json"), {});
 const knownTags = new Set(Object.values(groups).flatMap((g) => Object.keys(g.tags)));
+const academicGroups = readJson(path.join(root, "content/academic-tags.json"), {});
+const knownAcademicTags = new Set(Object.values(academicGroups).flatMap((g) => Object.keys(g.tags)));
 
 function readCollection(kind) {
   const dir = path.join(root, "content", kind);
@@ -75,6 +77,7 @@ for (const [slug, p] of readCollection("academics")) {
   for (const f of p.images ?? []) ref("academics", slug, f);
   for (const f of p.files ?? []) ref("academics", slug, f.file);
   if (p.video && !/^https?:/.test(p.video)) ref("academics", slug, p.video);
+  for (const t of p.tags ?? []) if (!knownAcademicTags.has(t)) errors.push(`academics/${slug}: unknown tag "${t}" (add it to content/academic-tags.json)`);
 }
 
 if (errors.length) {
@@ -154,11 +157,30 @@ async function writeTemp(buf, hash) {
   return p;
 }
 
-function processFile(abs, hash) {
+const PDF = /\.pdf$/i;
+let warnedGs = false;
+
+async function processFile(abs, hash) {
   const src = `${hash}/${path.basename(abs)}`;
   fs.mkdirSync(path.dirname(outPath(src)), { recursive: true });
   fs.copyFileSync(abs, outPath(src));
-  return { kind: "file", v: VERSION, hash, src, bytes: fs.statSync(abs).size };
+  const entry = { kind: "file", v: VERSION, hash, src, bytes: fs.statSync(abs).size };
+  if (PDF.test(abs)) entry.preview = await pdfPreview(abs, hash);
+  return entry;
+}
+
+// Render a PDF's first page with Ghostscript (`brew install ghostscript`), for thumbnails.
+async function pdfPreview(abs, hash) {
+  const png = path.join(root, ".cache", `${hash}-page1.png`);
+  try {
+    fs.mkdirSync(path.dirname(png), { recursive: true });
+    execFileSync("gs", ["-q", "-dSAFER", "-dBATCH", "-dNOPAUSE", "-dFirstPage=1", "-dLastPage=1", "-sDEVICE=png16m", "-r150", "-dTextAlphaBits=4", "-dGraphicsAlphaBits=4", `-sOutputFile=${png}`, abs]);
+  } catch {
+    if (!warnedGs) console.warn("  ! Ghostscript not found; PDFs won't get preview images. Install it with `brew install ghostscript`.");
+    warnedGs = true;
+    return undefined;
+  }
+  return processImage(png, `${hash}-page1`);
 }
 
 fs.mkdirSync(path.join(OUT, "m"), { recursive: true });
@@ -167,9 +189,10 @@ for (const key of refs) {
   const abs = path.join(MEDIA, key);
   const hash = hashFile(abs, key);
   const prev = manifest[key];
-  const allOut = (e) => [...outputsOf(e), ...(e.poster ? outputsOf(e.poster) : [])];
+  const allOut = (e) => [...outputsOf(e), ...(e.poster ? outputsOf(e.poster) : []), ...(e.preview ? outputsOf(e.preview) : [])];
   // Unchanged, and its outputs are either on disk or already in R2.
-  if (prev?.hash === hash && prev.v === VERSION && allOut(prev).every((f) => fs.existsSync(outPath(f)) || uploaded.has(f))) continue;
+  const needsPreview = prev?.kind === "file" && PDF.test(abs) && !prev.preview;
+  if (prev?.hash === hash && prev.v === VERSION && !needsPreview && allOut(prev).every((f) => fs.existsSync(outPath(f)) || uploaded.has(f))) continue;
   todo.push({ key, abs, hash });
 }
 
@@ -178,7 +201,7 @@ async function worker() {
   while (todo.length) {
     const { key, abs, hash } = todo.shift();
     try {
-      manifest[key] = IMAGE.test(abs) ? await processImage(abs, hash) : VIDEO.test(abs) ? await processVideo(abs, hash) : processFile(abs, hash);
+      manifest[key] = IMAGE.test(abs) ? await processImage(abs, hash) : VIDEO.test(abs) ? await processVideo(abs, hash) : await processFile(abs, hash);
       console.log(`  ✓ ${key}`);
       done++;
     } catch (e) {
@@ -209,7 +232,7 @@ const s3 = new S3Client({
   credentials: { accessKeyId: env.R2_ACCESS_KEY_ID, secretAccessKey: env.R2_SECRET_ACCESS_KEY },
 });
 const TYPES = { webp: "image/webp", mp4: "video/mp4", svg: "image/svg+xml", pdf: "application/pdf" };
-const pending = [...new Set(Object.values(manifest).flatMap((e) => [...outputsOf(e), ...(e.poster ? outputsOf(e.poster) : [])]))].filter(
+const pending = [...new Set(Object.values(manifest).flatMap((e) => [...outputsOf(e), ...(e.poster ? outputsOf(e.poster) : []), ...(e.preview ? outputsOf(e.preview) : [])]))].filter(
   (f) => !uploaded.has(f),
 );
 console.log(`Uploading ${pending.length} file(s) to R2…`);

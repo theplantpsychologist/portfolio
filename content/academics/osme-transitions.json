@@ -7,16 +7,16 @@
     "Erik Demaine"
   ],
   "images": [
-    "transitions image.svg"
+    "transitions.png"
   ],
   "video": "https://youtu.be/hshLzohvMWc",
   "files": [
     {
-      "label": "transitions paper",
+      "label": "Paper",
       "file": "transitions paper.pdf"
     },
     {
-      "label": "transitions slides",
+      "label": "Slides",
       "file": "transitions slides.pdf"
     }
   ],
@@ -28,8 +28,7 @@
   ],
   "tags": [
     "research",
-    "origami",
-    "computer-science",
-    "theoretical"
+    "algorithms",
+    "conference_talk","math","paper"
   ]
 }

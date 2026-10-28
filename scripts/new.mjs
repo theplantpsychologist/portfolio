@@ -1,6 +1,6 @@
 // Scaffold a new entry and its media folder.
 //   npm run new -- "Cardinal"              → content/works/cardinal.json
-//   npm run new -- --academic "Band-it"    → content/academics/band-it.json
+//   npm run new:academic -- "Band-it"      → content/academics/band-it.json
 
 import fs from "node:fs";
 import path from "node:path";
@@ -10,7 +10,7 @@ const args = process.argv.slice(2);
 const academic = args.includes("--academic");
 const name = args.filter((a) => !a.startsWith("--")).join(" ").trim();
 if (!name) {
-  console.error('Usage: npm run new -- [--academic] "Name of the piece"');
+  console.error(academic ? 'Usage: npm run new:academic -- "Project title"' : 'Usage: npm run new -- "Name of the piece"');
   process.exit(1);
 }
 
@@ -25,7 +25,7 @@ if (fs.existsSync(file)) {
 
 const today = new Date().toISOString().slice(0, 10);
 const template = academic
-  ? { title: name, date: today, summary: "", body: "", collaborators: [], images: [], video: null, files: [], links: [], tags: [] }
+  ? { title: name, date: today, draft: true, summary: "", body: "", collaborators: [], images: [], video: null, files: [], links: [], tags: [] }
   : { name, date: today, description: "", photos: [], cps: [], cpDescription: "", video: null, diagrams: null, tags: [], related: [] };
 
 fs.writeFileSync(file, JSON.stringify(template, null, 2) + "\n");
@@ -35,3 +35,4 @@ fs.mkdirSync(mediaDir, { recursive: true });
 console.log(`Created ${path.relative(root, file)}`);
 console.log(`Put photos, crease patterns, and files in ${path.relative(root, mediaDir)}/`);
 console.log(`List their file names in the JSON, then run: npm run publish`);
+if (academic) console.log(`It starts as a draft; set "draft": false when it's ready to show.`);

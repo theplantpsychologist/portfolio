@@ -5,7 +5,7 @@ const BASE = (import.meta.env.PUBLIC_MEDIA_BASE ?? "").replace(/\/$/, "") + "/m/
 
 type ImageEntry = { kind: "image"; hash: string; width: number; height: number; color: string; widths: number[]; download?: string };
 type VideoEntry = { kind: "video"; hash: string; src: string; width: number; height: number; color: string; poster: ImageEntry };
-type FileEntry = { kind: "file"; hash: string; src: string; bytes: number };
+type FileEntry = { kind: "file"; hash: string; src: string; bytes: number; preview?: ImageEntry };
 export type MediaEntry = ImageEntry | VideoEntry | FileEntry;
 
 export type Picture = {
@@ -44,12 +44,13 @@ function toPicture(e: ImageEntry, preferred = 800): Picture {
   };
 }
 
-/** Responsive image for any image or video key (videos use their poster). */
+/** Responsive image for any image, video (its poster), or PDF (its first page). */
 export function picture(key: string, preferred?: number): Picture | null {
   const e = entry(key);
   if (!e) return null;
   if (e.kind === "image") return toPicture(e, preferred);
   if (e.kind === "video") return toPicture(e.poster, preferred);
+  if (e.kind === "file" && e.preview) return toPicture(e.preview, preferred);
   return null;
 }
 

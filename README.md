@@ -49,7 +49,7 @@ git add -A && git commit -m "Add cardinal" && git push
 
 Cloudflare Pages rebuilds and the work is live in about a minute. To preview first, run `npm run publish -- --no-upload` and `npm run dev`.
 
-Academic projects work the same way: `npm run new -- --academic "Band-it"`.
+Academic projects work the same way: `npm run new:academic -- "Band-it"`. New projects start with `"draft": true`; set it to `false` when the project is ready. Their tags are grouped in `content/academic-tags.json` (type, format, field), which drives the filters on the Academics page. PDFs listed in `files` are shown in an inline viewer on desktop and as a first-page preview on phones. `npm run publish` renders those previews with Ghostscript (`brew install ghostscript`). To hide a project without deleting it, move its JSON into `content/academics/hidden/`.
 
 Set `"draft": true` in any entry to hide it.
 

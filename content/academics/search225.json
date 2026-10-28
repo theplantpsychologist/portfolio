@@ -1,0 +1,27 @@
+{
+  "title": "Spectral Embedding Archive for Rational Crease Pattern Hyperspace",
+  "date": "2026-06-28",
+  "summary": "Computational inverse design of uniaxial 22.5 crease patterns (ExplOri algorithm)",
+  "body": "Computational inverse design of uniaxial 22.5 crease patterns (ExplOri algorithm). Currently under review for the Journal of Computer-Aided Design.",
+  "collaborators": [
+  ],
+  "images": [
+    "search225.png"
+  ],
+  "video": "https://youtu.be/M6ewRG1zto4",
+  "files": [{
+      "label": "Preprint manuscript",
+      "file": "manuscript.pdf"
+    }],
+  "links": [{
+      "label": "Preprint link (SSRN)",
+      "url": "https://ssrn.com/abstract=7032707"
+  },{
+      "label": "ExplOri web application",
+      "url": "https://225.designorigami.net/"
+  }],
+  "tags": [
+    "research",
+    "math","algorithms","origami","paper"
+  ]
+}

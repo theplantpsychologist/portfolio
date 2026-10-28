@@ -1,8 +1,12 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 import tagGroups from "../content/tags.json";
+import academicTagGroups from "../content/academic-tags.json";
 
-const knownTags = Object.values(tagGroups).flatMap((g) => Object.keys(g.tags)) as [string, ...string[]];
+const tagsIn = (groups: Record<string, { tags: Record<string, string> }>) =>
+  Object.values(groups).flatMap((g) => Object.keys(g.tags)) as [string, ...string[]];
+const knownTags = tagsIn(tagGroups);
+const knownAcademicTags = tagsIn(academicTagGroups);
 
 const works = defineCollection({
   loader: glob({ pattern: "*.json", base: "./content/works" }),
@@ -34,7 +38,7 @@ const academics = defineCollection({
     video: z.string().nullable().default(null),
     files: z.array(z.object({ label: z.string(), file: z.string() })).default([]),
     links: z.array(z.object({ label: z.string(), url: z.string().url() })).default([]),
-    tags: z.array(z.string()).default([]),
+    tags: z.array(z.enum(knownAcademicTags)).default([]),
   }),
 });
 

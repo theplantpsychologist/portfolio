@@ -1,0 +1,15 @@
+{
+  "title": "Cable Actuation of Miura Tubes",
+  "date": "2026-03-10",
+  "summary": "A generalization of Miura tube geometry/kinematics and the use of cables for actuation",
+  "body": "Summary of my work over 3 months while working with Manan Arya's lab as a rotating first-year PhD student. This project generalizes Miura tube geometry/kinematics for non-parallel (that is, conical) tubes and explores the use of nearly length-invariant cable actuation to reversibly deploy and stow them.",
+  "collaborators": ["Manan Arya"],
+  "images": ["miuratube.png"],
+  "video": null,
+  "files": [{
+      "label": "Unpublished draft",
+      "file": "angled_miura_tubes.pdf"
+    }],
+  "links": [],
+  "tags": ["origami","engineering","research","mechanics","paper","prototype"]
+}

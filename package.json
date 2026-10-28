@@ -6,6 +6,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "new": "node scripts/new.mjs",
+    "new:academic": "node scripts/new.mjs --academic",
     "publish": "node --env-file-if-exists=.env scripts/publish.mjs",
     "check": "astro check",
     "preview:functions": "astro build && wrangler pages dev dist"

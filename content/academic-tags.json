@@ -1,0 +1,34 @@
+{
+  "type": {
+    "label": "Type",
+    "tags": {
+      "research": "Research",
+      "class_project": "Class project",
+      "personal": "Personal project"
+    }
+  },
+  "format": {
+    "label": "Format",
+    "tags": {
+      "paper": "Paper",
+      "conference_talk": "Conference talk",
+      "poster": "Poster",
+      "prototype": "Prototype"
+    }
+  },
+  "field": {
+    "label": "Field",
+    "tags": {
+      "origami": "Origami",
+      "math": "Math",
+      "theory": "Theory",
+      "algorithms": "Algorithms",
+      "engineering": "Engineering",
+      "design": "Design",
+      "mechanics": "Mechanics",
+      "robotics": "Robotics",
+      "electronics": "Electronics",
+      "3d_printing": "3D printing"
+    }
+  }
+}

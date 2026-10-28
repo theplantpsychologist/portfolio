@@ -1,0 +1,21 @@
+{
+  "title": "Basis Decomposition and Efficient Encoding of Box Pleating Crease Patterns",
+  "date": "2025-10-30",
+  "summary": "A short unpublished research idea",
+  "body": "An interesting, albeit not super practical, idea to decompose a standard box pleated crease pattern down to a handful of bytes by storing it as a superposition of a small set of basis patterns. Cannot encode mountain valley assignment or easily check for flat foldability.",
+  "collaborators": [
+  ],
+  "images": [
+    "decomposition.png"
+  ],
+  "video": null,
+  "files": [{
+      "label": "Unpublished manuscript",
+      "file": "decomposition.pdf"
+    }],
+  "links": [],
+  "tags": [
+    "research",
+    "math","origami","paper","personal"
+  ]
+}

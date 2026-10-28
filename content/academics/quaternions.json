@@ -1,0 +1,20 @@
+{
+  "title": "3D Kawsaski's theorem using quaternions",
+  "date": "2026-04-07",
+  "summary": "Crash course/study guide on 3d Kawasaki's theorem and its consequences",
+  "body": "Some work around 3d Kawasaki's theorem using quaternions rather than rotation matrices. More of a crash course/study guide than any original research or rigorous proof.",
+  "collaborators": [
+  ],
+  "images": [
+    "quaternions.png"
+  ],
+  "video": "https://youtube.com/shorts/mMJA0YrpCDQ",
+  "files": [{
+      "label": "Document",
+      "file": "quaternions.pdf"
+    }],
+  "links": [],
+  "tags": [
+    "math","origami","paper","personal"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "title": "Foldable 3d prints",
   "date": "2023-07-01",
-  "summary": "Origami-inspired 3d printed kinetic sculpture prototype, for my TeamLab internship",
+  "summary": "Origami-inspired 3d printed kinetic sculpture prototype",
   "body": "Origami-inspired 3d printed kinetic sculpture prototype, for my TeamLab internship. The models were made by printing a few base layers, inserting a thin net-like fabric, and then printing a few layers on top of that to form polygons of rigid plastic joined by gaps of thin fabric. With a little bit of actuation (either manually like the gif or with motors like the video), the models will buckle and cast reflections like the surface of a body of water. The effect is amplified under strobe lighting (see the gif).",
   "collaborators": [],
   "images": [
@@ -15,9 +15,8 @@
   "files": [],
   "links": [],
   "tags": [
-    "research",
     "origami",
-    "3d-printing",
-    "design"
+    "3d_printing",
+    "design","prototype","personal"
   ]
 }

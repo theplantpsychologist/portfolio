@@ -1,7 +1,7 @@
 {
   "title": "Stairmaster",
   "date": "2024-12-01",
-  "summary": "A bipedal robot for 2.74 (bio-inspired robotics) to investigate the effect of incline angle and step height on climbing efficiency",
+  "summary": "A bipedal robot to investigate the effect of incline angle and step height on climbing efficiency",
   "body": "A bipedal robot for 2.74 (bio-inspired robotics) to investigate the effect of incline angle and step height on climbing efficiency. The robot climbed by tracing a circle trajectory, modified to slow down and flatten out the bottom of each stroke to reduce slipping. The trajectory tracing was controlled by impedance control. We then tried it on different angles and step heights (adjusting the radius of the trajectory as necessary) and measured the motors' current draw to calculate the expended energy.",
   "collaborators": [
     "Andy Dequin",
@@ -21,9 +21,7 @@
   ],
   "links": [],
   "tags": [
-    "class-project",
-    "robotics",
-    "controls",
-    "measurement"
+    "class_project",
+    "robotics","engineering","poster"
   ]
 }

@@ -1,14 +1,18 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import tagGroups from "../../content/tags.json";
+import academicTagGroups from "../../content/academic-tags.json";
 import { picture } from "./media";
 
 export type Work = CollectionEntry<"works">;
 export type Project = CollectionEntry<"academics">;
 
-export { tagGroups };
+export { tagGroups, academicTagGroups };
 
 export const tagLabel = (tag: string) =>
   Object.values(tagGroups).find((g) => tag in g.tags)?.tags[tag as never] ?? tag;
+
+export const academicTagLabel = (tag: string) =>
+  Object.values(academicTagGroups).find((g) => tag in g.tags)?.tags[tag as never] ?? tag;
 
 export const tagGroupOf = (tag: string) =>
   Object.entries(tagGroups).find(([, g]) => tag in g.tags)?.[0];
@@ -32,6 +36,12 @@ export function derivedTags(w: Work) {
 export const coverOf = (w: Work, preferred?: number) => picture(`works/${w.id}/${w.data.photos[0]}`, preferred);
 export const cpCoverOf = (w: Work, preferred?: number) =>
   w.data.cps[0] ? picture(`works/${w.id}/${w.data.cps[0]}`, preferred) : null;
+
+/** A project's first image, or the first page of its first PDF. */
+export function projectCover(p: Project, preferred?: number) {
+  const first = p.data.images[0] ?? p.data.files.find((f) => /\.pdf$/i.test(f.file))?.file;
+  return first ? picture(`academics/${p.id}/${first}`, preferred) : null;
+}
 
 export const formatMonth = (d: Date) => d.toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
 

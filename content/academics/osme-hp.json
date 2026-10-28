@@ -5,23 +5,23 @@
   "body": "A summary of my findings with representational hex pleating. Submitted and presented at 8OSME. Essentially, I show how uniaxial hex pleating can be used for greater flexibility, layer distribution, and embedded textures compared to uniaxial box pleating, and then introduce non-uniaxial hex pleating for creating 3d \"representational polyhedra\".",
   "collaborators": [],
   "images": [
-    "hp image.svg"
+    "hp.png"
   ],
   "video": "https://youtu.be/an-mfNn9Idw",
   "files": [
     {
-      "label": "hp paper",
+      "label": "Paper",
       "file": "hp paper.pdf"
     },
     {
-      "label": "hp slides",
+      "label": "Slides",
       "file": "hp slides.pdf"
     }
   ],
   "links": [],
   "tags": [
-    "origami",
-    "theoretical",
-    "research"
+    "design",
+    "conference_talk",
+    "origami","paper","research"
   ]
 }

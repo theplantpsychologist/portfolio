@@ -1,172 +1,4 @@
 {
-  "academics/1-583/1.583 fig.png": {
-    "kind": "image",
-    "v": 2,
-    "hash": "256779748ed3d5a0",
-    "width": 950,
-    "height": 848,
-    "color": "#f8f8f8",
-    "widths": [
-      400,
-      800,
-      950
-    ]
-  },
-  "academics/1-583/1.583 poster.pdf": {
-    "kind": "file",
-    "v": 2,
-    "hash": "5d8589e97a28cc80",
-    "src": "5d8589e97a28cc80/1.583 poster.pdf",
-    "bytes": 1441228
-  },
-  "academics/1-583/1.583 video.MOV": {
-    "kind": "video",
-    "v": 2,
-    "hash": "45e17a2b0ac3a5d0",
-    "src": "45e17a2b0ac3a5d0.mp4",
-    "width": 1080,
-    "height": 1920,
-    "color": "#c88848",
-    "poster": {
-      "kind": "image",
-      "v": 2,
-      "hash": "45e17a2b0ac3a5d0-poster",
-      "width": 1080,
-      "height": 1920,
-      "color": "#c88848",
-      "widths": [
-        400,
-        800,
-        1080
-      ]
-    }
-  },
-  "academics/2-007/2.007 1.png": {
-    "kind": "image",
-    "v": 2,
-    "hash": "f6f893e2490ad21a",
-    "width": 1067,
-    "height": 1422,
-    "color": "#c8c8b8",
-    "widths": [
-      400,
-      800,
-      1067
-    ]
-  },
-  "academics/2-007/2.007 2.png": {
-    "kind": "image",
-    "v": 2,
-    "hash": "8309ca4867cd8f3c",
-    "width": 1067,
-    "height": 1422,
-    "color": "#b8a888",
-    "widths": [
-      400,
-      800,
-      1067
-    ]
-  },
-  "academics/2-007/2.007 3.png": {
-    "kind": "image",
-    "v": 2,
-    "hash": "03da0ccfc96eebdd",
-    "width": 1067,
-    "height": 1422,
-    "color": "#c8a878",
-    "widths": [
-      400,
-      800,
-      1067
-    ]
-  },
-  "academics/2-007/2.007 4.png": {
-    "kind": "image",
-    "v": 2,
-    "hash": "9fd1db49f365e993",
-    "width": 1067,
-    "height": 1422,
-    "color": "#d8d8c8",
-    "widths": [
-      400,
-      800,
-      1067
-    ]
-  },
-  "academics/2-007/2.007 video.MOV": {
-    "kind": "video",
-    "v": 2,
-    "hash": "69f67068aff9f582",
-    "src": "69f67068aff9f582.mp4",
-    "width": 1080,
-    "height": 1920,
-    "color": "#c8c8a8",
-    "poster": {
-      "kind": "image",
-      "v": 2,
-      "hash": "69f67068aff9f582-poster",
-      "width": 1080,
-      "height": 1920,
-      "color": "#c8c8a8",
-      "widths": [
-        400,
-        800,
-        1080
-      ]
-    }
-  },
-  "academics/2-008/2.008 1.png": {
-    "kind": "image",
-    "v": 2,
-    "hash": "10f756b664e4fb5c",
-    "width": 1896,
-    "height": 1422,
-    "color": "#f8f8f8",
-    "widths": [
-      400,
-      800,
-      1600
-    ]
-  },
-  "academics/2-008/2.008 2.png": {
-    "kind": "image",
-    "v": 2,
-    "hash": "97b42bd6cfdd07be",
-    "width": 1749,
-    "height": 1422,
-    "color": "#e8e8e8",
-    "widths": [
-      400,
-      800,
-      1600
-    ]
-  },
-  "academics/2-008/2.008 3.png": {
-    "kind": "image",
-    "v": 2,
-    "hash": "0c1246fe19c64adc",
-    "width": 2134,
-    "height": 1422,
-    "color": "#080808",
-    "widths": [
-      400,
-      800,
-      1600
-    ]
-  },
-  "academics/2-008/2.008 poster.png": {
-    "kind": "image",
-    "v": 2,
-    "hash": "2fe3c1a82014ab58",
-    "width": 2500,
-    "height": 1687,
-    "color": "#c8d8e8",
-    "widths": [
-      400,
-      800,
-      1600
-    ]
-  },
   "academics/2-009/2.009 1.jpg": {
     "kind": "image",
     "v": 2,
@@ -246,14 +78,40 @@
     "v": 2,
     "hash": "2fa223530e3dd29c",
     "src": "2fa223530e3dd29c/2.009 product sheet.pdf",
-    "bytes": 271329
+    "bytes": 271329,
+    "preview": {
+      "kind": "image",
+      "v": 2,
+      "hash": "2fa223530e3dd29c-page1",
+      "width": 3219,
+      "height": 8333,
+      "color": "#7888e8",
+      "widths": [
+        400,
+        800,
+        1600
+      ]
+    }
   },
   "academics/2-671/2.671 final paper.pdf": {
     "kind": "file",
     "v": 2,
     "hash": "5ed63cae036d938c",
     "src": "5ed63cae036d938c/2.671 final paper.pdf",
-    "bytes": 2432448
+    "bytes": 2432448,
+    "preview": {
+      "kind": "image",
+      "v": 2,
+      "hash": "5ed63cae036d938c-page1",
+      "width": 1275,
+      "height": 1650,
+      "color": "#f8f8f8",
+      "widths": [
+        400,
+        800,
+        1275
+      ]
+    }
   },
   "academics/2-671/2.671 photo.png": {
     "kind": "image",
@@ -273,7 +131,20 @@
     "v": 2,
     "hash": "e6e94709e0a3dfbf",
     "src": "e6e94709e0a3dfbf/2.671 poster.pdf",
-    "bytes": 799151
+    "bytes": 799151,
+    "preview": {
+      "kind": "image",
+      "v": 2,
+      "hash": "e6e94709e0a3dfbf-page1",
+      "width": 6300,
+      "height": 5400,
+      "color": "#f8f8f8",
+      "widths": [
+        400,
+        800,
+        1600
+      ]
+    }
   },
   "academics/2-74/2.74 CAD.png": {
     "kind": "image",
@@ -306,7 +177,20 @@
     "v": 2,
     "hash": "b1ff4a380acb9fe3",
     "src": "b1ff4a380acb9fe3/2.74 poster.pdf",
-    "bytes": 3305682
+    "bytes": 3305682,
+    "preview": {
+      "kind": "image",
+      "v": 2,
+      "hash": "b1ff4a380acb9fe3-page1",
+      "width": 4800,
+      "height": 2700,
+      "color": "#f8f8f8",
+      "widths": [
+        400,
+        800,
+        1600
+      ]
+    }
   },
   "academics/2-74/2.74 video.MOV": {
     "kind": "video",
@@ -330,17 +214,70 @@
       ]
     }
   },
-  "academics/circle-jig/circle jig.png": {
+  "academics/cfc225/cfc225.pdf": {
+    "kind": "file",
+    "v": 2,
+    "hash": "e312de12adee58ae",
+    "src": "e312de12adee58ae/cfc225.pdf",
+    "bytes": 9751509,
+    "preview": {
+      "kind": "image",
+      "v": 2,
+      "hash": "e312de12adee58ae-page1",
+      "width": 2000,
+      "height": 1125,
+      "color": "#c8d8e8",
+      "widths": [
+        400,
+        800,
+        1600
+      ]
+    }
+  },
+  "academics/cfc225/cfc225.png": {
     "kind": "image",
     "v": 2,
-    "hash": "0f389f0f23e783a6",
-    "width": 1000,
-    "height": 1000,
-    "color": "#78d8e8",
+    "hash": "898545171fd3b43d",
+    "width": 1399,
+    "height": 781,
+    "color": "#080808",
     "widths": [
       400,
       800,
-      1000
+      1399
+    ]
+  },
+  "academics/cfcmath/cfcmath.pdf": {
+    "kind": "file",
+    "v": 2,
+    "hash": "6be5a6249b6bb6b2",
+    "src": "6be5a6249b6bb6b2/cfcmath.pdf",
+    "bytes": 10048223,
+    "preview": {
+      "kind": "image",
+      "v": 2,
+      "hash": "6be5a6249b6bb6b2-page1",
+      "width": 2000,
+      "height": 1125,
+      "color": "#c8d8e8",
+      "widths": [
+        400,
+        800,
+        1600
+      ]
+    }
+  },
+  "academics/cfcmath/cfcmath.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "45c9f5553077ad23",
+    "width": 2114,
+    "height": 1050,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1600
     ]
   },
   "academics/circuit/circuit details.png": {
@@ -369,116 +306,71 @@
       1589
     ]
   },
-  "academics/desk-pet/desk pet bowing.MOV": {
-    "kind": "video",
-    "v": 2,
-    "hash": "c8f14f335320e1d0",
-    "src": "c8f14f335320e1d0.mp4",
-    "width": 1280,
-    "height": 720,
-    "color": "#c8c8c8",
-    "poster": {
-      "kind": "image",
-      "v": 2,
-      "hash": "c8f14f335320e1d0-poster",
-      "width": 1280,
-      "height": 720,
-      "color": "#c8c8c8",
-      "widths": [
-        400,
-        800,
-        1280
-      ]
-    }
-  },
-  "academics/desk-pet/desk pet cad.png": {
-    "kind": "image",
-    "v": 2,
-    "hash": "192df265e0e3488b",
-    "width": 1024,
-    "height": 1020,
-    "color": "#485868",
-    "widths": [
-      400,
-      800,
-      1024
-    ]
-  },
-  "academics/desk-pet/desk pet face.gif": {
-    "kind": "video",
-    "v": 2,
-    "hash": "647d04dce857d2e2",
-    "src": "647d04dce857d2e2.mp4",
-    "width": 800,
-    "height": 450,
-    "color": "#282828",
-    "poster": {
-      "kind": "image",
-      "v": 2,
-      "hash": "647d04dce857d2e2-poster",
-      "width": 800,
-      "height": 450,
-      "color": "#282828",
-      "widths": [
-        400,
-        800
-      ]
-    }
-  },
-  "academics/desk-pet/desk pet photo.jpg": {
-    "kind": "image",
-    "v": 2,
-    "hash": "95a17da5a639ee93",
-    "width": 2886,
-    "height": 2888,
-    "color": "#383838",
-    "widths": [
-      400,
-      800,
-      1600
-    ]
-  },
-  "academics/desk-pet/desk pet slides.pdf": {
+  "academics/corigami/corigami.pdf": {
     "kind": "file",
     "v": 2,
-    "hash": "bc1f89ba45db05b9",
-    "src": "bc1f89ba45db05b9/desk pet slides.pdf",
-    "bytes": 1183586
-  },
-  "academics/egg-gripper/egg gripper photo.JPG": {
-    "kind": "image",
-    "v": 2,
-    "hash": "45ff4d725a2fe374",
-    "width": 3024,
-    "height": 2269,
-    "color": "#988878",
-    "widths": [
-      400,
-      800,
-      1600
-    ]
-  },
-  "academics/egg-gripper/egg gripper video.MOV": {
-    "kind": "video",
-    "v": 2,
-    "hash": "bfe4e22df21b52e9",
-    "src": "bfe4e22df21b52e9.mp4",
-    "width": 1080,
-    "height": 1920,
-    "color": "#180808",
-    "poster": {
+    "hash": "b7cac795c4657721",
+    "src": "b7cac795c4657721/corigami.pdf",
+    "bytes": 9949277,
+    "preview": {
       "kind": "image",
       "v": 2,
-      "hash": "bfe4e22df21b52e9-poster",
-      "width": 1080,
-      "height": 1920,
-      "color": "#180808",
+      "hash": "b7cac795c4657721-page1",
+      "width": 1240,
+      "height": 1754,
+      "color": "#f8f8f8",
       "widths": [
         400,
         800,
-        1080
+        1240
       ]
     }
+  },
+  "academics/corigami/corigami.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "80dedfa92b6b9a54",
+    "width": 1145,
+    "height": 639,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1145
+    ]
+  },
+  "academics/decomposition/decomposition.pdf": {
+    "kind": "file",
+    "v": 2,
+    "hash": "eafd473862447ff0",
+    "src": "eafd473862447ff0/decomposition.pdf",
+    "bytes": 375241,
+    "preview": {
+      "kind": "image",
+      "v": 2,
+      "hash": "eafd473862447ff0-page1",
+      "width": 1275,
+      "height": 1650,
+      "color": "#f8f8f8",
+      "widths": [
+        400,
+        800,
+        1275
+      ]
+    }
+  },
+  "academics/decomposition/decomposition.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "88733acebf893a36",
+    "width": 1588,
+    "height": 822,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      1588
+    ]
   },
   "academics/foldable-3d-prints/foldable 3d print video.mp4": {
     "kind": "video",
@@ -576,13 +468,33 @@
       ]
     }
   },
-  "academics/levicircuits/levicircuits.png": {
+  "academics/miura-tubes/angled_miura_tubes.pdf": {
+    "kind": "file",
+    "v": 2,
+    "hash": "fad7f83d21134250",
+    "src": "fad7f83d21134250/angled_miura_tubes.pdf",
+    "bytes": 9008864,
+    "preview": {
+      "kind": "image",
+      "v": 2,
+      "hash": "fad7f83d21134250-page1",
+      "width": 1275,
+      "height": 1650,
+      "color": "#f8f8f8",
+      "widths": [
+        400,
+        800,
+        1275
+      ]
+    }
+  },
+  "academics/miura-tubes/miuratube.png": {
     "kind": "image",
     "v": 2,
-    "hash": "6d3eb892b51d0274",
-    "width": 1896,
-    "height": 1422,
-    "color": "#080808",
+    "hash": "875d9a9a4de63a52",
+    "width": 1704,
+    "height": 1066,
+    "color": "#f8f8f8",
     "widths": [
       400,
       800,
@@ -594,7 +506,20 @@
     "v": 2,
     "hash": "f4a2ce2fe3ce6bb9",
     "src": "f4a2ce2fe3ce6bb9/orikanji instructions.pdf",
-    "bytes": 5562353
+    "bytes": 5562353,
+    "preview": {
+      "kind": "image",
+      "v": 2,
+      "hash": "f4a2ce2fe3ce6bb9-page1",
+      "width": 1275,
+      "height": 1650,
+      "color": "#f8f8f8",
+      "widths": [
+        400,
+        800,
+        1275
+      ]
+    }
   },
   "academics/orikanji/orikanji photo.png": {
     "kind": "image",
@@ -614,7 +539,20 @@
     "v": 2,
     "hash": "b1e9a0a1d56beac7",
     "src": "b1e9a0a1d56beac7/orikanji slides.pdf",
-    "bytes": 10082451
+    "bytes": 10082451,
+    "preview": {
+      "kind": "image",
+      "v": 2,
+      "hash": "b1e9a0a1d56beac7-page1",
+      "width": 1500,
+      "height": 844,
+      "color": "#f8f8f8",
+      "widths": [
+        400,
+        800,
+        1500
+      ]
+    }
   },
   "academics/orikanji/orikanji stroke order.png": {
     "kind": "image",
@@ -629,82 +567,106 @@
       1030
     ]
   },
-  "academics/osme-hp/hp image.svg": {
-    "kind": "image",
-    "v": 2,
-    "hash": "ad229062975c60ed",
-    "width": 2004,
-    "height": 2004,
-    "color": "#f8f8f8",
-    "widths": [
-      400,
-      800,
-      1600
-    ],
-    "download": "ad229062975c60ed/hp image.svg"
-  },
   "academics/osme-hp/hp paper.pdf": {
     "kind": "file",
     "v": 2,
     "hash": "d7f8f4cbaa22e59e",
     "src": "d7f8f4cbaa22e59e/hp paper.pdf",
-    "bytes": 1383190
+    "bytes": 1383190,
+    "preview": {
+      "kind": "image",
+      "v": 2,
+      "hash": "d7f8f4cbaa22e59e-page1",
+      "width": 900,
+      "height": 1350,
+      "color": "#f8f8f8",
+      "widths": [
+        400,
+        800,
+        900
+      ]
+    }
   },
   "academics/osme-hp/hp slides.pdf": {
     "kind": "file",
     "v": 2,
     "hash": "5d99b5ae026a6af3",
     "src": "5d99b5ae026a6af3/hp slides.pdf",
-    "bytes": 4786422
+    "bytes": 4786422,
+    "preview": {
+      "kind": "image",
+      "v": 2,
+      "hash": "5d99b5ae026a6af3-page1",
+      "width": 1500,
+      "height": 844,
+      "color": "#e8e8e8",
+      "widths": [
+        400,
+        800,
+        1500
+      ]
+    }
   },
-  "academics/osme-transitions/transitions image.svg": {
+  "academics/osme-hp/hp.png": {
     "kind": "image",
     "v": 2,
-    "hash": "ce9f79d6b826a33c",
-    "width": 12641,
-    "height": 7093,
+    "hash": "37895ea0c624d28a",
+    "width": 1594,
+    "height": 1198,
     "color": "#f8f8f8",
     "widths": [
       400,
       800,
-      1600
-    ],
-    "download": "ce9f79d6b826a33c/transitions image.svg"
+      1594
+    ]
   },
   "academics/osme-transitions/transitions paper.pdf": {
     "kind": "file",
     "v": 2,
     "hash": "2601fbb44012d175",
     "src": "2601fbb44012d175/transitions paper.pdf",
-    "bytes": 525809
+    "bytes": 525809,
+    "preview": {
+      "kind": "image",
+      "v": 2,
+      "hash": "2601fbb44012d175-page1",
+      "width": 900,
+      "height": 1350,
+      "color": "#f8f8f8",
+      "widths": [
+        400,
+        800,
+        900
+      ]
+    }
   },
   "academics/osme-transitions/transitions slides.pdf": {
     "kind": "file",
     "v": 2,
     "hash": "dafcb3c5f6c72df1",
     "src": "dafcb3c5f6c72df1/transitions slides.pdf",
-    "bytes": 2231252
+    "bytes": 2231252,
+    "preview": {
+      "kind": "image",
+      "v": 2,
+      "hash": "dafcb3c5f6c72df1-page1",
+      "width": 1500,
+      "height": 844,
+      "color": "#f8f8f8",
+      "widths": [
+        400,
+        800,
+        1500
+      ]
+    }
   },
-  "academics/piano/piano internals.png": {
+  "academics/osme-transitions/transitions.png": {
     "kind": "image",
     "v": 2,
-    "hash": "8248e9c5be80f34f",
-    "width": 1896,
-    "height": 1422,
-    "color": "#482818",
-    "widths": [
-      400,
-      800,
-      1600
-    ]
-  },
-  "academics/piano/piano photo.jpg": {
-    "kind": "image",
-    "v": 2,
-    "hash": "01b9efab045cef7d",
-    "width": 4032,
-    "height": 2267,
-    "color": "#e8e8f8",
+    "hash": "fd078ed5dca03a7e",
+    "width": 1696,
+    "height": 1092,
+    "color": "#f8f8f8",
     "widths": [
       400,
       800,
@@ -718,6 +680,72 @@
     "width": 4032,
     "height": 3024,
     "color": "#f87888",
+    "widths": [
+      400,
+      800,
+      1600
+    ]
+  },
+  "academics/quaternions/quaternions.pdf": {
+    "kind": "file",
+    "v": 2,
+    "hash": "c6b25d7bd0f2f554",
+    "src": "c6b25d7bd0f2f554/quaternions.pdf",
+    "bytes": 256278,
+    "preview": {
+      "kind": "image",
+      "v": 2,
+      "hash": "c6b25d7bd0f2f554-page1",
+      "width": 1275,
+      "height": 1650,
+      "color": "#f8f8f8",
+      "widths": [
+        400,
+        800,
+        1275
+      ]
+    }
+  },
+  "academics/quaternions/quaternions.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "92850fccc7704585",
+    "width": 911,
+    "height": 577,
+    "color": "#f8f8f8",
+    "widths": [
+      400,
+      800,
+      911
+    ]
+  },
+  "academics/search225/manuscript.pdf": {
+    "kind": "file",
+    "v": 2,
+    "hash": "18c80434e58cff24",
+    "src": "18c80434e58cff24/manuscript.pdf",
+    "bytes": 6191852,
+    "preview": {
+      "kind": "image",
+      "v": 2,
+      "hash": "18c80434e58cff24-page1",
+      "width": 1240,
+      "height": 1654,
+      "color": "#f8f8f8",
+      "widths": [
+        400,
+        800,
+        1240
+      ]
+    }
+  },
+  "academics/search225/search225.png": {
+    "kind": "image",
+    "v": 2,
+    "hash": "631b47bf50dc8d44",
+    "width": 1648,
+    "height": 878,
+    "color": "#f8f8f8",
     "widths": [
       400,
       800,
