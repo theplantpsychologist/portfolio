@@ -1,0 +1,46 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Privacy" description="What this site collects and why.">
+  <article class="prose">
+    <h1>Privacy</h1>
+    <p class="muted">Last updated October 2026</p>
+
+    <h2>Analytics</h2>
+    <p>
+      This site uses <strong>Cloudflare Web Analytics</strong>, which counts page views without cookies and without identifying you, and
+      <strong>Google Analytics</strong>, which shows which pages and features people use: for example, which gallery filters are popular or
+      whether the contact form is working.
+    </p>
+    <p>
+      Outside the EU/EEA, the UK, and Switzerland, Google Analytics stores a first-party cookie (<code>_ga</code>) to tell visits apart. Inside
+      those regions it sets no cookies and sends only anonymous, cookieless measurements. Google Analytics doesn't store IP addresses, and
+      advertising features, Google signals, and ad personalization are turned off everywhere. Nothing is sold or used for ads.
+    </p>
+    <p>
+      To opt out of Google Analytics on every site, use Google's
+      <a href="https://tools.google.com/dlpage/gaoptout">opt-out browser add-on</a>, or block cookies for this site in your browser.
+    </p>
+
+    <h2>Contact form</h2>
+    <p>
+      What you type into the contact form (name, email, topic, subject, message) is emailed to me so I can reply, and isn't used for anything
+      else. Cloudflare Turnstile checks that the sender isn't a bot. Messages are delivered through Resend.
+    </p>
+
+    <h2>Embedded videos</h2>
+    <p>
+      YouTube and Instagram videos only load after you click play. Once loaded, they're served by those companies under their own privacy
+      policies.
+    </p>
+
+    <h2>Questions</h2>
+    <p>Use the <a href="/about/#contact">contact form</a>.</p>
+  </article>
+</Base>
+
+<style>
+  article { display: grid; gap: 12px; padding: 12px 0 24px; }
+  h2 { margin-top: 18px; }
+  code { font-size: 0.9em; background: var(--chip); padding: 1px 6px; border-radius: var(--radius-sm); }
+</style>

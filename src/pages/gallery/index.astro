@@ -148,6 +148,9 @@ const cards = works.map((w) => {
 </style>
 
 <script>
+  import { trackLater } from "../../lib/track";
+  const trackFilters = trackLater();
+  const trackSearch = trackLater();
   const grid = document.getElementById("grid")!;
   const cards = [...grid.children] as HTMLLIElement[];
   const groups = [...document.querySelectorAll<HTMLFieldSetElement>("fieldset[data-group]")];
@@ -199,7 +202,12 @@ const cards = works.map((w) => {
     grid.classList.toggle("show-cp", view === "cp");
     viewButtons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.view === view)));
     showButtons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.show === show)));
-    if (pushUrl) writeUrl(selection);
+    if (pushUrl) {
+      writeUrl(selection);
+      const filters = [...selection].filter(([, sel]) => sel.length).map(([g, sel]) => `${g}:${sel.join(",")}`).join(" ");
+      trackFilters("gallery_filter", { filters: filters || "none", show, view, sort: sort.value, results: shown });
+      if (q.value.trim()) trackSearch("search", { search_term: q.value.trim(), results: shown });
+    }
   }
 
   function applySort() {

@@ -55,6 +55,7 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 </style>
 
 <script>
+  import { track } from "../lib/track";
   const form = document.querySelector<HTMLFormElement>("form.contact")!;
   const status = form.querySelector<HTMLParagraphElement>(".status")!;
   const button = form.querySelector<HTMLButtonElement>("button[type=submit]")!;
@@ -75,7 +76,10 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       const res = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
       const data = await res.json();
       show(data.ok, data.message);
-      if (data.ok) form.reset();
+      if (data.ok) {
+        track("generate_lead", { topic: String(new FormData(form).get("topic")) });
+        form.reset();
+      }
     } catch {
       show(false, "Sorry, the message couldn't be sent. Please check your connection and try again.");
     } finally {

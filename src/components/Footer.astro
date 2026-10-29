@@ -3,7 +3,7 @@ import { socials } from "../lib/site";
 ---
 <footer>
   <div class="inner">
-    <span>© {new Date().getFullYear()} Brandon Wong</span>
+    <span>© {new Date().getFullYear()} Brandon Wong · <a href="/privacy/">Privacy</a></span>
     <nav aria-label="Social">
       {socials.map((s) => <a href={s.url} rel="me noopener">{s.label}</a>)}
     </nav>

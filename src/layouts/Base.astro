@@ -16,6 +16,8 @@ const fullTitle = title ? `${title} · ${SITE_NAME}` : SITE_NAME;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const beacon = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
 const gaId = import.meta.env.PUBLIC_GA_ID;
+// Where analytics cookies need opt-in consent: EU/EEA countries, the UK, and Switzerland.
+const CONSENT_REGIONS = ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "LI", "NO", "GB", "CH"];
 ---
 <!doctype html>
 <html lang="en">
@@ -44,13 +46,20 @@ const gaId = import.meta.env.PUBLIC_GA_ID;
     )}
     {gaId && (
       <>
-        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
-        <script is:inline define:vars={{ gaId }}>
+        <script is:inline define:vars={{ gaId, consentRegions: CONSENT_REGIONS }}>
           window.dataLayer = window.dataLayer || [];
-          function gtag() { dataLayer.push(arguments); }
+          // Global, so page scripts can send events (src/lib/track.ts).
+          const gtag = (window.gtag = function () { dataLayer.push(arguments); });
+          // No advertising storage or ad signals anywhere. Analytics cookies are on, except in
+          // regions where they need opt-in consent (EU/EEA, UK, Switzerland): there GA sends
+          // cookieless pings instead, so no cookie banner is needed. See /privacy/.
+          gtag("consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "granted" });
+          gtag("consent", "default", { analytics_storage: "denied", region: consentRegions });
+          gtag("set", "ads_data_redaction", true);
           gtag("js", new Date());
-          gtag("config", gaId);
+          gtag("config", gaId, { allow_google_signals: false, allow_ad_personalization_signals: false });
         </script>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
       </>
     )}
   </head>
@@ -60,5 +69,17 @@ const gaId = import.meta.env.PUBLIC_GA_ID;
       <slot />
     </main>
     <Footer />
+    <script>
+      // Elements with data-track="event_name" send that event when clicked;
+      // data-track-foo="bar" attributes become its parameters.
+      import { track } from "../lib/track";
+      document.addEventListener("click", (e) => {
+        const el = (e.target as Element).closest<HTMLElement>("[data-track]");
+        if (!el) return;
+        const params: Record<string, string> = { page: location.pathname };
+        for (const [k, v] of Object.entries(el.dataset)) if (k.startsWith("track") && k !== "track") params[k.slice(5).toLowerCase()] = v!;
+        track(el.dataset.track!, params);
+      });
+    </script>
   </body>
 </html>

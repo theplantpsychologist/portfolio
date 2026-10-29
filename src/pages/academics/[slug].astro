@@ -113,6 +113,7 @@ const media = slides.length > 0 || (d.video && !localVideo);
 </style>
 
 <script>
+  import { track } from "../../lib/track";
   // Show PDFs inline where the browser has a built-in viewer (desktop Chrome, Safari, Firefox, Edge).
   // Phones keep the first-page image, which opens the PDF full screen in a new tab.
   const docs = document.getElementById("documents");
@@ -125,12 +126,21 @@ const media = slides.length > 0 || (d.video && !localVideo);
       panel.replaceChildren(frame);
     }
   }
+  // Count a document as viewed once its viewer is mostly on screen.
+  if (docs) {
+    new IntersectionObserver((entries, obs) => {
+      if (!entries.some((e) => e.isIntersecting)) return;
+      track("pdf_view", { page: location.pathname, inline: !!docs.querySelector("iframe") });
+      obs.disconnect();
+    }, { threshold: 0.5 }).observe(docs);
+  }
   const tabs = [...(docs?.querySelectorAll<HTMLButtonElement>("[data-doc]") ?? [])];
   const panels = [...(docs?.querySelectorAll<HTMLElement>("[data-doc-panel]") ?? [])];
   tabs.forEach((t) =>
     t.addEventListener("click", () => {
       tabs.forEach((b) => b.setAttribute("aria-pressed", String(b === t)));
       panels.forEach((p) => (p.hidden = p.dataset.docPanel !== t.dataset.doc));
+      track("pdf_select", { file: t.textContent!, page: location.pathname });
     }),
   );
 </script>

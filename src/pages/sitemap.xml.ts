@@ -2,7 +2,7 @@ import type { APIRoute } from "astro";
 import { getWorks, getProjects } from "../lib/content";
 
 export const GET: APIRoute = async ({ site }) => {
-  const pages = ["/", "/gallery/", "/academics/", "/about/"];
+  const pages = ["/", "/gallery/", "/academics/", "/about/", "/privacy/"];
   const works = (await getWorks()).map((w) => `/gallery/${w.id}/`);
   const projects = (await getProjects()).map((p) => `/academics/${p.id}/`);
   const urls = [...pages, ...works, ...projects].map((p) => `<url><loc>${new URL(p, site)}</loc></url>`).join("");

@@ -74,6 +74,8 @@ const facets = Object.entries(academicTagGroups)
 </style>
 
 <script>
+  import { trackLater } from "../../lib/track";
+  const trackFilters = trackLater();
   const cards = [...document.querySelectorAll<HTMLLIElement>(".cards li")];
   const groups = [...document.querySelectorAll<HTMLFieldSetElement>("fieldset[data-group]")];
   const clear = document.getElementById("clear")!;
@@ -104,6 +106,8 @@ const facets = Object.entries(academicTagGroups)
     document.getElementById("empty")!.hidden = shown > 0;
     clear.hidden = ![...selection.values()].flat().length;
     if (!pushUrl) return;
+    const filters = [...selection].filter(([, sel]) => sel.length).map(([g, sel]) => `${g}:${sel.join(",")}`).join(" ");
+    trackFilters("academics_filter", { filters: filters || "none", results: shown });
     // Filters live in the URL, e.g. /academics/?type=research&field=math
     const p = new URLSearchParams();
     for (const [g, sel] of selection) if (sel.length) p.set(g, sel.join(","));

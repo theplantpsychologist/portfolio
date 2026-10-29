@@ -68,7 +68,7 @@ Replace `yourdomain.com` below with your domain.
    Then Custom domains → add `yourdomain.com` and `www.yourdomain.com`. Redirect www to the bare domain with Rules → Redirect Rules → "Redirect from WWW to root" template.
 4. **Turnstile (spam check).** Turnstile → Add widget → hostname `yourdomain.com` (plus `localhost` for testing) → copy the site key and secret key into step 3's variables.
 5. **Resend (email delivery).** Sign up at resend.com → Domains → add `yourdomain.com` → it lists DNS records; add them in Cloudflare DNS (or use its one-click Cloudflare connect). Create an API key with *Sending access* → `RESEND_API_KEY`.
-6. **Analytics.** Pages project → Metrics → enable Web Analytics (no token or code change needed). Optional Google Analytics: set `PUBLIC_GA_ID`.
+6. **Analytics.** Pages project → Metrics → enable Web Analytics (no token or code change needed). Google Analytics: set `PUBLIC_GA_ID` (a `G-…` measurement ID) as a Text variable and redeploy. GA runs without cookies in the EU/EEA, UK, and Switzerland and with cookies elsewhere, so no consent banner is needed (see `src/layouts/Base.astro` and `/privacy/`). Custom events are sent with `track()` from `src/lib/track.ts`, or by adding `data-track="event_name"` to any link or button.
 7. Trigger a redeploy (Deployments → Retry, or push a commit) so the build picks up the variables. Send yourself a test message from /about/.
 
 Test the contact form locally with `cp .dev.vars.example .dev.vars` and `npm run preview:functions` (uses Turnstile's always-pass test keys; set `PUBLIC_TURNSTILE_SITE_KEY=1x00000000000000000000AA` in `.env`).

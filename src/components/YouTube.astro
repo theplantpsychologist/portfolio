@@ -32,6 +32,7 @@ const vertical = /\/shorts\//.test(url);
 </style>
 
 <script>
+  import { track } from "../lib/track";
   for (const el of document.querySelectorAll<HTMLElement>(".yt")) {
     el.querySelector("button")?.addEventListener("click", () => {
       const f = document.createElement("iframe");
@@ -39,6 +40,7 @@ const vertical = /\/shorts\//.test(url);
       f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
       f.allowFullscreen = true;
       el.replaceChildren(f);
+      track("video_start", { video_provider: "youtube", video_id: el.dataset.id, page: location.pathname });
     });
   }
 </script>

@@ -281,11 +281,13 @@ const pieces = showcase.map((s) => works.find((w) => w.id === s)).filter((w) => 
 </style>
 
 <script>
+  import { track } from "../lib/track";
   // Buttons that jump to the contact form also pick the matching topic.
   const topic = document.querySelector<HTMLSelectElement>("form.contact select[name=topic]");
   for (const a of document.querySelectorAll<HTMLAnchorElement>("a[data-topic]")) {
     a.addEventListener("click", () => {
       if (topic) topic.value = a.dataset.topic!;
+      track("cta_click", { topic: a.dataset.topic!, label: a.textContent!.trim(), page: location.pathname });
     });
   }
 
@@ -300,6 +302,7 @@ const pieces = showcase.map((s) => works.find((w) => w.id === s)).filter((w) => 
       frame.title = a.getAttribute("aria-label")!;
       frame.allow = "autoplay; encrypted-media";
       a.replaceWith(frame);
+      track("reel_play", { reel: a.getAttribute("aria-label")! });
     });
   }
 </script>

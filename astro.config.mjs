@@ -8,7 +8,7 @@ const env = loadEnv(process.env.NODE_ENV ?? "development", process.cwd(), "");
 // On Cloudflare Pages builds, show which settings the build can see, and stop
 // instead of deploying a site whose images point at the wrong host.
 if (process.env.CF_PAGES) {
-  for (const name of ["PUBLIC_MEDIA_BASE", "SITE_URL", "PUBLIC_TURNSTILE_SITE_KEY"]) {
+  for (const name of ["PUBLIC_MEDIA_BASE", "SITE_URL", "PUBLIC_TURNSTILE_SITE_KEY", "PUBLIC_GA_ID"]) {
     console.log(`[config] ${name} = ${env[name] ? JSON.stringify(env[name]) : "(not set)"}`);
   }
   if (!env.PUBLIC_MEDIA_BASE) {

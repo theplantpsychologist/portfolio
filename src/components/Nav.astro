@@ -48,6 +48,8 @@ const path = Astro.url.pathname;
 </style>
 
 <script>
+  import { track, trackLater } from "../lib/track";
+  const trackSearch = trackLater();
   // Quick-jump search over works and academic projects. The index is
   // fetched once, on first focus, so pages that never search don't pay for it.
   type Item = { t: string; u: string; s: string; k: string; i?: string };
@@ -91,6 +93,8 @@ const path = Astro.url.pathname;
   input.addEventListener("input", async () => {
     await load();
     render();
+    const term = input.value.trim();
+    if (term) trackSearch("search", { search_term: term, source: "nav" });
   });
   input.addEventListener("keydown", (e) => {
     const links = [...list.querySelectorAll("a")];
@@ -100,10 +104,16 @@ const path = Astro.url.pathname;
       links.forEach((a, i) => a.setAttribute("aria-selected", String(i === active)));
     } else if (e.key === "Enter" && active >= 0) {
       e.preventDefault();
+      track("select_content", { content_type: "search_result", item_id: links[active].getAttribute("href")!, search_term: input.value.trim() });
       location.href = links[active].href;
     } else if (e.key === "Escape") list.hidden = true;
   });
   document.addEventListener("click", (e) => {
     if (!form.contains(e.target as Node)) list.hidden = true;
+  });
+  // Which result people pick (clicks and Enter both navigate through a link).
+  list.addEventListener("click", (e) => {
+    const a = (e.target as Element).closest("a");
+    if (a) track("select_content", { content_type: "search_result", item_id: a.getAttribute("href")!, search_term: input.value.trim() });
   });
 </script>

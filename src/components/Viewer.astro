@@ -66,6 +66,7 @@ const sizes = "(max-width: 900px) 100vw, 720px";
 </style>
 
 <script>
+  import { track } from "../lib/track";
   for (const viewer of document.querySelectorAll<HTMLElement>(".viewer")) {
     const figures = [...viewer.querySelectorAll<HTMLElement>("[data-slide]")];
     const tabs = [...viewer.querySelectorAll<HTMLButtonElement>("[data-go]")];
@@ -101,6 +102,7 @@ const sizes = "(max-width: 900px) 100vw, 720px";
       z.addEventListener("click", () => {
         dialog.querySelector("img")!.src = z.dataset.large!;
         dialog.showModal();
+        track("image_zoom", { page: location.pathname });
       });
     }
     dialog.addEventListener("click", (e) => e.target === dialog && dialog.close());
