@@ -45,7 +45,6 @@
   --radius: 18px;         /* photos, cards */
   --radius-sm: 10px;      /* inputs, small thumbnails, menus */
   --pill: 999px;          /* buttons, chips */
-  --arch: 240px 240px var(--radius) var(--radius);   /* the arched hero frame */
 
   /* Layout */
   --max: 1280px;
