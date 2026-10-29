@@ -8,7 +8,10 @@ const path = Astro.url.pathname;
 ---
 <header class="nav">
   <div class="inner">
-    <a class="logo" href="/" aria-label="Home"><img src="/img/logo.svg" alt="" width="36" height="36" /></a>
+    <a class="logo" href="/" aria-label="Brandon Wong, home">
+      <svg viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><path d="M3 3h22v14L17 25H3Z" fill="var(--logo)" /><path d="M25 17h-8v8Z" fill="var(--logo-fold)" /></svg>
+      <span>Brandon Wong</span>
+    </a>
     <nav aria-label="Main">
       {links.map((l) => <a href={l.href} aria-current={path.startsWith(l.href) ? "page" : undefined}>{l.label}</a>)}
     </nav>
@@ -23,17 +26,18 @@ const path = Astro.url.pathname;
 <style>
   .nav { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
   .inner { max-width: var(--max); margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; gap: 20px; }
-  .logo img { width: 36px; height: 36px; }
+  .logo { display: flex; align-items: center; gap: 9px; text-decoration: none; font-family: var(--font-display); font-weight: var(--display-weight); font-size: 1.25rem; letter-spacing: -0.01em; white-space: nowrap; }
+  .logo:hover { color: var(--ink); }
   nav { display: flex; gap: 18px; }
   nav a { text-decoration: none; font-weight: 600; color: var(--muted); padding: 8px 0; }
   nav a[aria-current="page"], nav a:hover { color: var(--ink); }
   .search { margin-left: auto; position: relative; }
-  input { width: 200px; font: inherit; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+  input { width: 200px; font: inherit; padding: 7px 12px; border-radius: var(--pill); border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
   input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
-  .results { position: absolute; right: 0; top: calc(100% + 6px); width: min(340px, calc(100vw - 32px)); list-style: none; padding: 6px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 10px 30px rgb(0 0 0 / 0.15); }
-  .results :global(a) { display: flex; gap: 10px; align-items: center; padding: 6px; border-radius: 6px; text-decoration: none; }
+  .results { position: absolute; right: 0; top: calc(100% + 6px); width: min(340px, calc(100vw - 32px)); list-style: none; padding: 6px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-strong); }
+  .results :global(a) { display: flex; gap: 10px; align-items: center; padding: 6px; border-radius: var(--radius-sm); text-decoration: none; }
   .results :global(a:hover), .results :global(a[aria-selected="true"]) { background: var(--chip); color: var(--ink); }
-  .results :global(img) { width: 40px; height: 40px; object-fit: cover; border-radius: 4px; flex: none; }
+  .results :global(img) { width: 40px; height: 40px; object-fit: cover; border-radius: var(--radius-sm); flex: none; }
   .results :global(small) { display: block; color: var(--muted); }
   @media (max-width: 640px) {
     .nav { position: static; }

@@ -1,0 +1,80 @@
+---
+// A row of tiles that drifts slowly and loops. Hovering or focusing pauses it;
+// with reduced motion it becomes a plain horizontal scroller.
+import Img from "./Img.astro";
+import type { Picture } from "../lib/media";
+
+export type Tile = { href: string; pic: Picture | null; title: string; sub?: string };
+interface Props {
+  tiles: Tile[];
+  label: string;
+  reverse?: boolean;
+  /** Seconds per tile; higher is slower. */
+  pace?: number;
+  /** Image aspect ratio, e.g. "1" or "4 / 3". */
+  aspect?: string;
+}
+const { tiles, label, reverse = false, pace = 12, aspect = "1" } = Astro.props;
+
+// Repeat short lists so one copy is wider than the screen, then render it twice:
+// the track slides by exactly one copy and starts over with no visible jump.
+const set = Array.from({ length: Math.max(1, Math.ceil(8 / Math.max(tiles.length, 1))) }, () => tiles).flat();
+---
+<div class:list={["carousel", { reverse }]} role="region" aria-label={label} style={`--duration:${set.length * pace}s; --aspect:${aspect}`}>
+  <ul class="track">
+    {[0, 1].map((copy) =>
+      set.map((t, i) => {
+        // Only the first appearance of each tile is announced and focusable.
+        const dup = copy > 0 || i >= tiles.length;
+        return (
+          <li aria-hidden={dup ? "true" : undefined}>
+            <a href={t.href} tabindex={dup ? -1 : undefined}>
+              <Img pic={t.pic} alt="" sizes="(max-width: 640px) 170px, 260px" />
+              <span class="title">{t.title}</span>
+              {t.sub && <span class="sub">{t.sub}</span>}
+            </a>
+          </li>
+        );
+      }),
+    )}
+  </ul>
+</div>
+
+<style>
+  .carousel {
+    overflow: hidden;
+    /* Fade the edges so tiles drift in and out instead of being cut off. */
+    mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
+  }
+  .track {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; gap: 16px; width: max-content;
+    animation: drift var(--duration) linear infinite;
+  }
+  .reverse .track { animation-direction: reverse; }
+  .carousel:hover .track, .carousel:focus-within .track { animation-play-state: paused; }
+  @keyframes drift {
+    from { transform: translateX(0); }
+    /* One copy plus the gap after it. */
+    to { transform: translateX(calc(-50% - 8px)); }
+  }
+  li { flex: none; width: 260px; }
+  a { display: grid; gap: 2px; text-decoration: none; }
+  a :global(img), a :global(.missing) {
+    width: 100%; aspect-ratio: var(--aspect); object-fit: cover; object-position: top;
+    border-radius: var(--radius); margin-bottom: 6px; transition: transform 0.2s;
+  }
+  a:hover :global(img) { transform: scale(1.02); }
+  .title { font-weight: 600; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .sub { color: var(--muted); font-size: 0.85rem; }
+  @media (max-width: 640px) {
+    li { width: 170px; }
+    .track { gap: 12px; }
+    @keyframes drift { to { transform: translateX(calc(-50% - 6px)); } }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .carousel { overflow-x: auto; mask-image: none; }
+    .track { animation: none; }
+    li[aria-hidden] { display: none; }
+  }
+</style>

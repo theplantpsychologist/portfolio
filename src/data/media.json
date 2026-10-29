@@ -234,17 +234,17 @@
       ]
     }
   },
-  "academics/cfc225/cfc225.png": {
+  "academics/cfc225/explori_models.jpg": {
     "kind": "image",
     "v": 2,
-    "hash": "898545171fd3b43d",
-    "width": 1399,
-    "height": 781,
-    "color": "#080808",
+    "hash": "f8247ddb8f067bc8",
+    "width": 4103,
+    "height": 2308,
+    "color": "#e8e8e8",
     "widths": [
       400,
       800,
-      1399
+      1600
     ]
   },
   "academics/cfcmath/cfcmath.pdf": {

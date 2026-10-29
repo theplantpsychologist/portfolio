@@ -1,80 +1,110 @@
 ---
 import Base from "../layouts/Base.astro";
 import Img from "../components/Img.astro";
-import { getWorks, getProjects, coverOf } from "../lib/content";
+import Carousel, { type Tile } from "../components/Carousel.astro";
+import { getWorks, getProjects, coverOf, projectCover } from "../lib/content";
 
 const works = await getWorks();
 const projects = await getProjects();
 const featured = works.filter((w) => w.data.tags.includes("portfolio")).slice(0, 12);
-const recent = works.slice(0, 6);
+// The piece shown large at the top; any work slug from content/works.
+const heroWork = works.find((w) => w.id === "viper") ?? featured[0];
+
+// Newest first; getWorks and getProjects are already sorted by date.
+const portfolio: Tile[] = featured.slice(0, 8).map((w) => ({
+  href: `/gallery/${w.id}/`,
+  pic: coverOf(w, 800),
+  title: w.data.name,
+  sub: String(w.data.date.getUTCFullYear()),
+}));
+const papers: Tile[] = projects
+  .filter((p) => p.data.tags.some((t) => t === "paper" || t === "conference_talk"))
+  .slice(0, 8)
+  .map((p) => ({
+    href: `/academics/${p.id}/`,
+    pic: projectCover(p, 800),
+    title: p.data.title,
+    sub: `${p.data.tags.includes("conference_talk") ? "Talk" : "Paper"} · ${p.data.date.getUTCFullYear()}`,
+  }));
 ---
 <Base>
   <section class="hero">
+    <a class="feature" href={`/gallery/${heroWork.id}/`}>
+      <!-- <Img pic={coverOf(heroWork, 1600)} alt={heroWork.data.name} sizes="(max-width: 800px) 100vw, 600px" eager /> -->
+      <img src="../../public/img/viperhero.png" alt={heroWork.data.name} sizes="(max-width: 800px) 100vw, 600px" />
+      <span class="credit">{heroWork.data.name}, {heroWork.data.date.getUTCFullYear()}</span>
+    </a>
+    
     <div class="copy">
-      <h1>Origami design at the meeting of art and engineering.</h1>
-      <p class="muted">
-        I'm Brandon Wong, an origami designer with {works.length}+ original models: intricate structures, crease patterns, and the stories behind them.
-      </p>
+      <h1>Art, math, and engineering of origami</h1>
       <div class="actions">
-        <a class="btn" href="/gallery/">Browse the gallery</a>
+        <a class="btn" href="/gallery/?show=polished">Artwork</a>
         <a class="btn ghost" href="/academics">Academics</a>
-        <a class="btn ghost" href="/about/#commissions">Commissions</a>
+        <a class="btn ghost" href="/about/#commissions">Business</a>
       </div>
     </div>
-    <ul class="mosaic" aria-label="Featured works">
-      {featured.slice(0, 9).map((w, i) => (
-        <li><a href={`/gallery/${w.id}/`} title={w.data.name}><Img pic={coverOf(w, 400)} alt={w.data.name} sizes="(max-width: 800px) 33vw, 180px" eager={i < 3} /></a></li>
-      ))}
-    </ul>
   </section>
 
   <section class="row">
     <div class="row-head">
-      <h2>Recent work</h2>
-      <a href="/gallery/">See all {works.length} →</a>
+      <h2>Featured origami work</h2>
+      <a href="/gallery/?show=polished">See all →</a>
     </div>
-    <ul class="strip">
-      {recent.map((w) => (
-        <li><a href={`/gallery/${w.id}/`}><Img pic={coverOf(w, 400)} alt="" sizes="(max-width: 640px) 50vw, 200px" /><span>{w.data.name}</span></a></li>
-      ))}
-    </ul>
+    <Carousel tiles={portfolio} label="Recent portfolio origami" />
   </section>
 
-  <section class="tiles">
-    <a href="/gallery/">
-      <h2>Gallery</h2>
-      <p>Original designs with crease patterns, backstories, and design notes. Filter by subject, technique, and more.</p>
-    </a>
-    <a href="/academics/">
-      <h2>Academics</h2>
-      <p>{projects.length} research and engineering projects: computational origami, metamaterials, robotics, and class work.</p>
-    </a>
-    <a href="/about/">
-      <h2>About & commissions</h2>
-      <p>Custom designs, folded models, tutorials, lessons, and sponsored content. Get in touch.</p>
-    </a>
+  <section class="row">
+    <div class="row-head">
+      <h2>Recent academic work</h2>
+      <a href="/academics">See all →</a>
+    </div>
+    <Carousel tiles={papers} label="Recent papers and talks" reverse aspect="4 / 3" />
   </section>
+
+  <section class="cta">
+    <div>
+      <h2>Let's chat</h2>
+      <p>
+        I create both sponsored content as well as custom origami commissions. Or, just reach out to say hi!
+      </p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn big" href="/about/#contact">Contact</a>
+      <a class="btn ghost" href="/about/">Rates & details</a>
+    </div>
+  </section>
+
 </Base>
 
 <style>
-  .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; padding: 24px 0 48px; }
+  .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 48px; align-items: center; padding: 24px 0 56px; }
+  .hero h1 { font-size: clamp(2.4rem, 5.2vw, 4rem); line-height: 1.02; letter-spacing: -0.02em; }
   .copy { display: grid; gap: 16px; }
   .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
-  .mosaic { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
-  .mosaic :global(img), .mosaic :global(.missing) { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); }
+  .feature { position: relative; display: block; }
+  .feature :global(img), .feature :global(.missing) { width: 100%; aspect-ratio: 4 / 5; max-height: 78vh; object-fit: cover; border-radius: var(--arch); }
+  .credit { position: absolute; right: 16px; bottom: 16px; padding: 4px 12px; border-radius: var(--pill); background: var(--badge-bg); color: var(--badge-ink); font-size: 0.85rem; font-weight: 600; }
   .row { margin-bottom: 48px; }
   .row-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
   .row-head a { color: var(--accent); text-decoration: none; font-weight: 600; padding: 8px 0; }
-  .strip { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
-  .strip a { text-decoration: none; font-weight: 600; font-size: 0.9rem; }
-  .strip :global(img), .strip :global(.missing) { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); margin-bottom: 4px; }
+  .cta {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 40px; align-items: center;
+    margin-top: 16px; padding: clamp(22px, 5vw, 44px); border-radius: calc(var(--radius) * 2);
+    background: var(--surface); border: 2px solid var(--accent-2); box-shadow: var(--shadow);
+  }
+  .cta h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); margin-bottom: 8px; }
+  .cta p { color: var(--muted); max-width: 60ch; font-size: 1.05rem; }
+  .cta-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn.big { padding: 13px 26px; font-size: 1.05rem; background: var(--accent); color: var(--accent-ink); }
+  .btn.big:hover { background: var(--ink); color: var(--bg); }
   .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .tiles a { display: grid; gap: 6px; align-content: start; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); text-decoration: none; }
   .tiles a:hover { border-color: var(--accent); color: inherit; }
   .tiles p { color: var(--muted); }
   @media (max-width: 800px) {
     .hero { grid-template-columns: minmax(0, 1fr); gap: 24px; padding-top: 8px; }
-    .strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .feature :global(img), .feature :global(.missing) { aspect-ratio: 1; }
+    .cta { grid-template-columns: minmax(0, 1fr); }
     .tiles { grid-template-columns: 1fr; }
   }
 </style>

@@ -50,8 +50,8 @@ const cards = works.map((w) => {
       </select>
       <div class="seg" role="group" aria-label="Show">
         <button type="button" data-show="highlight" aria-pressed="false">Highlights</button>
-        <button type="button" data-show="polished" aria-pressed="false">Polished</button>
-        <button type="button" data-show="all" aria-pressed="true">All</button>
+        <button type="button" data-show="polished" aria-pressed="true">Polished</button>
+        <button type="button" data-show="all" aria-pressed="false">All</button>
       </div>
       <div class="seg" role="group" aria-label="Image type">
         <button type="button" data-view="photo" aria-pressed="true">Photos</button>
@@ -102,8 +102,8 @@ const cards = works.map((w) => {
 <style>
   .head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
   .controls { display: flex; flex-wrap: wrap; gap: 8px; }
-  .controls input, .controls select { font: inherit; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
-  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+  .controls input, .controls select { font: inherit; padding: 7px 12px; border-radius: var(--pill); border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: var(--pill); overflow: hidden; }
   .seg button { font: inherit; border: 0; padding: 7px 14px; background: var(--surface); color: var(--muted); cursor: pointer; }
   .seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
 
@@ -112,7 +112,7 @@ const cards = works.map((w) => {
   summary { font-weight: 700; cursor: pointer; margin-bottom: 8px; }
   fieldset { border: 0; padding: 0; margin: 0 0 16px; }
   legend { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 6px; }
-  .facet { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 999px; background: var(--chip); font-size: 0.85rem; cursor: pointer; border: 1px solid transparent; user-select: none; }
+  .facet { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: var(--pill); background: var(--chip); font-size: 0.85rem; cursor: pointer; border: 1px solid transparent; user-select: none; }
   .facet input { position: absolute; opacity: 0; pointer-events: none; }
   .facet small { color: var(--muted); }
   .facet:has(input:checked) { background: var(--ink); color: var(--bg); }
@@ -131,7 +131,7 @@ const cards = works.map((w) => {
   .grid a { display: block; text-decoration: none; }
   .grid :global(img), .grid :global(.missing) { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); transition: transform 0.2s; }
   .grid a:hover :global(img) { transform: scale(1.02); }
-  .grid :global(.cp) { display: none; object-fit: contain; background: #fff !important; }
+  .grid :global(.cp) { display: none; object-fit: contain; background: var(--paper) !important; }
   .grid.show-cp :global(.photo) { display: none; }
   .grid.show-cp :global(.cp) { display: block; }
   .caption { display: block; padding: 6px 2px 0; font-weight: 600; font-size: 0.95rem; }

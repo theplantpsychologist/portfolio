@@ -1,0 +1,54 @@
+/*
+ * Site theme: every color, font, and corner radius lives here.
+ * Change a value and the whole site follows. (The favicon, public/favicon.svg,
+ * is a separate file and keeps its own copy of --logo.)
+ *
+ * Fonts are loaded in src/layouts/Base.astro (Google Fonts link); add new
+ * families there too.
+ */
+:root {
+  /* Surfaces */
+  --bg: #f7f5f0;          /* page background (museum cream) */
+  --surface: #fffdf8;     /* cards, inputs, menus */
+  --chip: #ece6da;        /* tag chips, subtle fills, hover rows */
+  --line: #ded6c8;        /* borders and dividers */
+  --paper: #ffffff;       /* behind crease patterns and PDF pages */
+
+  /* Text */
+  --ink: #23302b;         /* main text */
+  --muted: #5f6a63;       /* secondary text */
+
+  /* Accents */
+  --accent: #2f6b55;      /* forest green: buttons, links, active filters */
+  --accent-ink: #ffffff;  /* text on --accent */
+  --accent-2: #b05a30;    /* terracotta: highlights, badges, call-to-action borders */
+  --accent-2-ink: #ffffff;
+  --success: #2f8a4d;     /* "message sent" */
+
+  /* Logo (the folded-corner square) */
+  --logo: #2f6b55;
+  --logo-fold: #a8c4b5;
+
+  /* Overlays and shadows */
+  --scrim: rgb(20 28 24 / 0.85);        /* lightbox backdrop */
+  --badge-bg: rgb(20 28 24 / 0.65);     /* labels over photos, e.g. reel views */
+  --badge-ink: #ffffff;
+  --shadow: 0 10px 40px rgb(35 48 43 / 0.10);
+  --shadow-strong: 0 10px 30px rgb(35 48 43 / 0.22);
+
+  /* Type */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;           /* page titles, section headings */
+  --font: "Avenir Next", Avenir, "Figtree", "Segoe UI", sans-serif;        /* everything else */
+  --display-weight: 600;
+
+  /* Shape */
+  --radius: 18px;         /* photos, cards */
+  --radius-sm: 10px;      /* inputs, small thumbnails, menus */
+  --pill: 999px;          /* buttons, chips */
+  --arch: 240px 240px var(--radius) var(--radius);   /* the arched hero frame */
+
+  /* Layout */
+  --max: 1280px;
+
+  color-scheme: light;
+}

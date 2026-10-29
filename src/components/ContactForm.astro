@@ -38,7 +38,7 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
   label { display: grid; gap: 4px; font-weight: 600; font-size: 0.92rem; }
   input, select, textarea {
     font: inherit; font-weight: 400; font-size: 1rem; padding: 10px 12px; width: 100%;
-    border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink);
+    border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); color: var(--ink);
   }
   input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
   textarea { resize: vertical; }
@@ -46,7 +46,7 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
   .optional { color: var(--muted); font-weight: 400; }
   .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
   .status { margin: 0; }
-  .status.ok { color: #2f8a4d; }
+  .status.ok { color: var(--success); }
   .status.err { color: var(--accent); }
   .note { font-size: 0.85rem; }
   @media (max-width: 560px) {

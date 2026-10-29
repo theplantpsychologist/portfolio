@@ -1,28 +1,4 @@
-:root {
-  --bg: #f6f4ef;
-  --surface: #ffffff;
-  --ink: #1d1c1a;
-  --muted: #6b6760;
-  --line: #e2ded5;
-  --accent: #c8442c;
-  --accent-ink: #ffffff;
-  --chip: #ece8df;
-  --radius: 10px;
-  --max: 1280px;
-  --font: "Avenir Next", Avenir, "Segoe UI", system-ui, -apple-system, sans-serif;
-  color-scheme: light dark;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #161513;
-    --surface: #1f1e1b;
-    --ink: #eeeae3;
-    --muted: #a19c92;
-    --line: #34322d;
-    --accent: #e8664c;
-    --chip: #2a2925;
-  }
-}
+@import "./theme.css";
 
 * { box-sizing: border-box; margin: 0; }
 html { -webkit-text-size-adjust: 100%; }
@@ -40,8 +16,9 @@ main { flex: 1; width: 100%; max-width: var(--max); margin: 0 auto; padding: 24p
 img, video { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 a:hover { color: var(--accent); }
-h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.15; letter-spacing: -0.01em; }
-h2 { font-size: 1.35rem; line-height: 1.25; }
+h1, h2 { font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: -0.01em; }
+h1 { font-size: clamp(2rem, 4.4vw, 3rem); line-height: 1.08; }
+h2 { font-size: 1.5rem; line-height: 1.2; }
 p + p { margin-top: 0.8em; }
 .muted { color: var(--muted); }
 .prose { max-width: 70ch; }
@@ -49,17 +26,17 @@ p + p { margin-top: 0.8em; }
 
 .btn {
   display: inline-flex; align-items: center; gap: 6px;
-  padding: 9px 16px; border-radius: 999px;
-  background: var(--ink); color: var(--bg);
+  padding: 9px 18px; border-radius: var(--pill);
+  background: var(--accent); color: var(--accent-ink);
   text-decoration: none; font: inherit; font-weight: 600; border: 0; cursor: pointer;
 }
-.btn:hover { background: var(--accent); color: var(--accent-ink); }
+.btn:hover { background: var(--ink); color: var(--bg); }
 .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
 .btn.ghost:hover { border-color: var(--accent); color: var(--accent); }
 
 .chip {
   display: inline-flex; align-items: center; gap: 4px;
-  padding: 3px 10px; border-radius: 999px;
+  padding: 3px 10px; border-radius: var(--pill);
   background: var(--chip); color: var(--ink);
   font-size: 0.85rem; text-decoration: none; border: 1px solid transparent;
 }

@@ -25,7 +25,11 @@ const gaId = import.meta.env.PUBLIC_GA_ID;
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <link rel="icon" href="/img/logo.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#f7f5f0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Figtree:wght@400..700&display=swap" />
     <link rel="sitemap" href="/sitemap.xml" />
     <meta property="og:site_name" content={SITE_NAME} />
     <meta property="og:title" content={title ?? SITE_NAME} />
