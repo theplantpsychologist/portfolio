@@ -15,45 +15,54 @@ const facets = Object.entries(academicTagGroups)
   <h1>Academics</h1>
   <p class="muted intro">Research papers, class projects, and engineering work beyond paper folding.</p>
 
-  <div class="filters">
-    {facets.map((f) => (
-      <fieldset data-group={f.id}>
-        <legend>{f.label}</legend>
-        <div class="chips">
-          {f.tags.map(([t, label]) => (
-            <label class="facet">
-              <input type="checkbox" value={t} />
-              <span>{label}</span>
-              <small data-count />
-            </label>
-          ))}
-        </div>
-      </fieldset>
-    ))}
-    <button type="button" class="btn ghost" id="clear" hidden>Clear filters</button>
-  </div>
+  <div class="layout">
+    <aside>
+      <details id="filters" open>
+        <summary>Filters <span id="active-count"></span></summary>
+        {facets.map((f) => (
+          <fieldset data-group={f.id}>
+            <legend>{f.label}</legend>
+            <div class="chips">
+              {f.tags.map(([t, label]) => (
+                <label class="facet">
+                  <input type="checkbox" value={t} />
+                  <span>{label}</span>
+                  <small data-count />
+                </label>
+              ))}
+            </div>
+          </fieldset>
+        ))}
+        <button type="button" class="btn ghost" id="clear" hidden>Clear filters</button>
+      </details>
+    </aside>
 
-  <ul class="cards">
-    {projects.map((p) => (
-      <li data-tags={p.data.tags.join(" ")}>
-        <a href={`/academics/${p.id}/`}>
-          <Img pic={projectCover(p, 800)} alt="" sizes="(max-width: 640px) 100vw, 380px" />
-          <div>
-            <h2>{p.data.title}</h2>
-            <p class="muted">{p.data.date.getUTCFullYear()}</p>
-            <p>{p.data.summary}</p>
-          </div>
-        </a>
-      </li>
-    ))}
-  </ul>
-  <p id="empty" class="muted" hidden>No projects match these filters.</p>
+    <section>
+      <ul class="cards">
+        {projects.map((p) => (
+          <li data-tags={p.data.tags.join(" ")}>
+            <a href={`/academics/${p.id}/`}>
+              <Img pic={projectCover(p, 800)} alt="" sizes="(max-width: 640px) 100vw, 380px" />
+              <div>
+                <h2>{p.data.title}</h2>
+                <p class="muted">{p.data.date.getUTCFullYear()}</p>
+                <p>{p.data.summary}</p>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p id="empty" class="muted" hidden>No projects match these filters.</p>
+    </section>
+  </div>
 </Base>
 
 <style>
   .intro { margin: 6px 0 20px; }
-  .filters { display: flex; flex-wrap: wrap; align-items: end; gap: 12px 28px; margin-bottom: 24px; }
-  fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+  .layout { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 28px; align-items: start; }
+  aside { position: sticky; top: 76px; max-height: calc(100vh - 92px); overflow: auto; padding-right: 4px; }
+  summary { font-weight: 700; cursor: pointer; margin-bottom: 8px; }
+  fieldset { border: 0; padding: 0; margin: 0 0 16px; min-width: 0; }
   legend { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 6px; }
   .facet { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: var(--pill); background: var(--chip); font-size: 0.85rem; cursor: pointer; border: 1px solid transparent; user-select: none; }
   .facet input { position: absolute; opacity: 0; pointer-events: none; }
@@ -71,6 +80,10 @@ const facets = Object.entries(academicTagGroups)
   .cards div { padding: 14px 16px 18px; display: grid; gap: 4px; }
   .cards h2 { font-size: 1.1rem; }
   .cards p:last-child { font-size: 0.92rem; }
+  @media (max-width: 800px) {
+    .layout { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+    aside { position: static; max-height: none; }
+  }
 </style>
 
 <script>
@@ -104,7 +117,9 @@ const facets = Object.entries(academicTagGroups)
       }
     }
     document.getElementById("empty")!.hidden = shown > 0;
-    clear.hidden = ![...selection.values()].flat().length;
+    const active = [...selection.values()].flat().length;
+    clear.hidden = !active;
+    document.getElementById("active-count")!.textContent = active ? `(${active})` : "";
     if (!pushUrl) return;
     const filters = [...selection].filter(([, sel]) => sel.length).map(([g, sel]) => `${g}:${sel.join(",")}`).join(" ");
     trackFilters("academics_filter", { filters: filters || "none", results: shown });
@@ -123,6 +138,7 @@ const facets = Object.entries(academicTagGroups)
     for (const i of g.querySelectorAll<HTMLInputElement>("input")) i.checked = sel.has(i.value);
   }
   update(want.size > 0);
+  if (matchMedia("(max-width: 800px)").matches) document.getElementById("filters")!.removeAttribute("open");
 
   for (const g of groups) g.addEventListener("change", () => update());
   clear.addEventListener("click", () => {

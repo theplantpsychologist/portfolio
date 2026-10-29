@@ -41,21 +41,11 @@ const cards = works.map((w) => {
     </div>
     <div class="controls">
       <label class="visually-hidden" for="q">Filter by name</label>
-      <input id="q" type="search" placeholder="Filter by name or tag" autocomplete="off" />
-      <label class="visually-hidden" for="sort">Sort</label>
-      <select id="sort">
-        <option value="new">Newest first</option>
-        <option value="old">Oldest first</option>
-        <option value="az">A–Z</option>
-      </select>
+      <input id="q" type="search" placeholder="Search by name or tag" autocomplete="off" />
       <div class="seg" role="group" aria-label="Show">
         <button type="button" data-show="highlight" aria-pressed="false">Highlights</button>
         <button type="button" data-show="polished" aria-pressed="true">Polished</button>
         <button type="button" data-show="all" aria-pressed="false">All</button>
-      </div>
-      <div class="seg" role="group" aria-label="Image type">
-        <button type="button" data-view="photo" aria-pressed="true">Photos</button>
-        <button type="button" data-view="cp" aria-pressed="false">Crease patterns</button>
       </div>
     </div>
   </div>
@@ -64,6 +54,19 @@ const cards = works.map((w) => {
     <aside>
       <details id="filters" open>
         <summary>Filters <span id="active-count"></span></summary>
+        <fieldset class="display">
+          <legend>Display</legend>
+          <div class="seg" role="group" aria-label="Image type">
+            <button type="button" data-view="photo" aria-pressed="true">Photos</button>
+            <button type="button" data-view="cp" aria-pressed="false">Crease patterns</button>
+          </div>
+          <label class="visually-hidden" for="sort">Sort</label>
+          <select id="sort">
+            <option value="new">Newest first</option>
+            <option value="old">Oldest first</option>
+            <option value="az">A–Z</option>
+          </select>
+        </fieldset>
         {facets.map((f) => (
           <fieldset data-group={f.id}>
             <legend>{f.label}</legend>
@@ -102,7 +105,7 @@ const cards = works.map((w) => {
 <style>
   .head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
   .controls { display: flex; flex-wrap: wrap; gap: 8px; }
-  .controls input, .controls select { font: inherit; padding: 7px 12px; border-radius: var(--pill); border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+  .controls input, #sort { font: inherit; padding: 7px 12px; border-radius: var(--pill); border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
   .seg { display: inline-flex; border: 1px solid var(--line); border-radius: var(--pill); overflow: hidden; }
   .seg button { font: inherit; border: 0; padding: 7px 14px; background: var(--surface); color: var(--muted); cursor: pointer; }
   .seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
@@ -111,6 +114,9 @@ const cards = works.map((w) => {
   aside { position: sticky; top: 76px; max-height: calc(100vh - 92px); overflow: auto; padding-right: 4px; }
   summary { font-weight: 700; cursor: pointer; margin-bottom: 8px; }
   fieldset { border: 0; padding: 0; margin: 0 0 16px; }
+  .display { display: grid; gap: 8px; justify-items: start; }
+  .display .seg button { font-size: 0.85rem; padding: 6px 12px; }
+  #sort { font-size: 0.85rem; padding: 6px 12px; }
   legend { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 6px; }
   .facet { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: var(--pill); background: var(--chip); font-size: 0.85rem; cursor: pointer; border: 1px solid transparent; user-select: none; }
   .facet input { position: absolute; opacity: 0; pointer-events: none; }
